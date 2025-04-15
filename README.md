@@ -7,8 +7,7 @@ python3 --version
 ```
 ![image](https://github.com/user-attachments/assets/c1ef7329-c933-4515-954f-82f4d9a4eaa7)
 
-It's showing Python version 3.10 
-Now we need to update the Python Version. We need to follow some **steps**
+It's showing Python version 3.10. Now we need to update the Python Version. We need to follow some **steps**
 
 ---
 
