@@ -1,7 +1,3 @@
-**step-by-step installation guide for Python in Ubuntu** (works for Ubuntu 18.04, 20.04, 22.04, and later):
-
----
-
 ##  Step-by-Step Guide: Install Python in Ubuntu
 
 ### Step 1: Check if Python is Already Installed
