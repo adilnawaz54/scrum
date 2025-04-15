@@ -1,17 +1,18 @@
 ##  Step-by-Step Guide: Install Python in Ubuntu
 
-### Step 1: Check if Python is Already Installed
+###   Check if Python is Already Installed
 
 ```bash
 python3 --version
 ```
-![image](https://github.com/user-attachments/assets/c6708b87-331c-4592-b1d4-ee16ae1cb1c1)
+![image](https://github.com/user-attachments/assets/c1ef7329-c933-4515-954f-82f4d9a4eaa7)
 
-If not, follow the steps below to install it.
+It's showing Python version 3.10 
+Now we need to update the Python Version. We need to follow some **steps**
 
 ---
 
-### Step 2: Update System Packages
+### Step 1: Update System Packages
 
 ```bash
 sudo apt update
@@ -22,7 +23,7 @@ This ensures your package lists and software are up to date.
 
 ---
 
-### Step 3: Install Python 3
+### Step 2: Install Python 3
 
 Ubuntu comes with Python 3.x by default, but you can install or upgrade it:
 
@@ -32,7 +33,7 @@ sudo apt install python3 -y
 
 ---
 
-### Step 4: Install pip (Python Package Manager)
+### Step 3: Install pip (Python Package Manager)
 
 ```bash
 sudo apt install python3-pip -y
@@ -46,7 +47,7 @@ pip3 --version
 
 ---
 
-### Step 7: Verify Installation
+### Step 4: Verify Installation
 
 ```bash
 python3 --version
@@ -54,6 +55,8 @@ pip3 --version
 ```
 
 ---
+
+**If you want to install specific version of Python**
 
 ## 🧪  Install a Specific Version of Python (e.g., 3.12,3.13)
 
