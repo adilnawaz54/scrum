@@ -87,3 +87,14 @@ Check version:
 python3.12 --version
 ```
 ![Screenshot 2025-04-16 110416](https://github.com/user-attachments/assets/d7c379b1-8837-488d-bbbb-2739e213321a)
+
+
+---
+
+## Contacts
+
+| Name         | Email Address                                 |
+|--------------|-----------------------------------------------|
+| Adil Nawaz   | adil.nawaz.snaatak@mygurukulam.co             |
+
+---
