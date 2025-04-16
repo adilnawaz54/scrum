@@ -1,8 +1,11 @@
 ##  Step-by-Step Guide: Install Python in Ubuntu
 
+---
+
 | Created     | Version | Author        | Comment | Reviewer         |
 |-------------|---------|---------------|---------|------------------|
 | 15-04-2025  | V1      | Adil Nawaz    |         | Siddharth Pawar  |
+
 ---
 
 ###   Check if Python is Already Installed
