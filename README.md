@@ -1,4 +1,4 @@
-##  Step-by-Step Guide: Install Python in Ubuntu
+![Screenshot 2025-04-16 105456](https://github.com/user-attachments/assets/06097167-62e1-4e86-98e4-dd5e4c033b89)##  Step-by-Step Guide: Install Python in Ubuntu
 
 ###   Check if Python is Already Installed
 
@@ -29,6 +29,7 @@ Ubuntu comes with Python 3.x by default, but you can install or upgrade it:
 ```bash
 sudo apt install python3 -y
 ```
+![Screenshot 2025-04-16 105321](https://github.com/user-attachments/assets/4219b4d0-3c1d-47da-a44d-a494d3ae2092)
 
 ---
 
@@ -37,12 +38,14 @@ sudo apt install python3 -y
 ```bash
 sudo apt install python3-pip -y
 ```
+![Screenshot 2025-04-16 105456](https://github.com/user-attachments/assets/90005147-05e7-4e6f-94fc-41bb74b700cc)
 
 Check pip version:
 
 ```bash
 pip3 --version
 ```
+![Screenshot 2025-04-16 105520](https://github.com/user-attachments/assets/a15e885d-df59-4a2d-a4f1-8d012907dad4)
 
 ---
 
@@ -52,6 +55,7 @@ pip3 --version
 python3 --version
 pip3 --version
 ```
+![Screenshot 2025-04-16 105520](https://github.com/user-attachments/assets/7b4dff82-a727-419f-b500-9671d4897059)
 
 ---
 
@@ -66,8 +70,12 @@ sudo add-apt-repository ppa:deadsnakes/ppa -y
 sudo apt update
 sudo apt install python3.12 -y
 ```
+![Screenshot 2025-04-16 110214](https://github.com/user-attachments/assets/a86238ff-acb0-4084-8e52-9edf85ba4023)
+![Screenshot 2025-04-16 110356](https://github.com/user-attachments/assets/6e4a1772-5c6c-455a-bb90-c0bf1382d327)
+
 
 Check version:
 ```bash
 python3.12 --version
 ```
+![Screenshot 2025-04-16 110416](https://github.com/user-attachments/assets/d7c379b1-8837-488d-bbbb-2739e213321a)
