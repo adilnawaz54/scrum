@@ -2,9 +2,9 @@
 
 ---
 
-| Created     | Version | Author        | Comment | Reviewer         |
-|-------------|---------|---------------|---------|------------------|
-| 15-04-2025  | V1      | Adil Nawaz    |         | Pritam  |
+| Created     | Version | Author        | Comment                 | Reviewer         |
+|-------------|---------|---------------|-------------------------|------------------|
+| 15-04-2025  | V1      | Adil Nawaz    |   Internal Reviewer     | Pritam           |
 
 ---
 
