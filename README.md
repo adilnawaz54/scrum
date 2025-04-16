@@ -1,4 +1,4 @@
-![Screenshot 2025-04-16 105456](https://github.com/user-attachments/assets/06097167-62e1-4e86-98e4-dd5e4c033b89)##  Step-by-Step Guide: Install Python in Ubuntu
+##  Step-by-Step Guide: Install Python in Ubuntu
 
 ###   Check if Python is Already Installed
 
