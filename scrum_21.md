@@ -1,4 +1,4 @@
-##  SOP: Managing Python Dependencies with requirements.txt
+#  SOP: Managing Python Dependencies with requirements.txt
 
 
 ---
