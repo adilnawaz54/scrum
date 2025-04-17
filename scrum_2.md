@@ -7,42 +7,42 @@
 ---
 
 
+
 ##  Table of Contents
 
-1.  [Introduction](#-1-introduction)  
-2.  [Why to use Ubuntu?](#-2-why-to-use-ubuntu)  
-   -  [2.1. Free & Open Source](#-21-free--open-source)  
-   -  [2.2. User-Friendly](#-22-user-friendly)  
-   -  [2.3. Developer-Friendly](#-23-developer-friendly)  
-   -  [2.4. Strong Community & Documentation](#-24-strong-community--documentation)  
-   -  [2.5. Regular & Reliable Updates](#-25-regular--reliable-updates)  
-   -  [2.6. Secure by Design](#-26-secure-by-design)  
-   -  [2.7. Cloud & DevOps Ready](#-27-cloud--devops-ready)  
-   -  [2.8. Lightweight & Flexible](#-28-lightweight--flexible)  
-      [What is Ubuntu?](#-3-what-is-ubuntu)  
-      [Ubuntu Versions & Releases](#-4-ubuntu-versions--releases)  
-      [Security Features](#-5-security-features)  
-      [Ubuntu Use Cases](#-6-ubuntu-use-cases)  
-      [What Are Flavours in Linux?](#-7-what-are-flavours-in-linux)  
-   -  [7.1 Major Flavours of Linux (Distros)](#-71-major-flavours-of-linux-distros)  
-      [Ubuntu Architecture Overview](#-8-ubuntu-architecture-overview)  
-   -  [8.1. Hardware Layer](#-81-hardware-layer)  
-   -  [8.2. Linux Kernel](#-82-linux-kernel)  
-   -  [8.3. Shell / CLI Interface](#-83-shell--cli-interface)  
-   -  [8.4. Application Layer](#-84-application-layer)  
-      [Software Management](#-9-software-management)  
-   - 🔹 [9.1. APT (Advanced Package Tool)](#-81-apt-advanced-package-tool)  
-   - 🔹 [9.2. DPKG (Debian Package Manager)](#-82-dpkg-debian-package-manager)  
-   - 🔹 [9.3. Snap](#-83-snap)  
-   - 🔹 [9.4. Ubuntu Software Center (GUI)](#-84-ubuntu-software-center-gui)  
-10.  [Service Commands in Ubuntu](#-9-service-commands-in-ubuntu)  
-    - 🔧 [10.1 Common Service Commands](#-91-common-service-commands)  
-11.  [Conclusion](#-10-conclusion)  
-12.  [Contacts](#11-contacts)  
-13.  [References](#12-references)  
+1. [**Introduction**](#1-introduction)  
+2. [**Why to use Ubuntu?**](#2-why-to-use-ubuntu)  
+   - [2.1 Free & Open Source](#21-free--open-source)  
+   - [2.2 User-Friendly](#22-user-friendly)  
+   - [2.3 Developer-Friendly](#23-developer-friendly)  
+   - [2.4 Strong Community & Documentation](#24-strong-community--documentation)  
+   - [2.5 Regular & Reliable Updates](#25-regular--reliable-updates)  
+   - [2.6 Secure by Design](#26-secure-by-design)  
+   - [2.7 Cloud & DevOps Ready](#27-cloud--devops-ready)  
+   - [2.8 Lightweight & Flexible](#28-lightweight--flexible)  
+3. [**What is Ubuntu?**](#3-what-is-ubuntu)  
+4. [**Ubuntu Versions & Releases**](#4-ubuntu-versions--releases)  
+5. [**Security Features**](#5-security-features)  
+6. [**Ubuntu Use Cases**](#6-ubuntu-use-cases)  
+7. [**What Are Flavours in Linux?**](#7-what-are-flavours-in-linux)  
+   - [7.1 Major Flavours of Linux (Distros)](#71-major-flavours-of-linux-distros)  
+8. [**Ubuntu Architecture Overview**](#8-ubuntu-architecture-overview)  
+   - [8.1 Hardware Layer](#81-hardware-layer)  
+   - [8.2 Linux Kernel](#82-linux-kernel)  
+   - [8.3 Shell / CLI Interface](#83-shell--cli-interface)  
+   - [8.4 Application Layer](#84-application-layer)  
+9. [**Software Management**](#9-software-management)  
+   - [9.1 APT (Advanced Package Tool)](#apt-advanced-package-tool)  
+   - [9.2 DPKG (Debian Package Manager)](#dpkg-debian-package-manager)  
+   - [9.3 Snap](#snap)  
+   - [9.4 Ubuntu Software Center (GUI)](#ubuntu-software-center-gui)  
+10. [**Service Commands in Ubuntu**](#10-service-commands-in-ubuntu)  
+    - [10.1 Common Service Commands](#91-common-service-commands)  
+11. [**Conclusion**](#10-conclusion)  
+12. [**Contacts**](#11-contacts)  
+13. [**References**](#12-references)  
 
 ---
-
 
 
 ##  1. **Introduction**
@@ -244,7 +244,7 @@ sudo apt install nginx   # Installs a package
 sudo apt upgrade         # Updates installed packages
 ```
 
-## 🔧 **If Installed Using APT how to remove the package**
+##  **If Installed Using APT how to remove the package**
 
 ### 🔹 Remove a package:
 ```bash
