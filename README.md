@@ -1,4 +1,7 @@
-##  Step-by-Step Guide: Install Python in Ubuntu
+# ☕ Documentation: Python Installation Guide
+
+**Common Stack** | **Application** | **Python**  
+**Component:** Python Setup & Installation (Ubuntu)
 
 ---
 ## 👤 **Author Information**
@@ -8,18 +11,39 @@
 
 ---
 
-###   Check if Python is Already Installed
+## 📝 Introduction
+
+This SOP provides a simple, beginner-friendly guide to installing Python3 on Ubuntu-based systems. Whether you're setting up Python for development, deployment, or just running Python apps, this guide ensures you’re up and running in minutes.
+
+---
+
+## ✅ Acceptance Criteria
+
+This SOP must:
+- Provide a clear, step-by-step installation guide for Python
+- Include simple commands that work on Ubuntu 20.04 and above
+- Ensure that Python is correctly installed and configured
+- Be demo-friendly — even someone new can follow and explain it
+
+---
+
+## ⚙️ Python Installation Steps (Ubuntu)
+
+
+### Step 1: Check if Python is Already Installed
 
 ```bash
 python3 --version
 ```
-![image](https://github.com/user-attachments/assets/c1ef7329-c933-4515-954f-82f4d9a4eaa7)
+![Screenshot 2025-04-17 092947](https://github.com/user-attachments/assets/19bcc26d-f838-4503-a036-0ce1f27fc07f)
 
-It's showing **Python version 3.10**. Now we need to update the Python Version. We need to follow some **steps**
-
+It's showing **Python version 3.10**. 
+> 🔍 **Note:** On Ubuntu 20.04 LTS and above, this installs **Python3.10** by default.
 ---
 
-### Step 1: Update System Packages
+### **If Python is not Installed**
+
+### Step 2: Update System Packages
 
 ```bash
 sudo apt update
@@ -30,40 +54,44 @@ This ensures your package lists and software are up to date.
 
 ---
 
-### Step 2: Install Python 3
+### Step 3: Install Python3
 
-Ubuntu comes with Python 3.x by default, but you can install or upgrade it:
-
+To install the latest available version from Ubuntu's repository:
 ```bash
-sudo apt install python3 -y
+sudo apt install python3 
 ```
-![Screenshot 2025-04-16 105321](https://github.com/user-attachments/assets/4219b4d0-3c1d-47da-a44d-a494d3ae2092)
+![image](https://github.com/user-attachments/assets/97676c09-a751-4c81-a7c6-6b83bb6afa0b)
+
 
 ---
 
-### Step 3: Install pip (Python Package Manager)
+### Step 4: Install pip (Python Package Manager)
+
+pip is essential for installing Python packages from PyPI.
 
 ```bash
-sudo apt install python3-pip -y
+sudo apt install python3-pip 
 ```
-![Screenshot 2025-04-16 105456](https://github.com/user-attachments/assets/90005147-05e7-4e6f-94fc-41bb74b700cc)
+
 
 Check pip version:
 
 ```bash
 pip3 --version
 ```
-![Screenshot 2025-04-16 105520](https://github.com/user-attachments/assets/a15e885d-df59-4a2d-a4f1-8d012907dad4)
+![image](https://github.com/user-attachments/assets/26dc7d89-cb17-4881-a1b7-a60ab10ed416)
+
 
 ---
 
-### Step 4: Verify Installation
+### Step 5: Verify Installation
 
 ```bash
 python3 --version
 pip3 --version
 ```
-![Screenshot 2025-04-16 105520](https://github.com/user-attachments/assets/7b4dff82-a727-419f-b500-9671d4897059)
+![image](https://github.com/user-attachments/assets/258bf8d6-f1a7-4ba7-b94a-773a770f4737)
+
 
 ---
 
@@ -78,15 +106,17 @@ sudo add-apt-repository ppa:deadsnakes/ppa -y
 sudo apt update
 sudo apt install python3.12 -y
 ```
-![Screenshot 2025-04-16 110214](https://github.com/user-attachments/assets/a86238ff-acb0-4084-8e52-9edf85ba4023)
-![Screenshot 2025-04-16 110356](https://github.com/user-attachments/assets/6e4a1772-5c6c-455a-bb90-c0bf1382d327)
+![image](https://github.com/user-attachments/assets/c1e9002c-cdf7-447a-be06-988053c8797f)
+![image](https://github.com/user-attachments/assets/beb2aaf4-2dad-444d-989c-3c76fa8eca47)
 
 
 Check version:
 ```bash
 python3.12 --version
 ```
-![Screenshot 2025-04-16 110416](https://github.com/user-attachments/assets/d7c379b1-8837-488d-bbbb-2739e213321a)
+
+![image](https://github.com/user-attachments/assets/beb2aaf4-2dad-444d-989c-3c76fa8eca47)
+
 
 
 ---
