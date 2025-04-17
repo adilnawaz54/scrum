@@ -10,7 +10,7 @@
 ---
 
 
-## 📑 Table of Contents
+##  Table of Contents
 
 1. [Introduction](#introduction)  
 2. [Why We Use It](#why-we-use-it)  
