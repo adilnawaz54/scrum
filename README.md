@@ -1,4 +1,4 @@
-# ☕ Documentation: Python Installation Guide
+#  Documentation: Python Installation Guide
 
 **Common Stack** | **Application** | **Python**  
 **Component:** Python Setup & Installation (Ubuntu)
