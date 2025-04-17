@@ -4,25 +4,25 @@
 ##  **Author Information**
 | Created     | Version | Author        | Comment                 | Reviewer         |
 |-------------|---------|---------------|-------------------------|------------------|
-| 15-04-2025  | V1      | Adil Nawaz    |   Internal Reviewer     | Pritam           |
+| 17-04-2025  | V1      | Adil Nawaz    |   Internal Reviewer     | Pritam           |
 
 ---
 
 
 ##  Table of Contents
 
-1. [ Introduction](#-introduction)   
-2. [ Python Installation Steps (Ubuntu)](#️-python-installation-steps-ubuntu)  
+1. [**Introduction**](#introduction)  
+2. [**Python Installation Steps (Ubuntu)**](#python-installation-steps-ubuntu)  
    - [Step 1: Check if Python is Already Installed](#step-1-check-if-python-is-already-installed)  
    - [Step 2: Update System Packages](#step-2-update-system-packages)  
    - [Step 3: Install Python3](#step-3-install-python3)  
    - [Step 4: Install pip (Python Package Manager)](#step-4-install-pip-python-package-manager)  
    - [Step 5: Verify Installation](#step-5-verify-installation)  
-3. [ Available Python Versions](#-available-python-versions)  
-4. [ Install a Specific Version of Python (e.g., 3.12, 3.13)](#-install-a-specific-version-of-python-eg-312-313)  
-5. [ Conclusion](#-conclusion)  
-6. [ Contacts](#contacts)  
-7. [ References](#-references)  
+3. [**Available Python Versions**](#available-python-versions)  
+4. [**Install a Specific Version of Python**](#install-a-specific-version-of-python-eg-312313)  
+5. [**Conclusion**](#conclusion)  
+6. [**Contacts**](#contacts)  
+7. [**References**](#references)
 
 ---
 
