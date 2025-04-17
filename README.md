@@ -99,39 +99,17 @@ As of April 2025, Python has released numerous versions since its inception. Her
 
 ---
 
-## Python3 Versions and Their Latest Releases
+## 📦 Available Python Versions
 
-### Python 3.x Series
+Here are some commonly used Python versions:
 
-- **Python 3.14**:Development in progress; latest alpha release is 3.14.0a6 
-
-- **Python 3.13**:Latest release is 3.13.3 (April 8, 2025 citeturn0search4
-
-- **Python 3.12**:Latest release is 3.12.10 (April 8, 2025 citeturn0search4
-
-- **Python 3.11**:Latest release is 3.11.12 (April 8, 2025 citeturn0search4
-
-- **Python 3.10**:Latest release is 3.10.17 (April 8, 2025 citeturn0search4
-
-- **Python 3.9**:Latest release is 3.9.22 (April 8, 2025 citeturn0search4
-
-- **Python 3.8**:Latest release is 3.8.20 (September 6, 2024 citeturn0search0
-
-- **Python 3.7**:Latest release is 3.7.17 (June 6, 2023 citeturn0search0
-
-- **Python 3.6**:Latest release is 3.6.15 (September 4, 2021 citeturn0search0
-
-- **Python 3.5**:Latest release is 3.5.10 (September 5, 2020 citeturn0search0
-
-- **Python 3.4**:Latest release is 3.4.10 (March 18, 2019 citeturn0search0
-
-- **Python 3.3**:Latest release is 3.3.7 (September 19, 2017 citeturn0search0
-
-- **Python 3.2**:Latest release is 3.2.6 (October 11, 2014 citeturn0search0
-
-- **Python 3.1**:Latest release is 3.1.5 (April 9, 2012 citeturn0search0
-
-- **Python 3.0**:Latest release is 3.0.1 (February 13, 2009 citeturn0search0
+| Version     | Command to Install           |
+|---------    |------------------------------|
+| Python 3.14 | `sudo apt install python3.14`|
+| Python 3.13 | `sudo apt install python3.13`|
+| Python 3.12 | `sudo apt install python3.12`|
+| Python 3.11 | `sudo apt install python3.11`|
+| Python 3.10 | `sudo apt install python3.10`|(default)
 
 
 **If you want to install specific version of Python**
@@ -146,7 +124,6 @@ sudo apt update
 sudo apt install python3.12 -y
 ```
 ![image](https://github.com/user-attachments/assets/c1e9002c-cdf7-447a-be06-988053c8797f)
-![image](https://github.com/user-attachments/assets/beb2aaf4-2dad-444d-989c-3c76fa8eca47)
 
 
 Check version:
