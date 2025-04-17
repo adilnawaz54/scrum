@@ -95,6 +95,45 @@ pip3 --version
 
 ---
 
+As of April 2025, Python has released numerous versions since its inception. Here's an overview of the major Python versions and their latest releases:
+
+---
+
+## Python3 Versions and Their Latest Releases
+
+### Python 3.x Series
+
+- **Python 3.14**:Development in progress; latest alpha release is 3.14.0a6 
+
+- **Python 3.13**:Latest release is 3.13.3 (April 8, 2025 citeturn0search4
+
+- **Python 3.12**:Latest release is 3.12.10 (April 8, 2025 citeturn0search4
+
+- **Python 3.11**:Latest release is 3.11.12 (April 8, 2025 citeturn0search4
+
+- **Python 3.10**:Latest release is 3.10.17 (April 8, 2025 citeturn0search4
+
+- **Python 3.9**:Latest release is 3.9.22 (April 8, 2025 citeturn0search4
+
+- **Python 3.8**:Latest release is 3.8.20 (September 6, 2024 citeturn0search0
+
+- **Python 3.7**:Latest release is 3.7.17 (June 6, 2023 citeturn0search0
+
+- **Python 3.6**:Latest release is 3.6.15 (September 4, 2021 citeturn0search0
+
+- **Python 3.5**:Latest release is 3.5.10 (September 5, 2020 citeturn0search0
+
+- **Python 3.4**:Latest release is 3.4.10 (March 18, 2019 citeturn0search0
+
+- **Python 3.3**:Latest release is 3.3.7 (September 19, 2017 citeturn0search0
+
+- **Python 3.2**:Latest release is 3.2.6 (October 11, 2014 citeturn0search0
+
+- **Python 3.1**:Latest release is 3.1.5 (April 9, 2012 citeturn0search0
+
+- **Python 3.0**:Latest release is 3.0.1 (February 13, 2009 citeturn0search0
+
+
 **If you want to install specific version of Python**
 
 ## 🧪  Install a Specific Version of Python (e.g., 3.12,3.13)
@@ -117,7 +156,13 @@ python3.12 --version
 
 ![image](https://github.com/user-attachments/assets/beb2aaf4-2dad-444d-989c-3c76fa8eca47)
 
+---
 
+## ☕ Conclusion
+
+Installing Python on Ubuntu is straightforward using the default packages.  
+This SOP ensures anyone — even a beginner — can quickly set up Python, verify it, and choose the right version as per project needs.  
+With Python properly installed, you're now ready to build, run, or deploy Python based applications with confidence.
 
 ---
 
@@ -128,3 +173,12 @@ python3.12 --version
 | Adil Nawaz   | adil.nawaz.snaatak@mygurukulam.co             |
 
 ---
+
+## 🔗 References
+
+| Title     | Link                                      |
+|-----------|-------------------------------------------|
+| Python    | (https://www.python.org/downloads/)           |
+
+---
+
