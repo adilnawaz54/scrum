@@ -80,47 +80,17 @@ Ensure the following before executing the playbook:
 ## 6. Features of Ansible Playbook
 
 
-###  6.1. **Human-Readable (YAML Format)**
-
-
-###  6.2. **Declarative**
-
-
-
-###  6.3. **Task Automation**
-
-
-
-###  6.4. **Idempotent**
-
-
-
-
-###  6.5. **Supports Roles and Variables**
-
-
-
-
-###  6.6. **Inventory Targeting**
-
-
-
-###  6.7. **Privilege Escalation (sudo/become)**
-
-
-
-###  6.8. **Conditionals and Loops**
-
-
-
-###  6.9. **Handlers**
-
-
-
-###  6.10. **Extensible with Custom Modules**
-
-
-
+| Key                         | Description                                      | 
+|-----------------------------------|--------------------------------------------------|
+| Human-Readable (YAML Format)     | Clean and easy to read      |                               
+| Declarative     |   describe the desired state |        
+| Task Automation |   Perform multiple tasks      
+| Idempotent      |  Prevents unnecessary re-execution or duplication.
+| Supports Roles and Variables     | Let you organize tasks, handlers, templates, and files for better reusability |
+| Privilege Escalation (sudo/become) | Easily run tasks with elevated privileges. |
+| Conditionals and Loops     | Use when to run tasks conditionally. |
+| Handlers     | Special tasks that run only when notified |
+| Extensible with Custom Modules     | write your own modules in Python or use thousands of built-in ones. |
 
 ---
 
