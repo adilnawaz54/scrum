@@ -80,6 +80,64 @@ It's driven by a special file called a **Makefile**.
 
 ---
 
+## 4. Workflow of **make**
+![make workflow](https://github.com/user-attachments/assets/76b3ecc7-7258-4f88-87d3-0f208c6fe102)
+
+ **How Workflow works**
+
+###  **4.1. Start / Run `make`**
+You initiate the process by typing a command like:
+```bash
+make build
+```
+or just:
+```bash
+make
+```
+(if there's a default target)
+
+---
+
+###  **4.2. Read the Makefile**
+`make` looks for a file named `Makefile` (or `makefile`) in the current directory.
+
+It parses:
+- **Targets**: names like `build`, `test`, `run`
+- **Dependencies**: files or other targets required
+- **Commands**: what to execute if dependencies are missing or outdated
+
+---
+
+###  **4.3. Check for Changes**
+Before running any command, `make` checks:
+- Have any dependencies (files) changed?
+- Is the output (target) out-of-date compared to its inputs?
+
+If **nothing has changed**, it **skips the command**—that’s the smart part.
+
+---
+
+###  **4.4. Execute Commands**
+If changes are detected or dependencies are unmet:
+- The associated shell commands are executed
+- Each target runs in sequence, unless told otherwise
+
+Example:
+```makefile
+build:
+	go build main.go
+```
+---
+
+###  **4.5. Target Complete / Done**
+Once the commands are executed successfully:
+- The target is marked as **up to date**
+- `make` exits gracefully
+
+If any command fails (non-zero exit code), `make` stops and shows the error.
+
+---
+
 ## 4. What is a Makefile?
 
 A **Makefile** is just a text file that defines:
