@@ -6,6 +6,25 @@
 | 18-04-2025  | V1    | Adil Nawaz    |Internal Review      | Pritam           |
 ---
 
+
+## 📘 Table of Contents
+
+1. [Introduction](#1-introduction)  
+2. [Why do we use Make?](#2-why-do-we-use-make)  
+   2.1. [Automate Repetitive Tasks](#21-automate-repetitive-tasks)  
+   2.2. [Manage Dependencies](#22-manage-dependencies)  
+   2.3. [Language-Agnostic Tooling](#23-language-agnostic-tooling)  
+   2.4. [Faster Onboarding](#24-faster-onboarding)  
+   2.5. [Lightweight & Built-in](#25-lightweight--built-in)  
+3. [What is `make`?](#3-what-is-make)  
+4. [What is a Makefile?](#4-what-is-a-makefile)  
+5. [Conclusion](#5-conclusion)  
+6. [Contacts](#6-contacts)  
+7. [References](#7-references)  
+
+---
+
+
 ##  1. **Introduction**
 The documentation provides you a basic understanding of why we use `make` and what are the benefits of using **make** in our project. We create a makefile which is a **to-do list for your project**, where `make` figures out **what needs to be done** and does it efficiently.
 
