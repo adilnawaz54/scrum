@@ -148,12 +148,12 @@ Great topic! Let's break it down 👇
 
 | Use Case         | Example                   |
 |------------------|---------------------------|
-| Desktop OS       | Personal laptops, offices |
-| Web Servers      | Apache/Nginx hosting      |
-| DevOps & CI/CD   | Jenkins, Ansible, Docker  |
+| Desktop OS       | Ubuntu is widely used as a desktop operating system due to its clean user interface, easy software management, strong community support, and security. |
+| Web Servers      | Ubuntu Server edition is a popular choice for running web servers due to its stability, security updates, and long-term support (LTS) releases.      |
+| DevOps & CI/CD   | Ubuntu integrates well with automation tools like Jenkins, Ansible, Docker, and Kubernetes.  |
 | Cloud Images     | AWS EC2 Ubuntu AMIs       |
-| Containers       | Docker base images        |
-| IoT              | Ubuntu Core (lightweight) |
+| Containers       | Ubuntu is often used as the base image in Docker containers        |
+
 
 
 ##  7. What Are **Flavours in Linux**?
