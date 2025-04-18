@@ -6,7 +6,7 @@
 | 15-04-2025  | V1.2    | Adil Nawaz    |Internal Review      | Pritam           |
 | 18-04-2025  | V2.2    | Adil Nawaz    | L0      | Shreya Jaiswal           |
 ---
----
+
 
 
 
@@ -45,6 +45,8 @@ Ubuntu is a beginner-friendly Linux OS that’s free, open-source, and widely us
 ##  2. What is Ubuntu?
 Ubuntu is a **free and open-source Linux-based operating system** developed and maintained by **Canonical Ltd.** It is one of the most popular Linux distributions in the world, known for its ease of use, regular updates, and strong community support.
 
+| **Feature**             | **Highlights**                                                                 |
+|--------------------------|--------------------------------------------------------------------------------|
 | **First released**       | **October 2004**                         |
 | **Based on**           | **Debian Linux**                               |
 | **Uses**        | **APT package manager** and `.deb` packages                        |
