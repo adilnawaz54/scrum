@@ -1,13 +1,13 @@
-#  Documentation: Operating System - Ubuntu
+#  Documentation: Introduction on Make
 
 
 | Created     | Version | Author        | Comment             | Reviewer         |
 |-------------|---------|---------------|---------------------|------------------|
-| 15-04-2025  | V1.2    | Adil Nawaz    |Internal Review      | Pritam           |
+| 18-04-2025  | V1    | Adil Nawaz    |Internal Review      | Pritam           |
 ---
 
 ##  1. **Introduction**
-The documentation provides you a basic understanding of why we use `make` and what are the benefits of using `make` in our project. We create a makefile which is a **to-do list for your project**, where `make` figures out **what needs to be done** and does it efficiently.
+The documentation provides you a basic understanding of why we use `make` and what are the benefits of using **make** in our project. We create a makefile which is a **to-do list for your project**, where `make` figures out **what needs to be done** and does it efficiently.
 
 ---
 
