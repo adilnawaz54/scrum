@@ -232,11 +232,11 @@ Ubuntu is built on the **Linux kernel** and structured into multiple **layers** 
 
 Ubuntu is based on **Debian**, so it uses **APT** (Advanced Package Tool) for package management.
 
-
-| **Tool**  | **Description** |
-| **APT** (Advanced Package Tool) | High-level CLI tool for `.deb` packages. Resolves dependencies and uses online repos. | 
-| **DPKG** (Debian Package) | Low-level tool to manage `.deb` files locally. No dependency resolution. | 
-| **Snap** | Canonical's containerized package system. Auto-updates, cross-platform. |
+| **Tool**      | **Description**  | 
+|---------------|-------|
+| **APT** (Advanced Package Tool)  | High-level CLI tool for `.deb` packages. Resolves dependencies and uses online repos  | 
+| **DPKG** (Debian Package)  | Low-level tool to manage `.deb` files locally. No dependency resolution  |
+| **Snap**  | Canonical's containerized package system. Auto-updates, cross-platform |
 
 ---
 
