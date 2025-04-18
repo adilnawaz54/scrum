@@ -12,46 +12,46 @@
 ##  2. **Why do we use Make?**
 **make** is a build automation tool that automatically builds and manages dependencies.
 
-### 2.1. **Automate Repetitive Tasks**
-Instead of running long commands every time, you just run:
-```bash
-make test
-make build
-make run
-```
- `make` executes the exact commands you define in a `Makefile`.
+	### 2.1. **Automate Repetitive Tasks**
+	Instead of running long commands every time, you just run:
+	```bash
+	make test
+	make build
+	make run
+	```
+	 `make` executes the exact commands you define in a `Makefile`.
 
----
+	---
 
-### 2.2. **Manage Dependencies**
-Originally built for compiling C/C++ programs, `make` tracks which files have changed and only rebuilds what’s necessary.  
+	### 2.2. **Manage Dependencies**
+	Originally built for compiling C/C++ programs, `make` tracks which files have changed and only rebuilds what’s 		necessary.  
 
----
+	---
 
-### 2.3. **Language-Agnostic Tooling**
-You can use `make` for:
-- Compiling C, C++, Rust, Go
-- Running Python scripts
-- Docker builds
-- Linting, testing, code formatting
+	### 2.3. **Language-Agnostic Tooling**
+	You can use `make` for:
+	- Compiling C, C++, Rust, Go
+	- Running Python scripts
+	- Docker builds
+	- Linting, testing, code formatting
 
----
+	---
 
-### 2.4. **Faster Onboarding**
-New developers only need to know:
-```bash
-make setup
-make run
-```
-Instead of learning all the internal commands.
+	### 2.4. **Faster Onboarding**
+	New developers only need to know:
+	```bash
+	make setup
+	make run
+	```
+	Instead of learning all the internal commands.
 
----
+	---
 
-### 2.5. **Lightweight & Built-in**
-- No need to install extra tools — `make` is usually already available on Unix-based systems
-- Cross-compatible and scriptable
+	### 2.5. **Lightweight & Built-in**
+	- No need to install extra tools — `make` is usually already available on Unix-based systems
+	- Cross-compatible and scriptable
 
----
+	---
 
 ##  What is `make`?
 
