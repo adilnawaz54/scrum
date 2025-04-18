@@ -81,7 +81,8 @@ It's driven by a special file called a **Makefile**.
 ---
 
 ## 4. Workflow of **make**
-![Screenshot 2025-04-18 122955](https://github.com/user-attachments/assets/28837820-311b-401c-a891-d91176744241)
+![Screenshot 2025-04-18 122955](https://github.com/user-attachments/assets/54f85852-1c61-4c25-a533-2b4a32a5987e)
+
 
 
 
