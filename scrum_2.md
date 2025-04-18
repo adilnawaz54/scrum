@@ -232,108 +232,13 @@ Ubuntu is built on the **Linux kernel** and structured into multiple **layers** 
 
 Ubuntu is based on **Debian**, so it uses **APT** (Advanced Package Tool) for package management.
 
-### 🔹 8.1. **APT (Advanced Package Tool)**
 
-- Backend tool that manages `.deb` packages
-- Resolves dependencies automatically
-- Pulls from online repositories
+| **Tool** | **Description** |
+|----------|------------------|----------------------|---------------------|-----------|
+| **APT** (Advanced Package Tool) | High-level CLI tool for `.deb` packages. Resolves dependencies and uses online repos. | 
+| **DPKG** (Debian Package) | Low-level tool to manage `.deb` files locally. No dependency resolution. | 
+| **Snap** | Canonical's containerized package system. Auto-updates, cross-platform. |
 
-```bash
-sudo apt update          # Refreshes the package index
-sudo apt install nginx   # Installs a package
-sudo apt upgrade         # Updates installed packages
-```
-
-##  **If Installed Using APT how to remove the package**
-
-### 🔹 Remove a package:
-```bash
-sudo apt remove <package-name>
-```
- Removes the software **but keeps** configuration files.
-
-### 🔹 Example:
-```bash
-sudo apt remove nginx
-```
-### 🔹 Remove + config files (cleaner):
-```bash
-sudo apt purge <package-name>
-```
- Removes software **and** its config files (from `/etc/`).
-
-### 🔹 Example:
-```bash
-sudo apt purge nginx
-```
-### 🔹 Clean unused dependencies:
-```bash
-sudo apt autoremove
-```
- Cleans leftover packages no longer needed (e.g. after uninstalling).
-
----
-### 🔹 8.2. **DPKG (Debian Package Manager)**
-```bash
-sudo dpkg -i package.deb   # Install a local .deb package
-sudo dpkg -l               # List all installed packages
-```
-- Lower-level tool
-- No dependency resolution (APT is smarter)
-
-##  **If Installed Using DPKG how to remove the package**
-
-Example:
-```bash
-sudo dpkg -r google-chrome-stable
-```
----
-
-### 🔹 8.3. **Snap**
-- Containerized packages
-- Developed by Canonical (Ubuntu’s parent company)
-- Updates automatically in the background
-
-```bash
-sudo snap install vlc
-```
-
----
-##  **If Installed Using Snap, how to remove**
-
-Example:
-```bash
-sudo snap remove vlc
-```
----
-
-### 🔹 8.4. **Ubuntu Software Center (GUI)**
-- User-friendly graphical interface
-- Lets you search, install, and remove software
-- Ideal for non-terminal users
-
----
-
-##  9. **Service commands in Ubuntu**
-
-**`service` commands** are used to manage system services (start, stop, restart, etc.). These commands are wrappers around `systemctl` (for systemd) or older init systems.
-
-List of **commonly used `service` commands** in Ubuntu:
-
----
-
-###  Basic Syntax
-
-```bash
-sudo service <service_name> <command>
-```
-**Example:**
-```bash
-sudo service apache2 start
-sudo service ssh status
-sudo service nginx restart
-sudo service mysql stop
-```
 ---
 
 ###  9.1 Common Service Commands
