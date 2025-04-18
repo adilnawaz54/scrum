@@ -164,7 +164,6 @@ go env
 It should show your Go environment:
 - `GOROOT` – Go installation path
 - `GOPATH` – Workspace path
-- `GOOS`, `GOARCH`, etc.
 
 ---
 
