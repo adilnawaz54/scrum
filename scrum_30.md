@@ -4,28 +4,30 @@
 ## **Author Information**
 | Created     | Version | Author        | Comment                 | Reviewer         |
 |-------------|---------|---------------|-------------------------|------------------|
-| 18-04-2025  | V1      | Adil Nawaz    |   Internal Reviewer     | Pritam           |
+| 18-04-2025  | V1.2     | Adil Nawaz    |   Internal Reviewer     | Pritam           |
 
 ---
 
 
-
-
-
-## 📘 Table of Contents
+##  Table of Contents
 
 1. [Introduction](#introduction)  
 2. [Why Go?](#why-go)  
 3. [What is Go?](#what-is-go)  
 4. [Golang Installation Guide (Step by Step)](#golang-installation-guide-step-by-step)  
-    4.1. [Download Go](#1-download-go)  
-    4.2. [Linux Installation](#2-linux-installation)  
-    4.3. [Setup Workspace](#3-setup-workspace)  
-    4.4. [Test Installation](#4-test-installation)  
-    4.5. [Confirm Everything Works](#5-confirm-everything-works)  
-5. [Conclusion](#conclusion)  
-6. [Contact](#contact)  
-7. [References](#references)  
+   - [1. Download Go](#1-download-go)  
+   - [Windows Installation](#windows-installation)  
+   - [macOS Installation](#macos-installation)  
+     - [Option 1: Official Installer](#option-1-official-installer)  
+     - [Option 2: Homebrew](#option-2-homebrew)  
+   - [Linux Installation](#linux-installation)  
+     - [Manual Method](#manual-method)  
+5. [2. Setup Workspace](#2-setup-workspace)  
+6. [3. Test Installation](#3-test-installation)  
+7. [4. Confirm Everything Works](#4-confirm-everything-works)  
+8. [Conclusion](#conclusion)  
+9. [Contact](#contact)  
+10. [References](#references)  
 
 ---
 
@@ -66,6 +68,7 @@ Go was created to address common problems faced in software development, especia
 | Website        | [https://golang.org](https://golang.org) |
 
 
+
 ---
 
 ##  Golang Installation Guide (Step by Step)
@@ -75,11 +78,56 @@ Go was created to address common problems faced in software development, especia
 ##  1. Download Go
 
 Choose the installer for your OS:
+- Windows `.msi`
+- macOS `.pkg`
 - Linux `.tar.gz`
 
 ---
 
-##  2. Linux Installation
+##  Windows Installation
+
+1. **Download** the `.msi` installer from [https://go.dev/dl/](https://go.dev/dl/)
+2. **Run the installer** – accept defaults.
+3. It will install Go in:  
+   ```
+   C:\Program Files\Go
+   ```
+4. Add this to your `PATH` (if not auto-added):
+   ```
+   C:\Program Files\Go\bin
+   ```
+
+To verify:
+```powershell
+go version
+```
+
+---
+
+##  macOS Installation
+
+###  Option 1: Official installer
+
+1. Download `.pkg` from [https://go.dev/dl/](https://go.dev/dl/)
+2. Run the installer – it installs Go to:
+   ```
+   /usr/local/go
+   ```
+
+###  Option 2: Homebrew
+
+```bash
+brew install go
+```
+
+To verify:
+```bash
+go version
+```
+
+---
+
+##  Linux Installation
 
 ### Manual Method:
 
@@ -103,7 +151,7 @@ go version
 
 ---
 
-##  3. Setup Workspace
+##  2. Setup Workspace
 
 Go recommends a directory structure like:
 
@@ -123,7 +171,7 @@ export PATH=$PATH:$GOPATH/bin
 
 ---
 
-##  4. Test Installation
+##  3. Test Installation
 
 Create a test file:
 ```bash
@@ -154,7 +202,7 @@ Hello, World!
 
 ---
 
-##  5. Confirm Everything Works
+##  4. Confirm Everything Works
 
 Run:
 ```bash
@@ -164,6 +212,7 @@ go env
 It should show your Go environment:
 - `GOROOT` – Go installation path
 - `GOPATH` – Workspace path
+- `GOOS`, `GOARCH`, etc.
 
 ---
 
