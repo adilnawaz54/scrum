@@ -1,5 +1,4 @@
 # Golang Installation Documentation
-![image](https://cdn.dribbble.com/userupload/2624050/file/original-59266f4dea1c2aa43f2064cc0f3b165a.png?format=webp&resize=400x300&vertical=center)
 
 ---
 ## **Author Information**
@@ -11,18 +10,26 @@
 
 
 
-## Table of Contents
-1. [Introduction](#introduction)
-2. [Why Go?](#why-go)
-3. [What is Go?](#what-is-go)
-4. [Golang Installation Guide](#Golang Installation Guide)
-5. 
-6. [Conclusion](#conclusion)
-7. [Contacts](#contacts)
-8. [References](#references)
 
+
+## 📘 Table of Contents
+
+1. [Introduction](#introduction)  
+2. [Why Go?](#why-go)  
+3. [What is Go?](#what-is-go)  
+4. [Golang Installation Guide (Step by Step)](#golang-installation-guide-step-by-step)  
+    4.1. [Download Go](#1-download-go)  
+    4.2. [Linux Installation](#2-linux-installation)  
+    4.3. [Setup Workspace](#3-setup-workspace)  
+    4.4. [Test Installation](#4-test-installation)  
+    4.5. [Confirm Everything Works](#5-confirm-everything-works)  
+5. [Conclusion](#conclusion)  
+6. [Contact](#contact)  
+7. [References](#references)  
 
 ---
+
+
 
 ## Introduction
 This documentation outlines the core concepts and practical value of the Go programming language (Golang), highlighting why it was created, what it offers, and step by step installation guide.
@@ -72,7 +79,7 @@ Choose the installer for your OS:
 
 ---
 
-##  Linux Installation
+##  2. Linux Installation
 
 ### Manual Method:
 
@@ -96,7 +103,7 @@ go version
 
 ---
 
-##  2. Setup Workspace
+##  3. Setup Workspace
 
 Go recommends a directory structure like:
 
@@ -116,7 +123,7 @@ export PATH=$PATH:$GOPATH/bin
 
 ---
 
-##  3. Test Installation
+##  4. Test Installation
 
 Create a test file:
 ```bash
@@ -147,7 +154,7 @@ Hello, World!
 
 ---
 
-##  4. Confirm Everything Works
+##  5. Confirm Everything Works
 
 Run:
 ```bash
