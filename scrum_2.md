@@ -89,7 +89,7 @@ Ubuntu is widely chosen by developers, system admins, and even casual users beca
 
 ##  5. Ubuntu Use Cases
 
-| **Use Case **        | **Description**                   |
+| **Use Case**        | **Description**                   |
 |------------------|---------------------------|
 | **Desktop OS**       | Ubuntu is widely used as a desktop operating system due to its clean user interface, easy software management, strong community support, and security. |
 | **Web Servers**      | Ubuntu Server edition is a popular choice for running web servers due to its stability, security updates, and long-term support (LTS) releases.      |
