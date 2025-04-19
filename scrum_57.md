@@ -11,8 +11,28 @@
 
 ---
 
+
+
+##  Table of Contents
+
+1. [**Introduction**](#1-introduction)  
+2. [**What Is Branching?**](#what-is-branching)  
+3. [**Why Do We Need a Branching Strategy?**](#why-do-we-need-a-branching-strategy)  
+4. [**Types of Branching Strategies**](#types-of-branching-strategies)  
+5. [**Advantages of Branching Strategy**](#advantages-of-branching-strategy)  
+6. [**Disadvantages of Branching Strategy**](#disadvantages-of-branching-strategy)  
+7. [**Types of Branches (Git Flow Style)**](#types-of-branches-git-flow-style)  
+8. [**Branching Strategy Best Practices**](#branching-strategy-best-practices)  
+9. [**Conclusion**](#conclusion)  
+10. [**Contacts**](#contacts)  
+11. [**References**](#references)
+
+---
+
+
 ##  1. **Introduction**
 This document provides you a basic understanding of Branching. How branching works and what is the use of branching. How we create, name and merge. We will also get to know advantages and disadvantages of branching. What best practices we should acquire while we working on branching.
+
 ---
 
 
@@ -75,7 +95,6 @@ A good strategy makes collaboration predictable, organized, and safe and to avoi
 
 ---
 
-Would you like a visual flowchart or comparison table of different branching strategies next?
 
 ###  **Types of Branches (Git Flow Style)**
 
