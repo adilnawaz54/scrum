@@ -14,17 +14,20 @@
 
 ---
 
-###  **Table of Contents**
+
+
+
+##  Table of Contents
 
 1. [Introduction](#introduction)  
-2. [To Generate `requirements.txt`](#to-generate-requirementstxt)  
-   - [👉 Follow Documentation](https://github.com/snaatak-Downtime-Crew/Documentation/blob/yuvraj_scrums_20/common_stack/application/python/requirements/documentation/README.md)
-3. [Installing from `requirements.txt`](#installing-from-requirementstxt)
+2. [Installing from requirements.txt](#installing-from-requirementstxt)  
+3. [Generating Dependencies for Requirement.txt](#generating-dependencies-for-requirementtxt)  
+   - [Dependencies list inside Requirement.txt](#dependencies-list-inside-requirementtxt)  
+   - [Example requirements.txt](#example-requirementstxt)  
 4. [Using Virtual Environments](#using-virtual-environments)  
-   - [👉 Follow Documentation](https://github.com/snaatak-Downtime-Crew/Documentation/blob/harsh_scrums_13/common_stack/application/python/virtualenv/documentation/README.md)
-5. [Common `pip install` Issues & Troubleshooting](#common-pip-install-issues--troubleshooting)
-6. [Conclusion](#conclusion)
-7. [Contact](#contact)
+5. [Common pip install Issues & Troubleshooting](#common-pip-install-issues--troubleshooting)  
+6. [Conclusion](#conclusion)  
+7. [Contact](#contact)  
 8. [References](#references)
 
 ---
@@ -57,9 +60,9 @@ This command reads the file and installs every listed dependency.
 ##  Generating Dependencies for Requirement.txt
 Generating dependencies in requirements.txt means listing all the packages your project needs so they can be easily installed later using `pip install -r requirements.txt`
 
----
 
-###  **Dependencies list inside Requirement.txt**
+
+   - ###  **Dependencies list inside Requirement.txt**
 
 | Entry Type                     | Example                          | Description                                                                 |
 |-------------------------------|----------------------------------|-----------------------------------------------------------------------------|
@@ -73,7 +76,7 @@ Generating dependencies in requirements.txt means listing all the packages your 
 
 ---
 
-###  Example `requirements.txt`
+   - ###  Example `requirements.txt`
 
 ```txt
 flask==2.1.1
