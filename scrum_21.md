@@ -8,7 +8,7 @@
 | Created     | Last updated | Version | Author         | Comment | Reviewer |
 |-------------|-----------|---------|----------------|---------|----------|
 | 15-04-2025  | 17-04-2025 | V1.2     | Adil Nawaz |     Internal Review    | Pritam    |
-| 18-04-2025  | 19-04-2025 |  V2.1     |Adil Nawaz |     L0 Review    | Shreya    |
+| 18-04-2025  | 19-04-2025 |  V2.1    |Adil Nawaz |     L0 Review    | Shreya    |
 
 
 
@@ -53,6 +53,36 @@ This command reads the file and installs every listed dependency.
 
 ---
 
+
+##  Generating Dependencies for Requirement.txt
+Generating dependencies in requirements.txt means listing all the packages your project needs so they can be easily installed later using `pip install -r requirements.txt`
+
+---
+
+###  **Dependencies list inside Requirement.txt**
+
+| Entry Type                     | Example                          | Description                                                                 |
+|-------------------------------|----------------------------------|-----------------------------------------------------------------------------|
+| **Exact package version**     | `flask==2.1.1`                   | Locks the version to avoid unexpected updates or breaking changes.         |
+| **Minimum version**           | `requests>=2.25.0`               | Ensures at least this version is installed.                                |
+| **Version range**             | `numpy>=1.18,<1.22`              | Allows updates within a safe range.                                        |
+| **Environment markers**       | `PyYAML; python_version<"3.8"`   | Conditional install based on Python version.                               |
+| **Editable installs**         | `-e ./local_package/`            | Installs a local package in “editable” mode (changes reflect live).        |
+| **GitHub or Git packages**    | `git+https://github.com/user/repo.git@main#egg=package` | Install directly from a Git repository.      |
+| **Recursive files**           | `-r other-requirements.txt`      | Includes another requirements file.                                        |
+
+---
+
+###  Example `requirements.txt`
+
+```txt
+flask==2.1.1
+requests>=2.25.0,<3.0.0
+pandas
+-e ./my-local-lib/
+git+https://github.com/psf/requests.git@master#egg=requests
+-r dev-requirements.txt
+```
 
 ##  Using Virtual Environments
 > 👉 **Follow Documentation**: [Virtual Environments](https://github.com/snaatak-Downtime-Crew/Documentation/blob/harsh_scrums_13/common_stack/application/python/virtualenv/documentation/README.md)
