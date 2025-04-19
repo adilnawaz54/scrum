@@ -1,37 +1,34 @@
 #  SOP: Managing Python Dependencies with requirements.txt
+![image](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSyVrRrhYDmUdt6QBsDkve4SneCW2cFnKk17Rf4HZ10_U2Z1XgfpBopH2OmXj1qjfo9g&usqp=CAU)
 
 
 ---
-## **Author Information**
-| Created     | Version | Author        | Comment                 | Reviewer         |
-|-------------|---------|---------------|-------------------------|------------------|
-| 15-04-2025  | V1      | Adil Nawaz    |   Internal Reviewer     | Pritam           |
+
+##  **Author Information**
+| Created     | Last updated | Version | Author         | Comment | Reviewer |
+|-------------|-----------|---------|----------------|---------|----------|
+| 15-04-2025  | 17-04-2025 | V1.2     | Adil Nawaz |     Internal Review    | Pritam    |
+| 18-04-2025  | 19-04-2025 |  V2.1     |Adil Nawaz |     L0 Review    | Shreya    |
+
+
 
 ---
 
-
-##  Table of Contents
+###  **Table of Contents**
 
 1. [Introduction](#introduction)  
-2. [Why We Use It](#why-we-use-it)  
-3. [What is requirements.txt?](#what-is-requirementstxt)  
-4. [How to Generate requirements.txt](#how-to-generate-requirementstxt)  
-5. [Installing from requirements.txt](#installing-from-requirementstxt)  
-6. [Using Virtual Environments](#using-virtual-environments)  
-   - [Why?](#why)  
-   - [How?](#how)  
-7. [Common Issues & Troubleshooting](#common-issues--troubleshooting)  
-   - [1. Version Conflicts](#1-version-conflicts)  
-   - [2. No Matching Distribution Found](#2-no-matching-distribution-found)  
-   - [3. Install Fails Midway / Very Slow](#3-install-fails-midway--very-slow)  
-   - [4. OS-Specific Packages](#4-os-specific-packages)  
-   - [5. Unicode/Encoding Errors](#5-unicodeencoding-errors)  
-8. [Best Practices](#best-practices)  
-9. [Conclusion](#conclusion)  
-10. [Contact](#contact)  
-11. [References](#references)  
+2. [To Generate `requirements.txt`](#to-generate-requirementstxt)  
+   - [👉 Follow Documentation](https://github.com/snaatak-Downtime-Crew/Documentation/blob/yuvraj_scrums_20/common_stack/application/python/requirements/documentation/README.md)
+3. [Installing from `requirements.txt`](#installing-from-requirementstxt)
+4. [Using Virtual Environments](#using-virtual-environments)  
+   - [👉 Follow Documentation](https://github.com/snaatak-Downtime-Crew/Documentation/blob/harsh_scrums_13/common_stack/application/python/virtualenv/documentation/README.md)
+5. [Common `pip install` Issues & Troubleshooting](#common-pip-install-issues--troubleshooting)
+6. [Conclusion](#conclusion)
+7. [Contact](#contact)
+8. [References](#references)
 
 ---
+
 
 
 
@@ -41,29 +38,9 @@ This SOP outlines how to create, install, and troubleshoot Python dependencies u
 
 ---
 
-###  Why We Use It:
-- It can recreate the **exact same environment**
-- Ensures consistent environments for development, testing, and deployment
-- Makes it easy to install dependencies in one go
-- Helps with version locking to prevent future compatibility issues
-
+> 👉 **Follow Documentation**: [What is requirement.txt and How to generate requirement.txt](https://github.com/snaatak-Downtime-Crew/Documentation/blob/yuvraj_scrums_20/common_stack/application/python/requirements/documentation/README.md)
 ---
 
-##  What is requirements.txt?
-
-`requirements.txt` is a plain text file used to list all the Python packages and versions required to run a project. It allows developers to **recreate the same environment** on other machines or servers.
-
----
-
-##  How to Generate requirements.txt
-
-After setting up and installing all your packages:
-```bash
-pip freeze > requirements.txt
-```
-This captures the exact versions of all installed packages in your current environment.
-
----
 
 ##  Installing from requirements.txt
 
@@ -76,86 +53,28 @@ This command reads the file and installs every listed dependency.
 
 ---
 
+
 ##  Using Virtual Environments
+> 👉 **Follow Documentation**: [Virtual Environments](https://github.com/snaatak-Downtime-Crew/Documentation/blob/harsh_scrums_13/common_stack/application/python/virtualenv/documentation/README.md)
 
-###  Why?
-Virtual environments isolate your project's dependencies from the global Python environment.
-We can create multiple virtual environment for every seperate project which helps to resolve version conflicts.
 
-###  How?
+##  Common `pip install` Issues & Troubleshooting
 
-By creating a seperate environment for the project and there we activate using script and perform all task in that environment
--- Keeps Dependencies Isolated
--- Avoids System-wide Installation
--- Simplifies Deployment
--- Cleaner Development
 
-```bash
-# Create virtual environment
-python -m venv venv
-
-# Activate (on Linux)
-source venv/bin/activate
-
-# Install dependencies
-pip install requests flask
-
-# To Deactivate (exit the environment)
-deactivate
-
-```
-Once activated, you're "inside" that virtual environment and any pip install goes that virtual environment.
-After activation, you’ll notice your terminal prompt changes—it'll show the environment name
-
-```
-(venv) your-computer:project-name user$
-
-```
----
-
-##  Common Issues & Troubleshooting
-
-###  1. Version Conflicts
-**Error:** Conflicting requirements between packages.
--  **Fix:** Pin compatible versions in `requirements.txt` manually.
-
-###  2. No Matching Distribution Found
-**Error:** Invalid version or package name.
--  **Fix:** Double-check on https://pypi.org or remove the version constraint.
-
-###  3. Install Fails Midway / Very Slow
--  **Fix:**
-```bash
-pip install --no-cache-dir -r requirements.txt
-```
--  Ensure build tools are installed:
-```bash
-sudo apt install python3-dev build-essential
-```
-
-###  4. OS-Specific Packages
-Some packages are only compatible with Windows/Linux.
--  **Fix:** Use OS-specific `requirements-*.txt` files or add notes.
-
-###  5. Unicode/Encoding Errors
--  **Fix:** Save the file with UTF-8 encoding or regenerate using `pip freeze`.
+| **Issue**                       | **Description**                                                                                           | **Fix**                                                                                                 |
+|--------------------------------|-----------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|
+| **1. Version Conflicts**        | Conflicting requirements between packages.                                                                | Pin compatible versions manually in `requirements.txt`.                                                  |
+| **2. No Matching Distribution** | Invalid version or package name.                                                                          | Double-check on [PyPI](https://pypi.org) or remove the version constraint.                               |
+| **3. Install Fails / Slow**     | Installation fails midway or is very slow.                                                                | Run with `--no-cache-dir`:<br>`pip install --no-cache-dir -r requirements.txt`<br>Install build tools:<br>`sudo apt install python3-dev build-essential` |
+| **4. OS-Specific Packages**     | Some packages are only compatible with specific OS like Windows/Linux.                                    | Use OS-specific `requirements-*.txt` or add notes for compatibility.                                     |
+| **5. Unicode/Encoding Errors**  | Encoding issues in `requirements.txt`.                                                                    | Save file with UTF-8 encoding or regenerate using `pip freeze`.                                          |
 
 ---
 
-##  Best Practices
-
-| Practice                      | Benefit                                            |
-|------------------------------|----------------------------------------------------|
-| Use virtualenv/venv          | Avoids dependency pollution                        |
-| Pin versions                 | Prevents breaking changes                          |
-| Separate dev/prod files      | Keeps production lean and clean                   |
-| Regenerate requirements.txt  | After every major install/update                  |
-
----
 
 ##  Conclusion
 
-Using `requirements.txt` makes it easy to maintain, share, and deploy consistent Python environments. It is essential for any professional or collaborative Python project.
+Using `requirements.txt` makes maintaining, sharing, and deploying consistent Python environments easy. It is essential for any professional or collaborative Python project.
 
 ---
 
@@ -174,6 +93,8 @@ Using `requirements.txt` makes it easy to maintain, share, and deploy consistent
 |-----------|-------------------------------------------|
 | Python    | https://www.freecodecamp.org/news/python-requirementstxt-explained         |
 | Python    | https://docs.mage.ai/development/dependencies/requirements | 
+| documentation requirement.txt    | [generate requirment.txt ](https://github.com/snaatak-Downtime-Crew/Documentation/blob/yuvraj_scrums_20/common_stack/application/python/requirements/documentation/README.md)
+| Virtual Environment    | [Virtual Environments](https://github.com/snaatak-Downtime-Crew/Documentation/blob/harsh_scrums_13/common_stack/application/python/virtualenv/documentation/README.md) | 
+
 
 ---
-
