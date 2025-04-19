@@ -1,26 +1,28 @@
+
 #  Documentation: Introduction on Make
 
 
 | Created     | Version | Author        | Comment             | Reviewer         |
 |-------------|---------|---------------|---------------------|------------------|
 | 18-04-2025  | V1    | Adil Nawaz    |Internal Review      | Pritam           |
+| 19-04-2025  | V2.1    | Adil Nawaz    |L0     | Shreya Jaiswal           |
 ---
 
 
-## 📘 Table of Contents
 
-1. [Introduction](#1-introduction)  
-2. [Why do we use Make?](#2-why-do-we-use-make)  
-   2.1. [Automate Repetitive Tasks](#21-automate-repetitive-tasks)  
-   2.2. [Manage Dependencies](#22-manage-dependencies)  
-   2.3. [Language-Agnostic Tooling](#23-language-agnostic-tooling)  
-   2.4. [Faster Onboarding](#24-faster-onboarding)  
-   2.5. [Lightweight & Built-in](#25-lightweight--built-in)  
-3. [What is `make`?](#3-what-is-make)  
-4. [What is a Makefile?](#4-what-is-a-makefile)  
-5. [Conclusion](#5-conclusion)  
-6. [Contacts](#6-contacts)  
-7. [References](#7-references)  
+
+##  Table of Contents
+
+1. [**Introduction**](#1-introduction)  
+2. [**What is `make`?**](#2-what-is-make)  
+3. [**Why Use `make`?**](#3-why-use-make)  
+4. [**Key Features of `make`**](#4-key-features-of-make)  
+5. [**What is a Makefile?**](#5-what-is-a-makefile)  
+   - [Structure of a Makefile](#structure-of-makefile--how-to-write-inside-makefile)  
+   - [Installing `make`](#to-run-the-makefile-we-need-to-install-make-in-our-system)  
+6. [**Conclusion**](#5-conclusion)  
+7. [**Contacts**](#6-contacts)  
+8. [**References**](#7-references)  
 
 ---
 
@@ -30,118 +32,46 @@ The documentation provides you a basic understanding of why we use `make` and wh
 
 ---
 
-##  2. **Why do we use Make?**
-**make** is a build automation tool that automatically builds and manages dependencies.
-
-### 2.1. **Automate Repetitive Tasks**
-Instead of running long commands every time, you just run:
-```bash
-make test
-make build
-make run
-```
-`make` executes the exact commands you define in a `Makefile`.
+## 2. What is `make`?
+`make` is a **build automation tool** that reads a **Makefile** to:
+- Decide **what needs to be done**
+- Run only the **necessary commands**
+- Work across languages and tools (not just C/C++)
 
 ---
 
-### 2.2. **Manage Dependencies**
-Originally built for compiling C/C++ programs, `make` tracks which files have changed and only rebuilds what’s 		necessary.  
+
+
+### 3. **Why Use `make`?**
+
+| Benefit                        | Description                                                                 |
+|-------------------------------|-----------------------------------------------------------------------------|
+|  Automate Repetitive Tasks  | Replace long shell commands with simple ones like `make build`, `make test`. |
+|  Standardize Workflows      | Teams can share consistent scripts inside a `Makefile`.                     |
+|  Speed Up Onboarding        | New developers only need to run `make setup`—no need to memorize commands.  |
+|  Efficient Build Process     | Only rebuilds what has changed—saves time and system resources.             |
 
 ---
 
-### 2.3. **Language-Agnostic Tooling**
-You can use `make` for:
-- Compiling C, C++, Rust, Go
-- Running Python scripts
-- Docker builds
-- Linting, testing, code formatting
+
+
+
+### 4. **Key Features of `make`**
+
+| Feature                     | Description                                                                 |
+|----------------------------|-----------------------------------------------------------------------------|
+|  **Target-based execution**   | Defines tasks (like `build`, `run`, `test`) and when they should run       |
+|  **Dependency tracking**      | Only executes tasks if dependencies have changed                          |
+|  **Human-readable Makefiles**| Easy to write and understand — looks like a to-do list for your project     |
+|  **Language/tool agnostic**  | Use with Python, Go, Docker, Node.js, Rust, etc.                           |
+|  **Fast and lightweight**     | Comes pre-installed on most Unix systems, no overhead                     |
+|  **Customizable workflows**  | Create flexible targets like `make lint`, `make clean`, `make deploy`     |
+|  **Integrates well with CI/CD** | Works smoothly with Jenkins, GitHub Actions, GitLab CI, etc.              |
 
 ---
 
-### 2.4. **Faster Onboarding**
-New developers only need to know:
-```bash
-make setup
-make run
-```
----
 
-### 2.5. **Lightweight & Built-in**
-- No need to install extra tools — `make` is usually already available on Unix-based systems
-- Cross-compatible and scriptable
-
----
-
-## 3. What is `make`?
-
-**`make`** is a **build automation tool** that automatically builds and manages dependencies for our project, most often used in **C/C++**, but also useful in **Python**, **Go**, **Docker**, and more.
-
-It's driven by a special file called a **Makefile**.
-
----
-
-## 4. Workflow of **make**
-![Screenshot 2025-04-18 122955](https://github.com/user-attachments/assets/54f85852-1c61-4c25-a533-2b4a32a5987e)
-
-
-
-
- **How Workflow works**
-
-###  **4.1. Start / Run `make`**
-You initiate the process by typing a command like:
-```bash
-make build
-```
-or just:
-```bash
-make
-```
-(if there's a default target)
-
----
-
-###  **4.2. Read the Makefile**
-`make` looks for a file named `Makefile` (or `makefile`) in the current directory.
-
-It parses:
-- **Targets**: names like `build`, `test`, `run`
-- **Dependencies**: files or other targets required
-- **Commands**: what to execute if dependencies are missing or outdated
-
----
-
-###  **4.3. Check for Changes**
-Before running any command, `make` checks:
-- Have any dependencies (files) changed?
-- Is the output (target) out-of-date compared to its inputs?
-
-If **nothing has changed**, it **skips the command**—that’s the smart part.
-
----
-
-###  **4.4. Execute Commands**
-If changes are detected or dependencies are unmet:
-- The associated shell commands are executed
-- Each target runs in sequence, unless told otherwise
-
-Example:
-```makefile
-build:
-	go build main.go
-```
----
-
-###  **4.5. Target Complete / Done**
-Once the commands are executed successfully:
-- The target is marked as **up to date**
-- `make` exits gracefully
-
-If any command fails (non-zero exit code), `make` stops and shows the error.
-
----
-
-## 4. What is a Makefile?
+## 5. What is a Makefile?
 
 A **Makefile** is just a text file that defines:
 - What commands to run
@@ -150,36 +80,33 @@ A **Makefile** is just a text file that defines:
 
 ---
 
-## Example:
+  - ### Structure of Makefile ( How to write inside Makefile)
 
 `Makefile` for a Python project:
 
 ```Makefile
 install:
 	pip install -r requirements.txt
-
 run:
 	python app.py
-
 test:
 	pytest
-
 clean:
 	rm -rf __pycache__ *.pyc
 ```
+---
 
-Now from your terminal, we can just run:
 
-```bash
-make install
-make run
-make test
-make clean
-```
+  - ## **To Run the Makefile we need to install make in our system**
+
+> 👉 **Follow Documentation**: [make Installation](https://github.com/snaatak-Downtime-Crew/Documentation/blob/durgesh_scrums_40/common_stack/others/make/sop/README.md)
+>  
+---
+
 
 ##  5. **Conclusion**
 
-Ubuntu stands out as one of the most reliable, user-friendly, and versatile Linux distributions available today. Whether you're a beginner exploring Linux for the first time, a developer building modern applications, or a system administrator managing large-scale infrastructure, **Ubuntu provides a powerful and secure environment** to get the job done.
+**make** simplifies repetitive tasks, improves consistency, and speeds up development. It's lightweight, easy to use, and works across languages and tools—making it a valuable addition to any project.
 
 ---
 
@@ -199,6 +126,6 @@ Ubuntu stands out as one of the most reliable, user-friendly, and versatile Linu
 | [GNU Make Documentation](https://www.gnu.org/software/make/) | Official GNU Make documentation.                |
 | [Make Tutorial](https://opensource.com/article/18/8/what-how-makefile) | Beginner-friendly guide to Makefiles.           |
 | [GNU Make GitHub](https://github.com/mirror/make) | Source code repository for GNU Make.             |
-| [Learn Makefiles](https://makefiletutorial.com/)  | Interactive tutorial on writing Makefiles.       |
+| [make Installation](https://github.com/snaatak-Downtime-Crew/Documentation/blob/durgesh_scrums_40/common_stack/others/make/sop/README.md)| Documentation on make Installation     |
 
 ---
