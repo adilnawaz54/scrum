@@ -8,6 +8,42 @@
 
 ---
 
+
+
+##  Table of Contents
+
+1. [ Purpose](#purpose)  
+2. [ Pre-requisites](#pre-requisites)  
+3. [ System Requirements](#system-requirements)  
+4. [ Dependencies](#dependencies)  
+   - [ Build Time Dependency](#build-time-dependency)  
+   - [ Run Time Dependency](#run-time-dependency)  
+   - [ Other Dependency](#other-dependency)  
+   - [ Important Ports](#important-ports)  
+   - [ Others](#others)  
+5. [ Architecture](#architecture)  
+6. [ Dataflow Diagram](#dataflow-diagram)  
+7. [ Step-by-step Installation of [Application]](#step-by-step-installation-of-application)  
+   - [ Step 1: Install Software Dependencies](#step1-installation-of-software-dependencies)  
+   - [ Step 2: Build/Artifact Generation](#step2-buildartifact-generation)  
+   - [ Step 3: Application Deployment](#step3-application-deployment)  
+8. [ Monitoring](#monitoring)  
+   - [ Metrics](#metrics)  
+   - [ Health Check](#health-check)  
+   - [ Explanation of Health Check Parameters](#explanation-of-parameters-used-in-above-table)  
+9. [ Logging](#logging)  
+   - [ Event Logs](#event-logs)  
+   - [ Authentication & Authorization Logs](#authentication--authorization-logs)  
+   - [ Server Logs](#server-logs)  
+   - [ Threat Logs](#threat-logs)  
+10. [ Disaster Recovery](#disaster-recovery)  
+11. [ High Availability](#high-availability)  
+12. [ Contact Information](#contact-information)  
+13. [ References](#references)  
+
+---
+
+
 ## Purpose
 Explain the purpose of this application. Why there was a need for this application and what problems does it solve.
 
