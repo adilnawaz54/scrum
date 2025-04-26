@@ -7,10 +7,11 @@
 | 17-04-2025  | V1      | Adil Nawaz    |                    | Pritam           | Internal Reviewer|
 | 26-04-2025  | V2.1    | Adil Nawaz    |                    | L0 Reviewer      | Shreya           |
 
+
 ---
 
 
-##  Table of Contents
+# Table of Contents
 
 1. [Introduction](#introduction)  
 2. [Pre-requisites](#pre-requisites)  
@@ -18,18 +19,15 @@
 4. [Dependencies](#dependencies)  
     - [Build Time Dependency](#build-time-dependency)  
     - [Run Time Dependency](#run-time-dependency)  
-    - [Other Dependency](#other-dependency)  
-    - [Important Ports](#important-ports)  
-    - [Others](#others)  
-5. [Architecture](#architecture)  
-6. [Dataflow Diagram](#dataflow-diagram)  
-7. [Step-by-step Installation of [Application]](#step-by-step-installation-of-application)  
+5. [Important Ports](#important-ports)  
+6. [Architecture](#architecture)  
+7. [Dataflow Diagram](#dataflow-diagram)  
+8. [Step-by-step Installation of [application]](#step-by-step-installation-of-application)  
     - [Step 1: Installation of Software Dependencies](#step-1-installation-of-software-dependencies)  
     - [Step 2: Build/Artifact Generation](#step-2-buildartifact-generation)  
     - [Step 3: Application Deployment](#step-3-application-deployment)  
-8. [Troubleshooting](#troubleshooting)  
 9. [Contact Information](#contact-information)  
-10. [References](#references)  
+10. [References](#references)
 
 ---
 
@@ -80,14 +78,17 @@ Before diving into application deployment, let’s ensure your system meets basi
 | 9042          | used by ScyllaDB            |
 
 
-### Architecture
+## Architecture
 
-![Screenshot 2025-04-26 210121](https://github.com/user-attachments/assets/8e2194e8-31fd-449c-adac-271331b47a74)
+![application architecture](https://github.com/user-attachments/assets/2a408d66-aeaa-4741-929b-3129dcbcde24)
 
 
-### Dataflow Diagram
+
+## Dataflow Diagram
 
 Explain the flow of the data in this diagram. How the data is traveling/flowing in this application.
+
+---
 
 ## Step-by-step installation of [application]
 
@@ -95,16 +96,15 @@ Explain the flow of the data in this diagram. How the data is traveling/flowing 
 > 👉 **Follow Documentation**: [Software Installation](https://github.com/snaatak-Downtime-Crew/Documentation/blob/durgesh_scrums_71/templates/documentation_template/software_template/README.md)
 
 **Build Dependency**
-Add the command used to install the dependency in code snippet format. [command]
+   - Add the command used to install the dependency in code snippet format. [command]
 
 **Run time Dependency**
-Add the command used to install the dependency in code snippet format. [command]
+   - Add the command used to install the dependency in code snippet format. [command]
 
 **Other Dependency**
-These are the dependencies specific to integration of your application with 3rd party application.
+   - These are the dependencies specific to integration of your application with 3rd party application.
 
 ### Step2: Build/Artifact Generation
-👉 **You take your raw code → and build it into a ready-to-run executable or deployable unit.**
 
 #### 1. Clone the repository
 ```bash
@@ -119,7 +119,6 @@ make run-migrations
 ```
 This creates tables, keyspaces, etc., in **<database>** based on your migration scripts.
 
----
 
 #### 3. Build the application
 You compile the Go code into a binary (executable file):
@@ -130,21 +129,15 @@ or manually:
 ```bash
 go build -o <application-api>
 ```
----
+
 ### Step3: Application Deployment
-  - Perform the following steps to deploy the software artifact. [command] means starting the application so it is up and running on a server.
-  - For **Java**, it would be:  
-    ```bash
-    java -jar target/salary-0.1.0-RELEASE.jar
-    ```
-  - For **Golang**, if the output was an executable:  
-    ```bash
-    ./employee-api
-    ```
-- Ensure the application deployed is in working state [command] by hitting the URL or using curl command
+  - Deploy the software artifact. [command] by starting the application so it is up and running on a server.
 
+  - Ensure the application deployed is in working state [command] by hitting the URL or using curl command
 
-### Contact Information
+---
+
+## Contact Information
 
 | Name         | Email Address                                 |
 |--------------|-----------------------------------------------|
