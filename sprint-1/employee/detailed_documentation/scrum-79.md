@@ -159,16 +159,9 @@ The Employee REST API, built in Go, uses ScyllaDB for fast data storage, Redis f
 | Links | Descriptions|
 |-------|--------------|
 |(https://redis.io/documentation)|Redis Official Documentation|
-|(https://redis.com/blog/redis-beyond-caching/) | Redis: Beyond Simple Caching|
 |https://www.scylladb.com/|ScyllaDB Homepage Documentation|
-|https://stackoverflow.com/questions/tagged/scylla?tab=Newest|Stackoverflow|
-|https://stackoverflow.com/questions/tagged/migrate|Migrate:stackoverflow docs|
 |https://github.com/golang-migrate/migrate|Migrate Github Docs|
 |https://github.com/golang-migrate/migrate/blob/master/cmd/migrate/README.md|Migrate CLI|
 |https://en.wikipedia.org/wiki/Jq_(programming_language)|Jq|
-|https://www.digitalocean.com/community/tutorials/how-to-transform-json-data-with-jq|Jq Digital Ocean Doc|
 |https://go.dev/doc/|Go Official Documentation|
-|https://awesome-go.com/|Awesome Go|
 |https://swagger.io/tools/swagger-ui/|Swagger UI Documentation|
-|https://swagger.io/docs/open-source-tools/swagger-ui/usage/installation/|Getting Started with Swagger UI|
-|https://swagger.io/resources/articles/best-practices-in-api-documentation/|Best Practices for Using Swagger UI|
