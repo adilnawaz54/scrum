@@ -62,35 +62,43 @@ ScyllaDB follows a distributed architecture where data is automatically replicat
 
 ## Step-by-step installation of ScyllaDB
 
-### Step 1: Add ScyllaDB repository
+
+### Step 1: Create a repo file in your system
+ ```
+sudo mkdir -p /etc/apt/keyrings
+```
+
+
+### Step 2: Add ScyllaDB repository
 
 ```bash
 sudo gpg --homedir /tmp --no-default-keyring --keyring /etc/apt/keyrings/scylladb.gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 491c93b9de7496a7
 sudo wget -O /etc/apt/sources.list.d/scylla.list http://downloads.scylladb.com/deb/debian/scylla-6.1.list
 ```
+![Screenshot 2025-04-26 104516](https://github.com/user-attachments/assets/75dda3cf-255a-4dff-ba49-1d41bc823955)
+![Screenshot 2025-04-26 104559](https://github.com/user-attachments/assets/04d5aa16-dcc1-45bb-bfa3-95728e01693c)
 
-### Step 2: Update package cache
+### Step 3: Update package cache
 
-```bash
-sudo apt-get update
-```
+> 👉 **Follow Step-3**: [update_command](https://github.com/snaatak-Downtime-Crew/Documentation/blob/main/common_stack/operating_system/ubuntu/sop/commoncommands/README.md)
 
-### Step 3:  Now need to install java 11 with below commands
-   
-```
-sudo apt-get install -y openjdk-11-jre-headless
-```
+
+### Step 4:  Install java 11
+
+> 👉 **Follow Documentation**: [Java Installation](https://github.com/snaatak-Downtime-Crew/Documentation/blob/main/common_stack/application/java/installation/guide/README.md   )
+
 ```
 sudo update-java-alternatives --jre-headless -s java-1.11.0-openjdk-amd64
 ```
 
-### Step 4: Install ScyllaDB
+### Step 5: Install ScyllaDB
 
 ```bash
 sudo apt-get install scylla
 ```
+![Screenshot 2025-04-26 104709](https://github.com/user-attachments/assets/71188af0-4ce2-45a9-8e5f-14ca5dab60dd)
 
-### Step 5: Configure ScyllaDB
+### Step 6: Configure ScyllaDB
 
 ```bash
 sudo scylla_setup
@@ -98,7 +106,7 @@ sudo scylla_setup
 
 Follow the prompts to configure ScyllaDB according to your system specifications.
 
-### Step 6: Start ScyllaDB service and check its status
+## Step 7: Start ScyllaDB service and check its status
 
 Start the ScyllaDB service:
 
@@ -112,8 +120,9 @@ Check the status of the ScyllaDB service
 sudo systemctl status scylla-server
 
 ```
+![Screenshot 2025-04-26 110102](https://github.com/user-attachments/assets/747fe549-63ef-456e-82f0-80edf6db9120)
 
-![Screenshot from 2024-09-16 23-52-10](https://github.com/user-attachments/assets/2ffffcc9-e5df-4e0c-8580-b21311e0d833)
+
 
 
 
@@ -146,7 +155,7 @@ authorizer: CassandraAuthorizer
 
 
 
-![Screenshot from 2024-09-16 17-06-07](https://github.com/user-attachments/assets/d5cef51d-2122-427d-8d32-2203cbef1737)
+![Screenshot 2025-04-26 105617](https://github.com/user-attachments/assets/d17c7deb-bb23-4683-9c98-6761ad76bfb3)
 
 
 
@@ -158,7 +167,7 @@ Here are some basic CQL commands to get started with ScyllaDB:
    ```bash
    cqlsh -u cassandra -p cassandra
    ```
-   ![Screenshot from 2024-09-16 23-51-51](https://github.com/user-attachments/assets/5070a12a-a4ef-4bcc-8e46-9e682dd2947e)
+ ![Screenshot 2025-04-26 110607](https://github.com/user-attachments/assets/f425fec5-8467-4f40-91a3-77e996deeab0)
 
 2. Create a keyspace:
    ```sql
@@ -185,7 +194,7 @@ The `CREATE KEYSPACE` command is used to define a new keyspace in ScyllaDB. A ke
 5. Insert 
    ```sql
    INSERT INTO users (user_id, username, email) 
-   VALUES (uuid(), 'amit', 'amit@example.com');
+   VALUES (uuid(), 'adil', 'adil@example.com');
    ```
 
 6. Query 
@@ -212,9 +221,10 @@ The `CREATE KEYSPACE` command is used to define a new keyspace in ScyllaDB. A ke
 
 ## Contact Information
 
-| Name       | Email address     |
-|------------|-------------------|
-| Amit Nagar | amit.nagar.snaatak@mygurukulam.com |
+
+| Name         | Email Address                                 |
+|--------------|-----------------------------------------------|
+| Adil Nawaz | adil.nawaz.snaatak@mygurukulam.co           |
 
 ## References
 
