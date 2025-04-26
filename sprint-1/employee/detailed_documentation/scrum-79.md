@@ -33,15 +33,15 @@ In this document, we will provide a comprehensive overview of the dependencies a
 
 2. **Redis** – An in-memory key-value data store that helps with quick data access through caching.
 
+
 ## Purpose
 The Employee REST API is a Golang-based microservice designed to handle all employee-related transactions within the OT-Microservices ecosystem. It is fully platform-independent, capable of running on any platform. 
 
 
----
-
 
 ### Architecture
 ![Employee_API Architecture drawio](https://github.com/user-attachments/assets/5b87b48d-8399-4ac7-8d49-361de4189828)
+
 
 ###  Pre-Requisites 
 
@@ -65,10 +65,6 @@ The Employee REST API is a Golang-based microservice designed to handle all empl
 | **Performance Improvement**|Offloads read-heavy operations from ScyllaDB, improving overall system performance and scalability.|
 
    
-#### Relevant Resources:
-  -  **[Redis Official Documentation](https://redis.io/documentation)**
-  -  **[Redis: Beyond Simple Caching](https://redis.com/blog/redis-beyond-caching/)**
-
   
  #### What is ScyllaDB:
 ScyllaDB is a high-performance, distributed NoSQL database designed to handle large volumes of data with low latency. It is compatible with Apache Cassandra but offers improved speed and efficiency due to its advanced architecture.
@@ -83,9 +79,6 @@ ScyllaDB is a high-performance, distributed NoSQL database designed to handle la
 |**Scalability**  | Offers horizontal scalability to accommodate growing amounts of data and increased load as the application scales.|
 
 
-#### Relevant Resources:
-- **[ScyllaDB Homepage Documentation](https://www.scylladb.com/)**
-- **[Stackoverflow](https://stackoverflow.com/questions/tagged/scylla?tab=Newest)**
 
 ### Build-Dependencies
  - [Migrations](#what-is-migrations)
@@ -106,11 +99,6 @@ ScyllaDB is a high-performance, distributed NoSQL database designed to handle la
 | **Data Integrity** |Ensure that schema changes do not disrupt existing data or application functionality, maintaining data integrity during updates.           |
 |**Automated Updates** | OFacilitate automated application of schema changes, reducing manual intervention and minimizing the risk of errors.    |
 
-
-#### Relevant Resources:
-- **[Migrate:stackoverflow docs](https://stackoverflow.com/questions/tagged/migrate)**
-- **[Migrate Github Docs](https://github.com/golang-migrate/migrate)**
-- **[Migrate CLI](https://github.com/golang-migrate/migrate/blob/master/cmd/migrate/README.md)**
   
 
 #### What is Jq
@@ -123,10 +111,6 @@ Jq is a powerful command-line tool used for parsing, filtering, and manipulating
 |**Data Filtering**|Allows filtering of JSON data based on specific criteria, such as selecting employees based on their roles or statuses.|
 |**Data Transformation**|Enables transformation of JSON data into different formats or structures for further processing or integration with other systems.|
 |**Debugging and Testing**| Helps in debugging and testing API responses by allowing users to quickly inspect and validate JSON data returned by the Employee API.|
-
-#### Relevant Resources:
-- **[Jq](https://en.wikipedia.org/wiki/Jq_(programming_language))**
-- **[Jq Digital Ocean Doc](https://www.digitalocean.com/community/tutorials/how-to-transform-json-data-with-jq)**
 
 
 
@@ -142,9 +126,7 @@ Go (Golang) is a statically typed, compiled programming language designed by Goo
 |**Scalability**|Leverages Go’s performance features to ensure that the API can scale effectively as the number of employees or transactions grows.|
 |**Integration**|Facilitates easy integration with other services and databases, such as ScyllaDB and Redis, through Go’s robust standard library and third-party packages.|
 
-#### Relevant Resources:
-- **[Go Official Documentation](https://go.dev/doc/))**
-- **[Awesome Go](https://awesome-go.com/))**
+
 
 ### Swagger UI
 Swagger UI is an open-source tool that provides a visual interface for interacting with and exploring RESTful APIs. It generates interactive documentation from OpenAPI specifications, enabling developers and users to easily understand, test, and validate API endpoints without needing to write code manually.
@@ -156,22 +138,17 @@ Swagger UI is an open-source tool that provides a visual interface for interacti
 |**Interactive Testing**|Allows users and developers to test API endpoints directly from the browser interface, sending requests and viewing responses in real-time.|
 |**Improved Usability**| Enhances the developer experience by providing a user-friendly interface for exploring and understanding the API’s functionality and behavior.|
 
-#### POC Documentation Refference Link:
-https://github.com/mygurukulam-p10/Documention/tree/main/OT%20MS%20Understanding/Employee/Setup%20and%20run%20the%20App%20for%20POC%20
-
-#### Relevant Resources:
-- **[Swagger UI Documentation](https://swagger.io/tools/swagger-ui/)**
-- **[Getting Started with Swagger UI](https://swagger.io/docs/open-source-tools/swagger-ui/usage/installation/)**
-- **[Best Practices for Using Swagger UI](https://swagger.io/resources/articles/best-practices-in-api-documentation/)**
 
 #### Conclusion
-The Employee REST API, built using Go, leverages various dependencies to ensure robust, scalable, and high-performance employee data management. Key dependencies like ScyllaDB provide efficient data storage, Redis enhances caching and quick data access, jq facilitates JSON manipulation, and Swagger UI offers clear, interactive API documentation. Together, these components work seamlessly to handle employee-related transactions effectively, providing a reliable solution within the OT-Microservices ecosystem.
+The Employee REST API, built in Go, uses ScyllaDB for fast data storage, Redis for caching, jq for JSON handling, and Swagger UI for interactive documentation—ensuring scalable, high-performance employee data management within the OT-Microservices ecosystem.
 
 #### Contact Information
 For more information, feedback, or assistance, feel free to contact us:
 | Name         | Email address                       |
 |--------------|-------------------------------------|
 | Megha Tyagi  | megha.tyagi.snaatak@mygurukulam.co  |
+
+
 
 #### References
 | Links | Descriptions|
