@@ -51,18 +51,22 @@ Before diving into application deployment, let’s ensure your system meets basi
 
 ### Build Time Dependency
 
-| Name                    | Version                | Description |
-|-------------------------|------------------------|-------------|
-|  <application>          | <version>              |<Description>|
-|  <application>          | <version>              |<Description>|
+| Name          | Version   | Description                                     |
+|---------------|-----------|-------------------------------------------------|
+| Go (Golang)   | 1.20+     | Programming language used to build the API.     |
+| jq            | 1.6       | Command-line tool for processing JSON data.     |
+| Migrate       | v4.15+    | Database migration tool for managing schemas.   |
+| Git           | 2.34+     | Version control tool used for code repository.  |
 
 
 ### Run Time Dependency
 
-| Name                    | Version                | Description |
-|-------------------------|------------------------|-------------|
-|  <application>          | <version>              |<Description>|
-|  <application>          | <version>              |<Description>|
+| Name           | Version   | Description                                    |
+|----------------|-----------|------------------------------------------------|
+| Redis          | 7.2+      | In-memory database used for caching.           |
+| ScyllaDB       | 5.4+      | Primary NoSQL database for storing employee data. |
+| Swagger UI     | 4.15+     | API documentation tool for testing and exploring REST APIs. |
+| Linux OS (Ubuntu) | 22.04 LTS | Operating system environment where the app runs. |
 
 
 
