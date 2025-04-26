@@ -149,11 +149,10 @@ Swagger UI is an open-source tool that provides a visual interface for interacti
 The Employee REST API, built in Go, uses ScyllaDB for fast data storage, Redis for caching, jq for JSON handling, and Swagger UI for interactive documentation—ensuring scalable, high-performance employee data management within the OT-Microservices ecosystem.
 
 #### Contact Information
-For more information, feedback, or assistance, feel free to contact us:
-| Name         | Email address                       |
-|--------------|-------------------------------------|
-| Megha Tyagi  | megha.tyagi.snaatak@mygurukulam.co  |
 
+| Name         | Email Address                                 |
+|--------------|-----------------------------------------------|
+| Adil Nawaz | adil.nawaz.snaatak@mygurukulam.co           |
 
 
 #### References
