@@ -117,22 +117,19 @@ cd <repository-folder>
 ```
 
 #### 2. Run Database Migrations
-Running make run-migrations will create the employee table automatically in your ScyllaDB instance.
+Running make run-migrations will create the employee table automatically in your **<database>** instance.
 ```bash
 make run-migrations
 ```
-This creates tables, keyspaces, etc., in **<database>** based on your migration scripts.
+This creates tables, keyspaces, etc., in **<ScyllaDB>** based on your migration scripts.
 
 
 #### 3. Build the application
-You compile the Go code into a binary (executable file):
+
 ```bash
 make build
 ```
-or manually:
-```bash
-go build -o <application-api>
-```
+You compile the Go code into a binary (executable file)
 
 ### Step3: Application Deployment
   - Deploy the software artifact. [command] by starting the application so it is up and running on a server.
