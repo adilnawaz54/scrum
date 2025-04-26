@@ -4,7 +4,8 @@
 ##  **Author Information**
 | Created     | Version | Author        | Last Updated       | Comment          | Reviewer         |
 |-------------|---------|---------------|--------------------|------------------|------------------|
-| 17-04-2025  | V1      | Adil Nawaz    |                    | Pritam           | Internal Reviewer         |
+| 17-04-2025  | V1      | Adil Nawaz    |                    | Pritam           | Internal Reviewer|
+| 26-04-2025  | V2.1    | Adil Nawaz    |                    | L0 Reviewer      | Shreya           |
 
 ---
 
@@ -95,6 +96,7 @@ Before diving into application deployment, let’s ensure the following Hardware
 ### Architecture
 
 
+
 ### Dataflow Diagram
 
 Explain the flow of the data in this diagram. How the data is traveling/flowing in this application.
@@ -102,6 +104,8 @@ Explain the flow of the data in this diagram. How the data is traveling/flowing 
 ## Step-by-step installation of [application]
 
 ### Step1: Installation of software Dependencies
+> 👉 **Follow Documentation**: [Software Installation](https://github.com/snaatak-Downtime-Crew/Documentation/blob/durgesh_scrums_71/templates/documentation_template/software_template/README.md)
+
 **Build Dependency**
 Add the command used to install the dependency in code snippet format. [command]
 
@@ -112,18 +116,45 @@ Add the command used to install the dependency in code snippet format. [command]
 These are the dependencies specific to integration of your application with 3rd party application.
 
 ### Step2: Build/Artifact Generation
-  - Clone the git repository [commands]
-  - Run the following command inside the directory to build your software artifact. [commands]
+👉 **You take your raw code → and build it into a ready-to-run executable or deployable unit.**
+
+#### 1. Clone the repository
+```bash
+git clone <repository-url>
+cd <repository-folder>
+```
+
+#### 2. Run Database Migrations
+Running make run-migrations will create the employee table automatically in your ScyllaDB instance.
+```bash
+make run-migrations
+```
+This creates tables, keyspaces, etc., in **<database>** based on your migration scripts.
+
+---
+
+#### 3. Build the application
+You compile the Go code into a binary (executable file):
+```bash
+make build
+```
+or manually:
+```bash
+go build -o <application-api>
+```
+---
 ### Step3: Application Deployment
-  - Perform the following steps to deploy the software artifact. [command]
-  - Ensure the application deployed is in working state [command]
+  - Perform the following steps to deploy the software artifact. [command] means starting the application so it is up and running on a server.
+  - For **Java**, it would be:  
+    ```bash
+    java -jar target/salary-0.1.0-RELEASE.jar
+    ```
+  - For **Golang**, if the output was an executable:  
+    ```bash
+    ./employee-api
+    ```
+- Ensure the application deployed is in working state [command] by hitting the URL or using curl command
 
----
-
-## Troubleshooting
-Mention all the common issues that you encountered while performing setup of the Application. If you think there are some specific errors that are seen, you can add their screenshots or give a brief explanation of issue and offer solution to resolve it or guide the user to troubleshoot easily.
-
----
 
 ### Contact Information
 
