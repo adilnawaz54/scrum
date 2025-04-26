@@ -5,7 +5,7 @@
 | Created     | Version | Author        | Last Updated       | Comment          | Reviewer         |
 |-------------|---------|---------------|--------------------|------------------|------------------|
 | 17-04-2025  | V1      | Adil Nawaz    |                    | Pritam           | Internal Reviewer|
-| 26-04-2025  | V2.1    | Adil Nawaz    |                    | L0 Reviewer      | Shreya           |
+| 26-04-2025  | V2.1    | Adil Nawaz    | 26-04-2025         | L0 Reviewer      | Shreya           |
 
 
 ---
