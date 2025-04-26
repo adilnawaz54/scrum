@@ -83,13 +83,9 @@ sudo wget -O /etc/apt/sources.list.d/scylla.list http://downloads.scylladb.com/d
 > 👉 **Follow Step-3**: [update_command](https://github.com/snaatak-Downtime-Crew/Documentation/blob/main/common_stack/operating_system/ubuntu/sop/commoncommands/README.md)
 
 
-### Step 4:  Install java 11
+### Step 4:  Install java 11 & update
 
 > 👉 **Follow Documentation**: [Java Installation](https://github.com/snaatak-Downtime-Crew/Documentation/blob/main/common_stack/application/java/installation/guide/README.md   )
-
-```
-sudo update-java-alternatives --jre-headless -s java-1.11.0-openjdk-amd64
-```
 
 ### Step 5: Install ScyllaDB
 
@@ -126,7 +122,7 @@ sudo systemctl status scylla-server
 
 
 
-### Step 7: Verify ScyllaDB Installation
+### Step 8: Verify ScyllaDB Installation
 
 ```
  Use nodetool to check the status of your ScyllaDB nodes
@@ -134,7 +130,7 @@ sudo systemctl status scylla-server
 ```bash
 nodetool status
 ```
-### Step 8. Configure user Scylla 
+### Step 9. Configure user Scylla 
 ```
 sudo vi /etc/scylla/scylla.yaml
 ```
