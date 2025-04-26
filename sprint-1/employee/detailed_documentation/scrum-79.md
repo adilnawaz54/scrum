@@ -5,22 +5,28 @@
 |-------------|-----------|---------|----------------|---------|----------|
 | 25-04-2025  |           | V1     | Adil Nawaz |     Internal Review    | Pritam    |
 
+---
 
+# Table of Contents
 
-
-
-
-## Table of Contents
-1. [Employee-api](#employee-rest-api)
-2. [Architecture](#architecture)
-3. [Pre-Requisites](#pre-requisites)
-4. [Build-Dependencies](#build-dependencies)
-5. [Golang](#golang)
-6. [Swagger UI](#swagger-ui)
-7. [POC Doc](#poc-documentation-refference-link)
-8. [Conclusion](#conclusion)
-9. [Contact Information](#contact-information)
-10. [References](#references)
+1. [Overview](#overview)  
+2. [Purpose](#purpose)  
+3. [Architecture](#architecture)  
+4. [Pre-Requisites](#pre-requisites)  
+    - [Definition of Redis](#defination-of-redis)  
+    - [Redis in Employee REST API](#redis-in-employee-rest-api)  
+    - [What is ScyllaDB](#what-is-scylladb)  
+    - [ScyllaDB in Employee REST API](#scylladb-in-employee-rest-api)  
+5. [Build-Dependencies](#build-dependencies)  
+    - [What is Migrations](#what-is-migrations)  
+    - [Migrations in Employee REST API](#migrations-in-employee-rest-api)  
+    - [What is Jq](#what-is-jq)  
+    - [Jq in Employee REST API](#jq-in-employee-rest-api)  
+6. [Golang](#golang)  
+7. [Swagger UI](#swagger-ui)   
+8. [Conclusion](#conclusion)  
+9. [Contact Information](#contact-information)  
+10. [References](#references)  
 
 ---
 
