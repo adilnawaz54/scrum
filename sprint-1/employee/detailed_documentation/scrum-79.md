@@ -8,8 +8,7 @@
 
 
 
-## Overview
-In this document, we will provide a comprehensive overview of the dependencies associated with the Employee API and elucidate their roles and functionalities. The Employee API is a critical component of our microservices architecture, designed to handle all employee-related transactions efficiently. By understanding the dependencies and their interactions, we can gain insight into the operational aspects of the Employee API, ensuring robust and seamless integration within the overall system.
+
 
 ## Table of Contents
 1. [Employee-api](#employee-rest-api)
@@ -23,6 +22,12 @@ In this document, we will provide a comprehensive overview of the dependencies a
 9. [Contact Information](#contact-information)
 10. [References](#references)
 
+---
+
+## Overview
+In this document, we will provide a comprehensive overview of the dependencies associated with the Employee API and elucidate their roles and functionalities. The Employee API is a critical component of our microservices architecture, designed to handle all employee-related transactions efficiently. By understanding the dependencies and their interactions, we can gain insight into the operational aspects of the Employee API, ensuring robust and seamless integration within the overall system.
+
+## Purpose
 
 
 
