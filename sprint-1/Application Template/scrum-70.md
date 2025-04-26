@@ -34,10 +34,11 @@
 ---
 
 ## Introduction
-Explain the purpose of this application. Why there was a need for this application and what problems does it solve.
+This template provides a ready-to-use foundation for building scalable and maintainable applications.  
+It helps standardize project setup, speed up development, and ensure clean architecture.
 
 ## Pre-requisites
-Before diving into application deployment, let’s ensure the following Hardware, Software and Security requirements are met.
+Before diving into application deployment, let’s ensure your system meets basic hardware requirements and has necessary tools like Git, Docker, and language runtimes installed. 
 
 ## System Requirements
 
@@ -56,8 +57,7 @@ Before diving into application deployment, let’s ensure the following Hardware
 |-------------------------|------------------------|-------------|
 |  <application>          | <version>              |<Description>|
 |  <application>          | <version>              |<Description>|
-|  <application>          | <version>              |<Description>|
-|  <application>          | <version>              |<Description>|
+
 
 ### Run Time Dependency
 
@@ -67,13 +67,6 @@ Before diving into application deployment, let’s ensure the following Hardware
 |  <application>          | <version>              |<Description>|
 
 
-
-### Other Dependency
-
-| Name                    | Version                | Description |
-|-------------------------|------------------------|-------------|
-|  <application>          | <version>              |<Description>|
-|  <application>          | <version>              |<Description>|
 
 ### Important Ports
 
@@ -85,12 +78,6 @@ Before diving into application deployment, let’s ensure the following Hardware
 | Outbon Traffic         | Description |
 |-------------------------|------------------------|
 | 9042          | used by ScyllaDB            |
-
-### Others
-
-| Others                  | Description            |
-|-------------------------|------------------------|
-| Additional Requirements | Description            |
 
 
 ### Architecture
