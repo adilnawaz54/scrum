@@ -95,6 +95,7 @@ Before diving into application deployment, let’s ensure the following Hardware
 
 ### Architecture
 
+![Screenshot 2025-04-26 210121](https://github.com/user-attachments/assets/8e2194e8-31fd-449c-adac-271331b47a74)
 
 
 ### Dataflow Diagram
