@@ -94,15 +94,9 @@ sudo apt-get install scylla
 ```
 ![Screenshot 2025-04-26 104709](https://github.com/user-attachments/assets/71188af0-4ce2-45a9-8e5f-14ca5dab60dd)
 
-### Step 6: Configure ScyllaDB
 
-```bash
-sudo scylla_setup
-```
 
-Follow the prompts to configure ScyllaDB according to your system specifications.
-
-## Step 7: Start ScyllaDB service and check its status
+### Step 6: Start ScyllaDB service and check its status
 
 Start the ScyllaDB service:
 
@@ -122,7 +116,7 @@ sudo systemctl status scylla-server
 
 
 
-### Step 8: Verify ScyllaDB Installation
+### Step 7: Verify ScyllaDB Installation
 
 ```
  Use nodetool to check the status of your ScyllaDB nodes
@@ -130,7 +124,7 @@ sudo systemctl status scylla-server
 ```bash
 nodetool status
 ```
-### Step 9. Configure user Scylla 
+### Step 8. Configure user Scylla 
 ```
 sudo vi /etc/scylla/scylla.yaml
 ```
