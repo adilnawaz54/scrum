@@ -10,19 +10,22 @@
 
 ---
 
+
 # Table of Contents
 
-1. **Introduction**  
-2. **Why Use Monorepo?**  
-3. **Features**  
-4. **Advantages of Monorepo**  
-5. **Disadvantages of Monorepo**  
-6. **Best Practices for Monorepo Management**  
-7. **Conclusion**  
-8. **Contact Information**  
-9. **References**
+1. [Introduction](#introduction)  
+2. [Why use Monorepo?](#why-use-monorepo)  
+3. [Features](#features)  
+4. [Advantages of Monorepo](#advantages-of-monorepo)  
+5. [Disadvantages of Monorepo](#disadvantages-of-monorepo)  
+6. [Challenges Faced in Monorepo](#challenges-faced-in-monorepo)  
+7. [Best Practices for Monorepo Management](#best-practices-for-monorepo-management)  
+8. [Conclusion](#conclusion)  
+9. [Contact Information](#contact-information)  
+10. [References](#references)
 
 ---
+
 
 ## Introduction
 A **Monorepo** (short for Monolithic Repository) is a software development strategy where all the code for multiple projects, services, or libraries is stored in a single shared repository.
