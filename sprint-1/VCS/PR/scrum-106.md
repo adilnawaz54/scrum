@@ -9,19 +9,19 @@
 ---
 
 
-
 ## Table of Contents
 
 1. [Introduction](#introduction)
 2. [What is a Pull Request?](#what-is-a-pull-request)
 3. [Features of Pull Requests](#features-of-pull-requests)
 4. [Why Do We Use Pull Requests](#why-do-we-use-pull-requests)
-5. [Advantages](#advantages)
-6. [Disadvantages of Pull Requests](#disadvantages-of-pull-requests)
-7. [Best Practices for Pull Requests](#best-practices-for-pull-requests)
-8. [Conclusion](#conclusion)
-9. [Contact Information](#contact-information)
-10. [References](#references)
+5. [How to Use Pull Request](#how-to-use-pull-request)
+6. [Advantages of Pull Requests](#advantages-of-pull-requests)
+7. [Disadvantages of Pull Requests](#disadvantages-of-pull-requests)
+8. [Best Practices for Pull Requests](#best-practices-for-pull-requests)
+9. [Conclusion](#conclusion)
+10. [Contact Information](#contact-information)
+11. [References](#references)
 
 ---
 
