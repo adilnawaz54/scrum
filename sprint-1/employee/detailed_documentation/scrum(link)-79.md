@@ -3,30 +3,26 @@
 ##  **Author Information**
 | Created     | Last updated | Version | Author         | Comment | Reviewer |
 |-------------|-----------|---------|----------------|---------|----------|
-| 26-04-2025  |           | V1     | Adil Nawaz |     Internal Review    | Pritam    |
+| 26-04-2025  |  28-04-2025  | V1.2     | Adil Nawaz |     Internal Review    | Pritam    |
 
 ---
 
-# Table of Contents
 
-1. [Overview](#overview)  
-2. [Purpose](#purpose)  
-3. [Architecture](#architecture)  
-4. [Pre-Requisites](#pre-requisites)  
-    - [Definition of Redis](#defination-of-redis)  
-    - [Redis in Employee REST API](#redis-in-employee-rest-api)  
-    - [What is ScyllaDB](#what-is-scylladb)  
-    - [ScyllaDB in Employee REST API](#scylladb-in-employee-rest-api)  
-5. [Build-Dependencies](#build-dependencies)  
-    - [What is Migrations](#what-is-migrations)  
-    - [Migrations in Employee REST API](#migrations-in-employee-rest-api)  
-    - [What is Jq](#what-is-jq)  
-    - [Jq in Employee REST API](#jq-in-employee-rest-api)  
-6. [Golang](#golang)  
-7. [Swagger UI](#swagger-ui)   
-8. [Conclusion](#conclusion)  
-9. [Contact Information](#contact-information)  
-10. [References](#references)  
+## Table of Contents
+
+1. [Overview](#overview)
+2. [Purpose](#purpose)
+3. [Architecture](#architecture)
+4. [Pre-Requisites](#pre-requisites)
+    1. [Redis](#redis)
+    2. [ScyllaDB](#scylladb)
+5. [Build-Dependencies](#build-dependencies)
+    1. [Migrations](#migrations)
+    2. [Jq](#jq)
+    3. [Golang](#golang)
+6. [Conclusion](#conclusion)
+7. [Contact Information](#contact-information)
+8. [References](#references)
 
 ---
 
@@ -81,15 +77,6 @@ The Employee REST API is a Golang-based microservice designed to handle all empl
 > 👉 **Follow Documentation**: [Golang](https://github.com/snaatak-Downtime-Crew/Documentation/blob/yuvraj_scrums_29/common_stack/application/golang/introduction/README.md)
 
 
-### Swagger UI
-Swagger UI is an open-source tool that provides a visual interface for interacting with and exploring RESTful APIs. It generates interactive documentation from OpenAPI specifications, enabling developers and users to easily understand, test, and validate API endpoints without needing to write code manually.
-
-#### Swagger UI in Employee REST API
-| Features | Description  |
-|--------------------------|------------------------|
-|**API Documentation**|Automatically generates and displays interactive documentation for the Employee API, detailing available endpoints, request parameters, and response formats.|
-|**Interactive Testing**|Allows users and developers to test API endpoints directly from the browser interface, sending requests and viewing responses in real-time.|
-|**Improved Usability**| Enhances the developer experience by providing a user-friendly interface for exploring and understanding the API’s functionality and behavior.|
 
 
 #### Conclusion
