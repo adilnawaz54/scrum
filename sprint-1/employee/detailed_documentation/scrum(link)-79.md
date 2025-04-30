@@ -4,6 +4,7 @@
 | Created     | Last updated | Version | Author         | Comment | Reviewer |
 |-------------|-----------|---------|----------------|---------|----------|
 | 26-04-2025  |  28-04-2025  | V1.2     | Adil Nawaz |     Internal Review    | Pritam    |
+| -04-2025  |  -04-2025  | V2     | Adil Nawaz |   L0    | Shreya    |
 
 ---
 
@@ -50,7 +51,7 @@ The Employee REST API is a Golang-based microservice designed to handle all empl
    - [Redis](#defination-of-redis)
 <img width="47" alt="Redis-Logo-768x480" src="https://github.com/user-attachments/assets/3095ec95-88a7-42f4-921e-91960ae90a9b">
 
-> 👉 **Follow Documentation**: [Add Redis refrence]()
+> 👉 **Follow Documentation**: [Redis](https://github.com/snaatak-Downtime-Crew/Documentation/blob/SCRUMS-85-SHIVANI/ot-ms-understanding/redis/documentation/README.md)
 ---
 
   - [ScyllaDb](#what-is-scylladb)
@@ -98,4 +99,3 @@ The Employee REST API, built in Go, uses ScyllaDB for fast data storage, Redis f
 |https://github.com/golang-migrate/migrate/blob/master/cmd/migrate/README.md|Migrate CLI|
 |https://en.wikipedia.org/wiki/Jq_(programming_language)|Jq|
 |https://go.dev/doc/|Go Official Documentation|
-|https://swagger.io/tools/swagger-ui/|Swagger UI Documentation|
