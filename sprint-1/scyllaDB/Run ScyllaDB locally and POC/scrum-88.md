@@ -54,7 +54,8 @@
 
 ScyllaDB follows a distributed architecture where data is automatically replicated across multiple nodes for fault tolerance and high availability.
 
-![image](https://github.com/user-attachments/assets/ad54b4e0-df36-4290-8b89-fdd51f086bf8)
+![Screenshot 2025-04-26 115456](https://github.com/user-attachments/assets/fce60330-38eb-49ee-bcbe-b0f72b7494d8)
+
 
 
 
@@ -75,8 +76,9 @@ sudo mkdir -p /etc/apt/keyrings
 sudo gpg --homedir /tmp --no-default-keyring --keyring /etc/apt/keyrings/scylladb.gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 491c93b9de7496a7
 sudo wget -O /etc/apt/sources.list.d/scylla.list http://downloads.scylladb.com/deb/debian/scylla-6.1.list
 ```
-![Screenshot 2025-04-26 104516](https://github.com/user-attachments/assets/75dda3cf-255a-4dff-ba49-1d41bc823955)
-![Screenshot 2025-04-26 104559](https://github.com/user-attachments/assets/04d5aa16-dcc1-45bb-bfa3-95728e01693c)
+![Screenshot 2025-04-26 104516](https://github.com/user-attachments/assets/96576d15-6f32-483b-a4e4-bb6327944ef4)
+![Screenshot 2025-04-26 104559](https://github.com/user-attachments/assets/b57ec51a-6b76-4d30-ab4a-b96093e50ab3)
+
 
 ### Step 3: Update package cache
 
@@ -92,7 +94,8 @@ sudo wget -O /etc/apt/sources.list.d/scylla.list http://downloads.scylladb.com/d
 ```bash
 sudo apt-get install scylla
 ```
-![Screenshot 2025-04-26 104709](https://github.com/user-attachments/assets/71188af0-4ce2-45a9-8e5f-14ca5dab60dd)
+![Screenshot 2025-04-26 104709](https://github.com/user-attachments/assets/e248fbb9-d75c-4567-a779-f1687f57c694)
+
 
 
 
@@ -110,7 +113,8 @@ Check the status of the ScyllaDB service
 sudo systemctl status scylla-server
 
 ```
-![Screenshot 2025-04-26 110102](https://github.com/user-attachments/assets/747fe549-63ef-456e-82f0-80edf6db9120)
+![Screenshot 2025-04-26 105102](https://github.com/user-attachments/assets/f303c468-c195-4a79-b2dd-4c6e9ed47f82)
+
 
 
 
@@ -145,7 +149,8 @@ authorizer: CassandraAuthorizer
 
 
 
-![Screenshot 2025-04-26 105617](https://github.com/user-attachments/assets/d17c7deb-bb23-4683-9c98-6761ad76bfb3)
+![Screenshot 2025-04-26 105617](https://github.com/user-attachments/assets/e4095ec5-c1cd-4318-8d30-dfaa7a4ac4ef)
+
 
 
 
@@ -157,7 +162,8 @@ Here are some basic CQL commands to get started with ScyllaDB:
    ```bash
    cqlsh -u cassandra -p cassandra
    ```
- ![Screenshot 2025-04-26 110607](https://github.com/user-attachments/assets/f425fec5-8467-4f40-91a3-77e996deeab0)
+![Screenshot 2025-04-26 110607](https://github.com/user-attachments/assets/4e1ca646-dd14-492d-8a31-d19a55df11d9)
+
 
 2. Create a keyspace:
    ```sql
