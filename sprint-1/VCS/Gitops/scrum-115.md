@@ -3,12 +3,12 @@
 
 
 ##  **Author Information**
-| Created     | Last updated | Version | Author         | Comment | Reviewer |
-|-------------|-----------|---------|----------------|---------|----------|
-| 29-04-2025  |  -04-2025  | V1     | Adil Nawaz |     Internal Review    | Pritam    |
+| Created     | Version | Author        | Last Updated       | Comment          | Reviewer         |
+|-------------|---------|---------------|--------------------|------------------|------------------|
+| 29-04-2025  | V1    | Adil Nawaz    |         | Internal Reviewer | Pritam    |
+|             |       | Adil Nawaz    |          | L0 Reviewer      | Shreya           |
+
   
-## Purpose
-GitOps is a way to manage and deploy applications by using Git as the main source of truth. It builds on DevOps and Infrastructure as Code principles, making it easier to keep everything in sync and automate updates by tracking changes in Git. Essentially, you use Git to control and manage all aspects of your application's deployment and operation.
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -20,11 +20,14 @@ GitOps is a way to manage and deploy applications by using Git as the main sourc
 10. [Contact Information](#contact-information)
 11. [References](#references)
 
-## Introduction
-GitOps is a powerful approach for managing and deploying applications and infrastructure using Git as the single source of truth. By defining the desired state of the system in Git repositories, GitOps enables automated, reliable, and auditable deployments. This document outlines various GitOps strategies, detailing what they are, why they are important, and how different types of GitOps workflows compare.
 
-## What is GitOps?
-GitOps is an operational model that uses Git repositories to manage and control infrastructure and application deployments. It applies Git-based workflows to operations, making Git the central point of truth for system configurations and deployments. GitOps leverages tools and practices that ensure the system's actual state aligns with the desired state defined in Git.
+## Introduction
+This document outlines various GitOps strategies, detailing what they are, why they are important.
+GitOps is a powerful approach for managing and deploying applications and infrastructure using Git as the single source of truth for declarative infrastructure and application configurations 
+
+## What is GitOps Strategies?
+Gitops leverages tools to automate deployments, track changes, and ensure system state matches what is described in Git.
+It applies Git-based workflows to operations, making Git the central point for system configurations and deployments. 
 
 
 ## Why Implement GitOps Strategies?
@@ -45,14 +48,13 @@ GitOps workflows can be categorized based on how they handle configuration and d
 -	How It Works: Changes to configuration files trigger automated deployments to align the actual state with the desired state.
 -	Example Tools: Argo CD, Flux.
 ### 2. Pull-Based GitOps
-![pull](https://github.com/user-attachments/assets/daa23172-ccdb-4cf1-8189-6c58c028950c)
 
--	Description: The system periodically pulls the latest configuration from Git repositories to ensure the desired state is applied.
--	How It Works: The GitOps tool running in the cluster regularly checks the Git repository for changes and applies them if there are discrepancies.
--	Example Tools: Flux, Argo CD (with periodic sync).
+- Pull-Based GitOps, a GitOps agent (like Argo CD or Flux) runs inside a cluster and continuously monitors Git repository for changes. When it detects a difference between the desired state (in Git) and the actual state (in the cluster), it automatically synchronizes the two by applying changes to the cluster.
+
+-	Example Tools: Argo CD,  Flux  
+-	Argo CD: Argo CD constantly polls or uses webhooks to detect changes in the repo.
+ 
 ### 3. Push-Based GitOps
-![push](https://github.com/user-attachments/assets/83b8ed50-0aa0-43a5-a5e9-9fec38f7861e)
-
 -	Description: Changes are pushed to the Git repository, and a webhook or similar mechanism triggers an immediate update to the system.
 -	How It Works: The GitOps tool is notified via webhooks or other notifications when changes are made to the Git repository, prompting an immediate deployment.
 -	Example Tools: Argo CD (with webhook support).
@@ -62,7 +64,7 @@ GitOps workflows can be categorized based on how they handle configuration and d
 -	Example Tools: Argo CD (supports both methods), Flux (with additional tooling for push-based triggers).
 
 ## Comparison of GitOps Workflows
-Here’s a comparison of the different GitOps workflows:
+
 
 | **Feature**              | **Declarative GitOps**                  | **Pull-Based GitOps**                    | **Push-Based GitOps**                     | **Hybrid GitOps**                        |
 |--------------------------|-----------------------------------------|-----------------------------------------|------------------------------------------|-----------------------------------------|
@@ -76,17 +78,16 @@ Here’s a comparison of the different GitOps workflows:
 
 ## Conclusion
 
-Implementing GitOps strategies can greatly enhance the efficiency, consistency, and security of your deployment processes. Each GitOps workflow—declarative, pull-based, push-based, and hybrid—offers unique advantages and trade-offs. Declarative GitOps provides clear, consistent deployments based on configuration files. Pull-based GitOps ensures regular synchronization with the Git repository. Push-based GitOps allows for immediate updates based on changes. Hybrid GitOps combines these approaches to balance regular updates with critical changes. Choosing the right GitOps strategy depends on your specific requirements, including the need for immediate updates, the complexity of your deployment environments, and your team's familiarity with the tools.
+Implementing GitOps improves deployment efficiency, consistency, and security. Declarative GitOps ensures reliable deployments from config files. Pull-based GitOps syncs regularly from Git, while push-based enables immediate updates. Hybrid GitOps balances both approaches. The best strategy depends on your update needs, environment complexity, and team expertise.
 
 
 ## Contact Information
 
 | Name | Email address|
 |------|---------------------|
-| Vinay Bansal | vinay.bansal.snaatak@mygurukulam.co |
+| Adil Nawaz | adil.nawaz.snaatak@mygurukulam.co |
 
 ## References
-For further reading and resources on GitOps, check out the following:
 
 | Links | Descriptions|
 |------|---------------------|
