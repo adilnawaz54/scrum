@@ -128,4 +128,3 @@ Keeping PRs small, providing clear descriptions, and engaging in thoughtful revi
 |https://www.gitkraken.com/learn/git/tutorials/what-is-a-pull-request-in-git |Pull Request |
 |https://axolo.co/blog/p/part-1-what-are-github-pull-requests| Github doc for pull request|
 |https://opensource.com/article/19/7/create-pull-request-github|Opensource.com|
-
