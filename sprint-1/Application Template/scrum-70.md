@@ -4,8 +4,9 @@
 ##  **Author Information**
 | Created     | Version | Author        | Last Updated       | Comment          | Reviewer         |
 |-------------|---------|---------------|--------------------|------------------|------------------|
-| 17-04-2025  | V1      | Adil Nawaz    |                    | Pritam           | Internal Reviewer|
-| 26-04-2025  | V2.1    | Adil Nawaz    | 26-04-2025         | L0 Reviewer      | Shreya           |
+| 17-04-2025  | V1      | Adil Nawaz    | 17-04-2025        | Internal Reviewer| Pritam        |
+| 26-04-2025  | V2.1    | Adil Nawaz    | 28-04-2025         | L0 Reviewer      | Shreya           |
+| 00-05-2025  | V3    | Adil Nawaz    | 00-05-2025         | L1 Reviewer      | Abhiskek           |
 
 
 ---
@@ -83,8 +84,9 @@ Before diving into application deployment, let’s ensure your system meets basi
 
 
 ## Architecture
+![application architecture](https://github.com/user-attachments/assets/10e380ab-6d1a-4fa5-b7d2-8578157097eb)
 
-![application architecture](https://github.com/user-attachments/assets/2a408d66-aeaa-4741-929b-3129dcbcde24)
+
 
 
 
@@ -110,26 +112,10 @@ Explain the flow of the data in this diagram. How the data is traveling/flowing 
 
 ### Step2: Build/Artifact Generation
 
-#### 1. Clone the repository
-```bash
-git clone <repository-url>
-cd <repository-folder>
-```
+Clone the git repository [commands]
 
-#### 2. Run Database Migrations
-Running make run-migrations will create the employee table automatically in your **<database>** instance.
-```bash
-make run-migrations
-```
-This creates tables, keyspaces, etc., in **<ScyllaDB>** based on your migration scripts.
+Run the following command inside the directory to build your software artifact. [commands]
 
-
-#### 3. Build the application
-
-```bash
-make build
-```
-You compile the Go code into a binary (executable file)
 
 ### Step3: Application Deployment
   - Deploy the software artifact. [command] by starting the application so it is up and running on a server.
@@ -149,10 +135,8 @@ You compile the Go code into a binary (executable file)
 
 | **Title**                        | **Link**                                                                                      |
 |----------------------------------|-------------------------------------|
-| Ubuntu Official Documentation  | (https://help.ubuntu.com)          |
-| Ubuntu Releases List           | (https://wiki.ubuntu.com/Releases) |
-
-
+| Ubuntu Official Documentation  | [Ubuntu Documentation](https://help.ubuntu.com)          |
+| Ubuntu Releases List           | [Ubuntu Releases](https://wiki.ubuntu.com/Releases) |
 
 
 
