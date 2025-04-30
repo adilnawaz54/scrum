@@ -10,16 +10,24 @@
 
   
 
-## Table of Contents
-1. [Introduction](#introduction)
-2. [What is GitOps?](#what-is-gitops)
-3. [Why Implement GitOps Strategies?](#why-implement-gitops-strategies)
-4. [Types of GitOps Workflow](#types-of-gitOps-workflow)
-5. [Comparison of GitOps Workflows](#comparison-of-gitOps-workflows)
-6. [Conclusion](#conclusion)
-10. [Contact Information](#contact-information)
-11. [References](#references)
+##  Table of Contents
 
+1. [Introduction](#introduction)  
+2. [What is GitOps Strategies?](#what-is-gitops-strategies)  
+3. [Why Implement GitOps Strategies?](#why-implement-gitops-strategies)  
+4. [Types of GitOps Workflow](#types-of-gitops-workflow)  
+   - [1. Declarative GitOps](#1-declarative-gitops)  
+   - [2. Pull-Based GitOps](#2-pull-based-gitops)  
+   - [3. Push-Based GitOps](#3-push-based-gitops)  
+   - [4. Hybrid GitOps](#4-hybrid-gitops)  
+5. [Comparison of GitOps Workflows](#comparison-of-gitops-workflows)  
+6. [Conclusion](#conclusion)  
+7. [Contact Information](#contact-information)  
+8. [References](#references)  
+
+---
+
+Let me know if you'd like the headings themselves adjusted to be more concise or follow a specific style guide (e.g., APA, MLA, technical documentation standard).
 
 ## Introduction
 This document outlines various GitOps strategies, detailing what they are, why they are important.
