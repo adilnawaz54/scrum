@@ -1,34 +1,40 @@
-# Mono Repo Features
+# Mono Repo 
+<img width="470" alt="image" src="https://github.com/user-attachments/assets/f6ddc0d3-9928-46a5-bc83-075443b4f3c8" />
+
+
+
 
 ---
 
 ##  **Author Information**
 | Created     | Version | Author        | Last Updated       | Comment          | Reviewer         |
 |-------------|---------|---------------|--------------------|------------------|------------------|
-| 26-04-2025  | V1      | Adil Nawaz    |                    | Pritam           | Internal Reviewer|
+| 26-04-2025  | V1.2      | Adil Nawaz    | 28-04-2025                    | Pritam           | Internal Reviewer|
 |             |       | Adil Nawaz    |          | L0 Reviewer      | Shreya           |
 
 ---
+### Table of Contents
 
-
-# Table of Contents
-
-1. [Introduction](#introduction)  
-2. [Why use Monorepo?](#why-use-monorepo)  
-3. [Features](#features)  
-4. [Advantages of Monorepo](#advantages-of-monorepo)  
-5. [Disadvantages of Monorepo](#disadvantages-of-monorepo)  
-6. [Challenges Faced in Monorepo](#challenges-faced-in-monorepo)  
-7. [Best Practices for Monorepo Management](#best-practices-for-monorepo-management)  
-8. [Conclusion](#conclusion)  
-9. [Contact Information](#contact-information)  
-10. [References](#references)
+1. [Introduction](#introduction)
+2. [What is Monolithic Architecture?](#what-is-monolithic-architecture)
+3. [Why Use Monorepo?](#why-use-monorepo)
+4. [Features](#features)
+5. [Architecture](#architecture)
+6. [Advantages of Monorepo](#advantages-of-monorepo)
+7. [Disadvantages of Monorepo](#disadvantages-of-monorepo)
+8. [Best Practices for Monorepo Management](#best-practices-for-monorepo-management)
+9. [Conclusion](#conclusion)
+10. [Contact Information](#contact-information)
+11. [References](#references)
 
 ---
 
 
 ## Introduction
 A **Monorepo** (short for Monolithic Repository) is a software development strategy where all the code for multiple projects, services, or libraries is stored in a single shared repository.
+
+## What is Monolithic Architecture?
+Monolithic architecture is a software design methodology that combines all of an application's components into a single, inseparable unit. Under this architecture, the user interface, business logic, and data access layers are all created, put into use, and maintained as one, unified unit.
 
 ## Why use Mono repo?
 
@@ -51,46 +57,53 @@ A **Monorepo** (short for Monolithic Repository) is a software development strat
 
 ---
 
+## Architecture
+<img width="399" alt="image" src="https://github.com/user-attachments/assets/bf336ce0-ed4d-45b3-8fe0-bf5bd3a4daf5" />
+
+
 ## Advantages of Monorepo
 
-| **Advantage**               | **Description**                                                                 |
-|-------------------------------|---------------------------------------------------------------------------------|
-| **Simplified Dependency Management** | Easier to maintain and update shared libraries across multiple projects.        |
+
+
+| **Aspect**         | **Description**                                                                 |
+|--------------------|--------------------------------------------------------------------------------------------|
+| **Simplicity**     | Easy for developers to understand and modify as all components are bundled together.        |
+| **Cost-Effectiveness** | More economical for startups and small to medium projects due to lower infrastructure needs. |
+| **Performance**     | Offers better performance by reducing inter-component communication overhead.              |
 | **Better Code Reuse**            | Common modules can be reused easily without duplication.                        |
-| **Coordinated Changes**           | Changes affecting multiple projects can be made in a single atomic commit.      |
-| **Unified CI/CD**                 | Centralized build, test, and deployment pipelines ensure consistency.            |
-| **Faster Onboarding**             | New developers can quickly set up and access the entire codebase.               |
-| **Consistent Standards**          | Easier to apply and enforce coding, testing, and deployment standards.           |
-| **Efficient Refactoring**         | Refactor or upgrade across projects easily without managing multiple repos.      |
-| **Single Source of Truth**       | All code, tools, and configurations are kept in one place for easy access.        |
+| **Security**       | Fewer communication points reduce the attack surface, enhancing potential security.         |
+
 
 ---
 
+
 ## Disadvantages of Monorepo
 
-| **Disadvantage**              | **Description**                                                                 |
-|-------------------------------|---------------------------------------------------------------------------------|
-| **Scalability Challenges**        | Very large codebases can lead to slower builds and require specialized tooling. |
-| **Complex Access Control**        | Harder to restrict access to specific parts of the codebase if needed.           |
-| **Increased Build Times**         | Changes in one module might trigger builds/tests across unrelated modules.      |
-| **Tooling Limitations**           | Some existing tools may not efficiently handle very large repositories.         |
-| **Merge Conflicts**               | Higher chance of conflicts when multiple teams work on the same repo.           |
-| **Repository Size Management**    | Managing the size of the repository (e.g., history, artifacts) becomes critical.|
-| **Harder Rollbacks**              | Mistakes can impact multiple projects at once, making rollbacks tricky.         |
-| **Steeper Learning Curve**        | Newcomers may feel overwhelmed by the scale and complexity of a monorepo.        |
+
+| **Challenge**         | **Description**                                                         |
+|------------------------|-----------------------------------------------------------------------------------------|
+| **Long Deployment Cycles** | Entire codebase must be deployed at once, causing longer deployment times.              |
+| **Risk of Downtime**        | Full system may need to go offline during major updates, affecting users.               |
+| **Limited Scalability**     | Scaling requires replicating the whole app, leading to inefficiency and high costs.     |
+| **Resource Consumption**    | Monoliths consume more CPU and memory compared to lighter architectures.               |
+| **Limited Flexibility**     | Changes are harder as they often impact multiple areas, increasing error risk.          |
 
 ---
 
 ## Best Practices for Monorepo Management
 
-| **Best Practices**          | **Description**                                                                                                                                                        |
-|-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Modular Code Structure**  | Organize the codebase in a modular fashion to minimize the complexity and impact of changes on unrelated parts of the system.                                            |
-| **Tooling for Scalability** | Use tools like Bazel or Lerna to handle the scalability challenges that arise from large monorepos, such as dependency management, incremental builds, and testing.      |
-| **Enforce Code Ownership**  | Implement code ownership policies to ensure that specific teams or individuals are responsible for different parts of the repository.                                    |
-| **CI/CD Optimization**      | Optimize your CI/CD pipelines for efficiency. Use incremental builds and selective testing to avoid unnecessary processing for unrelated changes.                        |
-| **Clear Documentation**     | Document each module or component thoroughly, so that developers can quickly understand the purpose and scope of various parts of the codebase.                          |
-| **Versioning Strategy**     | Consider a versioning strategy that suits your monorepo, such as tagging releases for the entire repository or versioning individual modules independently.               |
+| **Best Practice**          | **Summary (One-liner)**                                                              |
+|-----------------------------|--------------------------------------------------------------------------------------|
+| **Clear Project Structure** | Organize code with well-defined directories for easy navigation and maintenance.    |
+| **Consistent Coding Standards** | Enforce uniform style and linting rules across all projects.                   |
+| **Efficient Dependency Management** | Use tools to isolate and manage dependencies cleanly.                  |
+| **Incremental Builds**      | Implement builds that only recompile changed parts to save time.                   |
+| **Strong CI/CD Pipelines**  | Automate testing, builds, and deployments to maintain code quality at scale.        |
+| **Access Control**          | Restrict permissions carefully to protect sensitive areas of the codebase.          |
+| **Effective Documentation** | Maintain clear, up-to-date documentation for onboarding and ongoing work.          |
+| **Tooling for Scaling**     | Use specialized monorepo tools (e.g., Bazel, Nx, Turborepo) for performance.        |
+
+---
 
 ## Conclusion
 A monorepo offers significant benefits for large teams and organizations that rely on shared codebases and close collaboration between projects. By using best practices such as modularization, scalable tooling, and robust CI/CD pipelines, teams can manage the complexity of monorepos while benefiting from enhanced code reuse, visibility, and consistent deployment processes.
