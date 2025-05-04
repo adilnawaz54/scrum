@@ -1,4 +1,4 @@
-# POC for DNS(Domain Name System)
+# Implementation of DNS(Domain Name System)
 
 ## Author
 | Created     | Version | Author        | Modifed | Comment           | Reviewer   |
