@@ -11,22 +11,18 @@
 <summary>1. Introduction</summary>
 
 - [Introduction](#introduction)  
-- [DNS Documentation](#dns-documentatiion)
 </details>
 
 <details>
-<summary>2. Steps of Conduct</summary>
+<summary>2. Implementation</summary>
 
-- [Step 1: Go to Namecheap](#step-1)  
-- [Step 2: Sign Up and Sign In](#step-2)  
-- [Step 3: Search and Select Domain](#step-3)  
-- [Step 4: Checkout and Confirm Order](#step-4)  
-- [Step 5: Make the Payment](#step-5)  
-- [Step 6: Go to Domain List](#step-6)  
-- [Step 7: Manage Your Domain](#step-7)  
-- [Step 8: Access Advanced DNS](#step-8)  
-- [Step 9: Configure DNS Records](#step-9)  
-- [Step 10: Verify Domain Mapping](#step-10)
+- [Step 1: DNS purchase](#step-1)  
+- [Step 2: Go to Domain List](#step-2)  
+- [Step 3: Manage Your Domain](#step-3)  
+- [Step 4: Access Advanced DNS](#step-4)  
+- [Step 5: Configure DNS Records](#step-5)  
+- [Step 6: Verify Domain Mapping](#step-6)  
+
 
 </details>
 
@@ -43,9 +39,6 @@
 
 This document provides a structured guide for configuring a custom domain purchased from Namecheap to point to an AWS EC2 instance using DNS (Domain Name System). Following a step-by-step approach, it walks through domain registration, DNS record setup, and validation, ensuring users can seamlessly link their domain to a cloud-hosted application.
 
-## DNS Documentation
-
-To get a detailed documentation for DNS [click here.]()
 
 ## Implementation
 
