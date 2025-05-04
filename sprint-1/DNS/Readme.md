@@ -76,7 +76,8 @@ This document provides a structured guide for configuring a custom domain purcha
 
 - Make sure that the service is up and running to the instance you're providing the public ip for
 
-![image](https://github.com/user-attachments/assets/d911cc61-5877-4750-83b1-a4c1d7ad2b2c)
+![image](https://github.com/user-attachments/assets/f64e38ed-c293-4ac4-b0ff-af8bae642a3c)
+
 
 ### Step 6 
 
