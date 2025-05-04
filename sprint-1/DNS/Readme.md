@@ -7,33 +7,19 @@
 
 ## Table of Contents
 
-<details>
-<summary>1. Introduction</summary>
+1. [Introduction](#introduction)  
+2. [Implementation](#implementation)  
+   - [Step 1: Purchase DNS](#step-1-purchase-dns)  
+   - [Step 2: Access Domain List](#step-2)  
+   - [Step 3: Manage Purchased Domain](#step-3)  
+   - [Step 4: Open Advanced DNS](#step-4)  
+   - [Step 5: Add DNS Records](#step-5)  
+   - [Step 6: Verify Domain](#step-6)  
+3. [Conclusion](#conclusion)  
+4. [Contact](#contact)  
+5. [References](#references)
 
-- [Introduction](#introduction)  
-</details>
-
-<details>
-<summary>2. Implementation</summary>
-
-- [Step 1: DNS purchase](#step-1)  
-- [Step 2: Go to Domain List](#step-2)  
-- [Step 3: Manage Your Domain](#step-3)  
-- [Step 4: Access Advanced DNS](#step-4)  
-- [Step 5: Configure DNS Records](#step-5)  
-- [Step 6: Verify Domain Mapping](#step-6)  
-
-
-</details>
-
-<details>
-<summary>3. Wrap-up</summary>
-
-- [Conclusion](#conclusion)  
-- [Contact](#contact)  
-- [References](#references)
-
-</details>
+---
 
 ## Introduction
 
