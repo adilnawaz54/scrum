@@ -47,57 +47,32 @@ This document provides a structured guide for configuring a custom domain purcha
 
 To get a detailed documentation for DNS [click here.]()
 
-## Steps of conduct
+## Implementation
 
-### Step 1
+### Step 1: Purchase DNS
 
-*Go to [namecheap.com](namecheap.com)*
+> 👉 **Follow Steps here**: [DNS](https://github.com/snaatak-Downtime-Crew/Documentation/blob/SCRUMS-123-YUVRAJ/domain-security/dns-ssl/poc%20of%20dns/README.md)
 
-![image](https://github.com/user-attachments/assets/9bf84de9-96ab-42ac-b00b-f0cfbe4d1679)
 
-### Step 2
-
-*Sign up and sign in to your account*
-
-![image](https://github.com/user-attachments/assets/aa20dfd6-9073-40bc-aff2-818cabbab53d)
-
-### Step 3 
-
-*Search for you desired domain name and select the one that meets your requirement (downtimecrew)*
-
-![image](https://github.com/user-attachments/assets/a29cf543-7501-48c3-886d-4a358493103c)
-
-### Step 4
-
-*Checkout and confirm order*
-
-![image](https://github.com/user-attachments/assets/ed2a236f-64d8-49c2-a3fc-6c416fe92d17)
-
-### Step 5
-
-*Make the payment*
-
-![image](https://github.com/user-attachments/assets/b1813611-29ac-4372-ba70-de4c5eb6ca22)
-
-### Step 6 
+### Step 2 
 
 *After payment is complete, go to **Account** > **Domain List*** 
 
 ![image](https://github.com/user-attachments/assets/a693b442-e8fb-41c4-87ee-c3a7aef7c554)
 
-### Step 7
+### Step 3
 
 *Select the domain you just purchased then click **Manage***
 
 ![image](https://github.com/user-attachments/assets/02cfd252-8229-44d8-8255-eb94185d433f)
 
-### Step 8
+### Step 4
 
 *Go to **Advance DNS** tab*
 
 ![image](https://github.com/user-attachments/assets/b40770dc-4be9-43c8-a58c-f252bb235b05)
 
-### Step 9
+### Step 5
 
 *Delete any existing default records and create 2 new records*
 
@@ -110,7 +85,7 @@ To get a detailed documentation for DNS [click here.]()
 
 ![image](https://github.com/user-attachments/assets/d911cc61-5877-4750-83b1-a4c1d7ad2b2c)
 
-### Step 10 
+### Step 6 
 
 *Visit your domain using your web browser to confirm the changes*
 (http://www.downtimecrew.xyz/) (http://downtimecrew.xyz/)
@@ -138,3 +113,4 @@ This setup enables seamless access to deployed applications via a human-readable
 | NameCheap    | [Visit](https://www.namecheap.com/)   |
 | What is DNS - CloudFlare | [Visit](https://www.cloudflare.com/learning/dns/what-is-dns/) | 
 | AWS EC2 doc | [Visit](https://docs.aws.amazon.com/ec2/) |
+| DNS Purchase | [DNS](https://github.com/snaatak-Downtime-Crew/Documentation/blob/SCRUMS-123-YUVRAJ/domain-security/dns-ssl/poc%20of%20dns/README.md) |
