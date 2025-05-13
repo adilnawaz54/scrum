@@ -33,7 +33,7 @@
 8. [Reference](#7-reference)
 9. [Contact](#8-contact)
 
-## 1.  Purpose of the Document
+## 1.  Introduction
 
 The purpose of this document is to guide users in setting up and managing a version control system using GitHub. As we progress in our sprints, we will have multiple micro-repositories that will reflect team collaboration. Therefore, we are adopting GitHub, which will be more beneficial for our team and facilitate better maintenance of repositories.
 
@@ -42,10 +42,12 @@ The purpose of this document is to guide users in setting up and managing a vers
 
 | Name  | Version | Description                                 |
 |-------|---------|---------------------------------------------|
-| Git   | 2.34.1    | Distributed version control system          |
+| Git   | 2.49.0    | Distributed version control system          |
 | GitHub Account | N/A     | Platform for hosting Git repositories |
 
 ## 3. Setting Up GitHub Version Control
+
+> 👉 **Setup Github VCS**: [Setup](https://github.com/snaatak-Downtime-Crew/Documentation/blob/SCRUMS-96-YUVRAJ/vcs_design%20+%20poc/features%20of%20vcs/detail%20document/README.md)
 
 ### 1. Create a GitHub Account
 
