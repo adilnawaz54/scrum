@@ -5,202 +5,114 @@
 ##  **Author Information**
 | Created     | Version | Author        | Last Updated       | Comment          | Reviewer         |
 |-------------|---------|---------------|--------------------|------------------|------------------|
-| 26-04-2025  | v1      | Adil Nawaz    | 28-04-2025        | Internal Reviewer| Pritam        |
-| 26-05-2025  | v2.1   | Adil Nawaz    |  05-05-2025       | L0 Reviewer      | Shreya           |
-| 26-05-2025  | v3    | Adil Nawaz    |  05-05-2025        | L1 Reviewer      | Abhiskek V         |
-| 26-05-2025  | v4    | Adil Nawaz    |  05-05-2025        | L2 Reviewer      | Abhiskek D         |
+| 12-05-2025  | v1      | Adil Nawaz    |          | Internal Reviewer| Pritam        |
+| 12-05-2025  | v2   | Adil Nawaz       |          | L0 Reviewer      | Shreya           |
+| 12-05-2025  | v3    | Adil Nawaz      |          | L1 Reviewer      | Abhiskek V         |
+| 12-05-2025  | v4    | Adil Nawaz      |          | L2 Reviewer      | Abhiskek D         |
 
 ## Table of Contents
 
-1. [Purpose of the Document](#1-purpose-of-the-document)
-2. [Prerequisites](#2-prerequisites)
-   - [GitHub Account](#github-account)
-   - [Git Installation](#git-installation)
-3. [Setting Up GitHub Version Control](#3-setting-up-github-version-control)
-   1. [Create a GitHub Account](#create-a-github-account)
-   2. [Install Git](#install-git)
-   3. [Configure Git](#configure-git)
-4. [Creating and Managing GitHub Repositories](#4-creating-and-managing-github-repositories)
-   1. [Create a New Repository (UI Setup)](#create-a-new-repository-ui-setup)
-   2. [Link Local Repository to GitHub (CLI Setup)](#link-local-repository-to-github-cli-setup)
-5. [Security Recommendations](#5-security-recommendations)
-   1. [Enable Two-Factor Authentication (2FA)](#enable-two-factor-authentication-2fa)
-   2. [Use SSH for Authentication](#use-ssh-for-authentication)
-   3. [Regularly Review Permissions](#regularly-review-permissions)
-   4. [Keep Your Software Updated](#keep-your-software-updated)
-6. [Best Practice](#6-best-practice)
-7. [Conclusion](#6-conclusion)
-8. [Reference](#7-reference)
-9. [Contact](#8-contact)
 
-## 1.  Introduction
+
+1. [Introduction](#introduction)
+2. [Pre-requisites](#pre-requisites)
+3. [Setting Up GitHub Version Control](#setting-up-github-version-control)
+4. [SaaS Solutions vs Local Setup (On-Prem)](#saas-solutions-vs-local-setupon-prem)
+5. [When to Choose SaaS](#when-to-choose-saas)
+   * [Limitations of SaaS](#limitations-of-saas)
+6. [When to Choose On-Prem](#when-to-choose-on-prem)
+   * [Limitations of On-Prem](#limitations-of-on-prem)
+7. [Conclusion](#conclusion)
+8. [Contact Information](#contact-information)
+9. [Reference](#reference)
+
+
+
+## Introduction
 
 The purpose of this document is to guide users in setting up and managing a version control system using GitHub. As we progress in our sprints, we will have multiple micro-repositories that will reflect team collaboration. Therefore, we are adopting GitHub, which will be more beneficial for our team and facilitate better maintenance of repositories.
 
-## 2.  Prerequisites
+## Pre-requisites
+
+| License Type        | Description                                             | Commercial Use | Open Source |
+|---------------------|---------------------------------------------------------|----------------|-------------|
+| GitHub Free / Paid Plans | Offers free public/private repositories; paid plans offer more features. | Yes            | Yes         |
 
 
-| Name  | Version | Description                                 |
-|-------|---------|---------------------------------------------|
-| Git   | 2.49.0    | Distributed version control system          |
-| GitHub Account | N/A     | Platform for hosting Git repositories |
-
-## 3. Setting Up GitHub Version Control
+## Setting Up GitHub Version Control
 
 > 👉 **Setup Github VCS**: [Setup](https://github.com/snaatak-Downtime-Crew/Documentation/blob/SCRUMS-96-YUVRAJ/vcs_design%20+%20poc/features%20of%20vcs/detail%20document/README.md)
 
-### 1. Create a GitHub Account
 
-####  UI Setup:
-- Go to [GitHub](https://github.com).
-- Click on **"Sign up"** and fill in the required details (username, email, password).
-- Verify your email address.
+## SAAS Solutions vs Local Setup(On Prem)
 
-![image](https://github.com/user-attachments/assets/7a3b793f-1f6f-43e6-8a69-be7e3f19aeb7)
 
----
-
-### 2. Install Git
-
-####  UI Setup:
-- Download Git from the official [Git website](https://git-scm.com/downloads) and follow the installation instructions for your operating system.
-
-####  CLI Setup:
-
-**For Ubuntu:**
-```
-sudo apt update
-sudo apt install git
-```
-![image](https://github.com/user-attachments/assets/5a38bf54-d5e8-4af9-bc70-e631207b6cf7)
+| **Aspect**                   | **SaaS (Cloud)**                                             | **Local Setup (On-Prem)**                                  |
+| ---------------------------- | ------------------------------------------------------------ | ---------------------------------------------------------- |
+| **Infrastructure Ownership** | Hosted and managed by vendor                                 | Fully owned and managed by your team                       |
+| **Setup Time**               | Very fast                                 | Slower - requires installation and configuration           |
+| **Maintenance**              | Vendor handles updates, patches, scaling                     | You are responsible for updates, backups, monitoring       |
+| **Cost**                     | Subscription-based , predictable                       | Requires hardware + maintenance (CAPEX)                    |
+| **Scalability**              | Easy to scale, elastic resources                             | Limited by internal infrastructure                         |
+| **Security Control**         | Shared responsibility — depends on vendor                    | Full control — you manage all access and data protection   |
+| **Access**                   | Global access via internet                                   | Restricted to internal network unless VPN/port opened      |
+| **Customization**            | Limited to vendor-provided features                          | Highly customizable — integrate with internal tools easily |
+| **Examples**                 | GitHub, GitLab.com, Bitbucket, Jenkins Cloud                 | GitLab CE, Jenkins, Bitbucket Server, Jenkins Server         |
 
 ---
 
-### 3.  Configure Git 
+##  **When to Choose SaaS**
 
-####  CLI Setup 
+* When we want Fast Setup and Minimal Maintenance
+* When you don't handles authentication, data, security, and updates
+* Small to medium teams with **no dedicated ops team**
+* Project doesn't require **custom integrations** or **strict compliance**
+  Example: Github, Slack, Salesforce(CRM), Zoom, Google Docs
 
-1. Set your Git username globally (for all repositories)
+### Limitations of SaaS
 
-```
-git config --global user.name "Your Name"   
-
-- This command sets your name for Git commits. Replace "Your Name" with your actual name.
-- Using global config means this username will apply to all repositories on your machine.
-```
-2. Set your Git email globally (for all repositories)
-
-```
-git config --global user.email "your_email@example.com"   
-
-- This command sets your email for Git commits. Replace with your actual email.
-- Using global config ensures consistency across all your projects, so you don't have to set it for each one.
-```
-
-![image](https://github.com/user-attachments/assets/4bf6af48-9fed-40e4-ac04-7ae5b0ca4751)
-
-### Note :- We can also use Local credentials which will be applied to a specific repository. 
-
-```
-git config user.name "Work Name"
-git config user.email "work_email@example.com"
-```
-
-## 4.  Creating and Managing GitHub Repositories
-
-### 1.  Create a New Repository
-
-####  UI Setup:
-- Log in to GitHub.
-- Click on the **"+"** icon in the upper right corner and select **"New repository."**
-- Fill in the repository name, description, and set it as public or private.
-- Initialize the repository with a README if desired.
-- Click **"Create repository
-
-![Git setup](https://github.com/user-attachments/assets/59881fc1-9b94-41a7-bd3b-74eaae016ed8)
-
-####  CLI Setup:
-
-```
-mkdir your-repo                           # Creates a new directory named 'your-repo'.
-cd your-repo                              # Changes the current directory to 'your-repo'.
-git init                                  # Initializes a new Git repository in the current directory.
-echo "# Your Repository Title" >> README.md  # Creates a README.md file with a title for the repository.
-git add README.md                         # Stages the README.md file for the next commit.
-git commit -m "Initial commit"           # Commits the staged changes with a message "Initial commit".
-
-```
-![image](https://github.com/user-attachments/assets/58ece8e0-ac04-45b6-97d6-1bfcf8f26560)
-
----
-
-### 2.  Link Local Repository to GitHub
-
-####  CLI Setup:
-
-```
-git remote add origin https://github.com/username/your-repo.git  # Links your local repository to the remote repository on GitHub.
-git branch -M main                                               # Renames the current branch to 'main', creating it if it doesn't exist.
-
-```
-![image](https://github.com/user-attachments/assets/6dcca27d-c81c-4ac1-bb8c-50cbaf4a9fd7)
+| Limitation               | Explanation                                            |
+| ------------------------ | ------------------------------------------------------ |
+|  Less Control          | You depend on the vendor for uptime and security       |
+|  Data Compliance       | May not meet strict data residency requirements        |
+|  Limited Customization | Can't fully tailor the backend logic or UI             |
+|  Internet Dependency   | No access during outages unless offline support exists |
 
 
-## 5.  Security Recommendations
+##  **When to Choose On-Prem**
 
-### 1. Enable Two-Factor Authentication (2FA):
+* Your organization has **compliance requirements** (e.g., banking, healthcare)
+* You need **full control** over data, plugins, and network
+* You have **existing internal infrastructure** or cloud deployments to integrate
 
-- Go to your GitHub account settings.
-- Navigate to **"Security"** and enable **"Two-factor authentication."**
+### Limitations of On-Prem
 
-![image](https://github.com/user-attachments/assets/d62a2b01-513d-42aa-b60a-9443cce5a0d5)
+| Limitation                 | Explanation                                                                      |
+| -------------------------- | -------------------------------------------------------------------------------- |
+|  Maintenance Overhead   | You must manage patches, updates, monitoring, logging, and troubleshooting       |
+|  High Costs      | Requires investment in hardware, networking, backups, and licenses               |
+|  Skilled Manpower     | Needs system administrators and DevOps engineers to manage infrastructure        |
+|  Scalability Challenges  | Scaling requires manual provisioning of servers or VMs                           |
+|  Slower Upgrades         | Testing and applying updates is manual and time-consuming                        |
+|  Security Responsibility | You're responsible for securing the environment (firewalls, certs, audits)       |
 
-### 2. Use SSH for Authentication:
 
-- **Generate SSH key:**
-```
-ssh-keygen                                                                                                                  
-```
-![image](https://github.com/user-attachments/assets/cd6314d5-3203-4067-a04a-906cc64201a5)
 
-- **Copy your SSH key to your clipboard:**
-
-```
-cat ~/.ssh/id_rsa.pub | clip  
-```
-
-- Click on your Github Settings , Go to SSH and GPG keys.
-- Then Click on New SSH and Then paste your SSH Key.
-
-![image](https://github.com/user-attachments/assets/2cfe7f14-32e7-400e-ba67-37ab8fa79938)
-
-## 6. Best Practice
-
-### 1. Regularly Review Permissions
-
-- Check and manage repository permissions and collaborators.
-
-### 2. Keep Your Software Up to Date
-
-- Regularly update Git and any development tools you use.
-
-## 7.  Conclusion
+##   Conclusion
 This document provides a comprehensive guide for setting up and managing a version control system using GitHub. By following the outlined steps and implementing security recommendations, we can effectively collaborate and maintain our codes which we will be using our sprints micro repositories.
 
-## 8. Contact Information
+## Contact Information
 
 
 | Name         | Email Address                                 |
 |--------------|-----------------------------------------------|
 | Adil Nawaz | adil.nawaz.snaatak@mygurukulam.co           |
 
-## 9.  Reference
+##  Reference
 
 | Title                                 | Link                                                                                           |
 |---------------------------------------|------------------------------------------------------------------------------------------------|
 | Git Installation                      | [Git Downloads](https://git-scm.com/downloads)                                              |
-| GitHub Account Creation               | [Create a GitHub Account](https://github.com/join)                                          |
-| Two-Factor Authentication (2FA)      | [GitHub 2FA Documentation](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication) |
-| SSH Key Generation                    | [Generating a new SSH key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key) |
+| GitHub Account Creation               | [Create a GitHub Account](https://github.com/join)   |
 | Features of VCS                       | [Feature of VCS](https://github.com/mygurukulam-p10/Documention/blob/main/VCS%20Design%20%2B%20POC/Features%20of%20VCS/POC%20to%20setup%20recommeded%20VCS%20as%20per%20conclusion%20doc/README.md) |
 
