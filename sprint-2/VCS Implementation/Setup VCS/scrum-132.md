@@ -69,7 +69,7 @@ The purpose of this document is to guide users in setting up and managing a vers
 * Project doesn't require **custom integrations** or **strict compliance**
   Example: Github, Slack, Salesforce(CRM), Zoom, Google Docs
 
-### Limitations of SaaS
+> ### Limitations of SaaS
 
 | Limitation               | Explanation                                            |
 | ------------------------ | ------------------------------------------------------ |
@@ -85,7 +85,7 @@ The purpose of this document is to guide users in setting up and managing a vers
 * You need **full control** over data, plugins, and network
 * You have **existing internal infrastructure** or cloud deployments to integrate
 
-### Limitations of On-Prem
+> ### Limitations of On-Prem
 
 | Limitation                 | Explanation                                                                      |
 | -------------------------- | -------------------------------------------------------------------------------- |
