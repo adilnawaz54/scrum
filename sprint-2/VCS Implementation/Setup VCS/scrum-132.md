@@ -1,4 +1,4 @@
-# 🚀 Setup Version Control System - GITHUB
+#  Setup Version Control System - GITHUB
 
 ![image](https://github.com/user-attachments/assets/3a170719-a472-4a0c-8a38-1906e6bc461e)
 
@@ -69,7 +69,7 @@ The purpose of this document is to guide users in setting up and managing a vers
 * Project doesn't require **custom integrations** or **strict compliance**
   Example: Github, Slack, Salesforce(CRM), Zoom, Google Docs
 
-> ### Limitations of SaaS
+> ### **Limitations of SaaS**
 
 | Limitation               | Explanation                                            |
 | ------------------------ | ------------------------------------------------------ |
