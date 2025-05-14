@@ -1,7 +1,5 @@
 # POC of Notification-API
 
-![Image](https://thaka.bing.com/th/id/OIP.g9SdunVmLqkrgtyX2RvRHgHaHa?w=173&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7)
-
 ---
 
 ## Author Information
@@ -9,9 +7,7 @@
 | Created | Modified | Version | Author       | Comment         | Internal Reviewer    |
 |---------|---------|---------|--------------|------------------|----------------------|
 | 24-04-2025 | 28-04-2025      | V1.1     | Prateek Rai  | Initial Commit   | Siddharth Pawar      |
-| 24-04-2025 | 28-04-2025      | V2     | Prateek Rai  | L0   | Shikha Tripathi      |
-| 24-04-2025 | 28-04-2025      | V3     | Prateek Rai  | L1   | Kirti Nehra      |
-| 24-04-2025  | 28-04-2025 | V4      | Prateek Rai |     L2     | Ashwani Singh |
+
 
 
 ---
