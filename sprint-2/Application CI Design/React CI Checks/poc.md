@@ -10,23 +10,29 @@
 | 18-05-2025  | V3    | Adil Nawaz    |          | L1 Reviewer      | Abhiskek V         |
 | 18-05-2025  | V3    | Adil Nawaz    |          | L2 Reviewer      | Abhiskek D         |
 
+ 
 
-## 🔍 Purpose
-We are preparing this document so that we can easily provide a completed guide to step code compilation which is designed in React to manage Frontend-api information.
 
-  
-## 📑 Table of Contents
-- [Introduction](#introduction)
-- [⚙️ Pre-Requisites](#-pre-requisites)
-- [🖥️ System Requirements](#-system-requirements)
-- [🛠️ Build-Time Dependency](#-build-time-dependency)
-- [🚀 Run-Time Dependency](#-run-time-dependency)
-- [🌐 Important Ports](#-important-ports)
-- [🏗️ Architecture](#-architecture)
-- [📥 Step-by-step Installation](#-step-by-step-installation)
-- [📝Conclusion](#conclusion)
-- [📧 Contact Information ](#-contact-information )
-- [📚 References](#-references )
+
+# Table of Contents
+
+1. [Introduction](#introduction)
+2. [Pre-Requisites](#pre-requisites)
+3. [System Requirements](#system-requirements)
+4. [Ports Required](#ports-required)
+5. [Architecture](#architecture)
+6. [Step-by-step Installation](#step-by-step-installation)
+   1. [Step 1. Clone the repo](#step-1-clone-the-repo)
+   2. [Step 2. Install Node.js](#step-2-install-nodejs)
+   3. [Step 3. Install dependencies](#step-3-install-dependencies)
+   4. [Step 4. Build the code](#step-4-build-the-code)
+   5. [Step 5. Validate build output](#step-5-validate-build-output)
+7. [Contact Information](#contact-information)
+8. [References](#references)
+
+---
+
+
 
 
 ## Introduction 
@@ -37,7 +43,7 @@ We are preparing this document so that we can easily provide a completed guide t
 - Node.js and npm Installed
 - Build Script in package.json
 - Install Project Dependencies
-- Troubleshooting Tools
+
 
 ## System Requirements
 
@@ -60,6 +66,9 @@ We are preparing this document so that we can easily provide a completed guide t
 | 3000 | React App   | Default port used by React development server.  |
 
 ##  Architecture
+
+![react](https://github.com/user-attachments/assets/d6d47556-fb74-4930-8cfb-565ff62d6c35)
+
 
 The Frontend Web is the primary user interface for the OT-Microservices stack. It is a ReactJS-based application that allows users to interact with the system through a web browser. Built using the ReactJS framework, it provides a fast, responsive, and dynamic UI that can handle complex user interactions with minimal loading times.
 
@@ -94,9 +103,9 @@ sudo apt install -y nodejs
 |--------------|-----------------------------------------------|
 | Adil Nawaz | adil.nawaz.snaatak@mygurukulam.co           |
 
-## 📚 References
-| Links | Descriptions|
+## References
+| Descriptions | Link|
 |------|---------------------|
-| Document||
+| ReactJS| [Link](https://www.tutorialspoint.com/reactjs/reactjs_architecture.htm)|
 
 
