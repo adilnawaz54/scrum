@@ -12,7 +12,7 @@
 
 
 ## 🔍 Purpose
-We are preparing this document so that we can easily provide a completed guide to step code compilation which is designed in GoLang to manage employee-api information.
+We are preparing this document so that we can easily provide a completed guide to step code compilation which is designed in React to manage Frontend-api information.
 
   
 ## 📑 Table of Contents
@@ -32,81 +32,57 @@ We are preparing this document so that we can easily provide a completed guide t
 ## Introduction 
 * This document will guide you through a Proof of Concept (PoC) for setting up and compiling . We will cover the necessary prerequisites, dependency, Architecture as well as the basic project structure.
 
-## ⚙ Pre-Requisites
+##  Pre-Requisites
 
-- Go installed on your machine.
-- Familiarity with Go modules.
+- Node.js and npm Installed
+- Build Script in package.json
+- Install Project Dependencies
+- Troubleshooting Tools
 
-## 🖥 System Requirements
-| Hardware Specifications | Minimum Requirement  |
-|--------------------------|------------------------|
-| Processor                | dual-core              |
-| RAM                      | 4 GB                    |
-| Disk                     |10 GB free disk space                  |
-| OS                       | Ubuntu 22.04 LTS         |
+## System Requirements
 
-
-## 🛠 Build-Time Dependency
-
-| 🛠️ Name | 📦 Version | 📄 Description |
-|---------|------------|----------------|
-| **Go modules** | 1.20      | Make sure your Go project uses Go modules (go.mod and go.sum) for dependency management. |
+| Component        | Minimum Requirement           |
+|------------------|-------------------------------|
+| OS               | Ubuntu or other Linux-based   |
+| Disk Space       | 8 GB                         |
+| RAM              | 2 GB                          |
+| Processor        | Single-core                     |
+| Instance Type    | t2.small                      |
 
 
-## 🚀 Run-Time Dependency
-
-| 🚀 Name | 📦 Version | 📄 Description          |
-|---------|------------|--------------------------|
-| **ScyllaDB** |  6.1.1  | ScyllaDB is a NoSQL database being utilized as the primary database in the employee application |
-
-## 🌐 Important Ports
-
-| 🔌 Inbound Traffic | 📄 Description           |
-|--------------------|--------------------------|
-| **9042**           | Used by ScyllaDB |
 
 
-## 🏗 Architecture
-![image](https://github.com/user-attachments/assets/cefdb377-0f61-4c43-afdc-596a4a9f1b55)
-- Go Source: This represents the source code written in the Go programming language. It’s the initial code that you write and save in .go files.
-  
-- Compiler: The compiler is a tool that translates the Go source code into machine code. Within the compiler, there’s a step labeled “asm” which stands for assembly. This step converts the high-level Go code into assembly language, a low-level representation of the code that is closer to machine language.
-  
-- Executable Binary: The final output of the compilation process is the executable binary. This is the machine code that the computer can directly execute. 
-## 📥 Step-by-step Installation
+## Ports Required
 
-## Install git
-```
-sudo apt install git
-```
-### 📂 Step 1: Clone the Git Repository
-```
-https://github.com/OT-MICROSERVICES/employee-api.git
-```
+| Port | Used By     | Description                                      |
+|------|-------------|--------------------------------------------------|
+| 22   | SSH         | Used for secure remote login and VM access.     |
+| 3000 | React App   | Default port used by React development server.  |
 
-### Step 2: Change Directory
-Change Directory to where your code is
-```
-cd employee-api
-```
+##  Architecture
+<img width="656" alt="image" src="https://github.com/user-attachments/assets/0a2f0273-2903-497f-ba46-a29d69faac2c">
 
-### Step 3: Code Compilation
-This command compiles the source code of the project according to the settings defined in the main.go file.
-- **go build:** This command compiles the Go source code in the current directory and produces an executable binary.
-If successful, it will create a binary file named employee-api.
-```
-go build
-```
-- **./employee-api:** This command executes the binary that was created by the go build command.
-The ./ indicates that the binary is located in the current directory.
-Running this command starts the employee API service, making it ready to handle requests.
+The Frontend Web is the primary user interface for the OT-Microservices stack. It is a ReactJS-based application that allows users to interact with the system through a web browser. Built using the ReactJS framework, it provides a fast, responsive, and dynamic UI that can handle complex user interactions with minimal loading times.
 
-```
-./employee-api
-```
-![ccsuccess](https://github.com/user-attachments/assets/3089ecee-144a-4fc4-a54d-fec1eff6539f)
+##  Step-by-step Installation
 
-- Compilation Successful: The Go source code has been successfully compiled into an executable binary named employee-api. The service is now ready to be executed and handle incoming requests. 
+### Step 1. Clone the repo
+git clone https://github.com/OT-MyGurukulam/frontend.git
+cd frontend
+
+### Step 2. Install Node.js
+sudo apt update
+curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+sudo apt install -y nodejs
+
+### Step 3. Install dependencies
+npm ci
+
+### Step 4. Build the code
+npm run build
+
+### Step 5. Validate build output
+test -d build && echo "✅ Build successful" || echo "❌ Build failed"
 
 
 ## Contact Information
@@ -118,6 +94,6 @@ Running this command starts the employee API service, making it ready to handle 
 ## 📚 References
 | Links | Descriptions|
 |------|---------------------|
-| Document|https://github.com/mygurukulam-p10/Documention/blob/main/Application%20CI%20Design/GoLang%20CI%20Checks/Code%20compilation%20Doc/readme.md|
+| Document||
 
 
