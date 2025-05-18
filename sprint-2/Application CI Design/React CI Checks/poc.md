@@ -60,29 +60,32 @@ We are preparing this document so that we can easily provide a completed guide t
 | 3000 | React App   | Default port used by React development server.  |
 
 ##  Architecture
-<img width="656" alt="image" src="https://github.com/user-attachments/assets/0a2f0273-2903-497f-ba46-a29d69faac2c">
 
 The Frontend Web is the primary user interface for the OT-Microservices stack. It is a ReactJS-based application that allows users to interact with the system through a web browser. Built using the ReactJS framework, it provides a fast, responsive, and dynamic UI that can handle complex user interactions with minimal loading times.
 
 ##  Step-by-step Installation
 
 ### Step 1. Clone the repo
-git clone https://github.com/OT-MyGurukulam/frontend.git
-cd frontend
+
+
+![Screenshot 2025-05-19 005718](https://github.com/user-attachments/assets/65a5a618-ad00-480e-b6f8-c3a9a7b10f0c)
 
 ### Step 2. Install Node.js
-sudo apt update
+```
 curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 sudo apt install -y nodejs
-
+```
 ### Step 3. Install dependencies
-npm ci
+
+![Screenshot 2025-05-19 013717](https://github.com/user-attachments/assets/02dd3050-a6af-41d3-880e-c5e1f48a7294)
 
 ### Step 4. Build the code
-npm run build
+
+![Screenshot 2025-05-19 014033](https://github.com/user-attachments/assets/a97b43cc-e18b-4083-b571-d4d745a6a39e)
 
 ### Step 5. Validate build output
-test -d build && echo "✅ Build successful" || echo "❌ Build failed"
+![Screenshot 2025-05-19 014838](https://github.com/user-attachments/assets/b294a7bf-d5e0-42da-8f80-13274d784a53)
+
 
 
 ## Contact Information
