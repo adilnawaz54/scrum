@@ -52,17 +52,17 @@ Code compilation is the process of converting source code written in a programmi
 
 ## **4. Workflow Diagram**
 
-```plaintext
-+-----------------+       +---------------------+       +------------------+
-| Developer Pushes|  -->  | CI Tool (Jenkins/   |  -->  | Code Compilation |
-| Code to Repo    |       | GitHub Actions)     |       | (Babel/Webpack)  |
-+-----------------+       +---------------------+       +------------------+
-                                                            |
-                                                            v
-                                                +-------------------------+
-                                                | Compilation Success/Fail|
-                                                +-------------------------+
-```
++------------------+        +--------------------------+        +------------------+
+| Developer Pulls  |  -->   | Run Build Commands in    |  -->   | Code Compilation |
+| Latest Code from |        | Terminal (npm/)          |        | (Babel/Webpack)  |
+| Repo (git pull)  |        |                          |        |                  |
++------------------+        +--------------------------+        +------------------+
+                                                                    |
+                                                                    v
+                                                    +-----------------------------+
+                                                    | Compilation Success / Fail  |
+                                                    +-----------------------------+
+
 
 ---
 
