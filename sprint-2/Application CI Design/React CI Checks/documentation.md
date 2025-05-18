@@ -52,19 +52,7 @@ Code compilation is the process of converting source code written in a programmi
 
 ## **4. Workflow Diagram**
 
-+------------------+        +--------------------------+        +------------------+
-| Developer Pulls  |  -->   | Run Build Commands in    |  -->   | Code Compilation |
-| Latest Code from |        | Terminal (npm/)          |        | (Babel/Webpack)  |
-| Repo (git pull)  |        |                          |        |                  |
-+------------------+        +--------------------------+        +------------------+
-                                                                    |
-                                                                    v
-                                                    +-----------------------------+
-                                                    | Compilation Success / Fail  |
-                                                    +-----------------------------+
 
-
----
 
 ## **5. Different Tools for Compilation Checks**
 
@@ -94,24 +82,24 @@ Code compilation is the process of converting source code written in a programmi
 
 ## **7. Advantages of Compilation Checks**
 
-* Detect syntax/structural issues early.
-* Save QA/testing time and effort.
-* Eliminate manual compilation.
-* Enable automated feedback loops.
-* Increase team confidence in builds.
+| Benefit    | Description                            |
+| ---------- | -------------------------------------- |
+| **Detection**  | Detect syntax/structural issues early. |
+| **Efficiency** | Save QA/testing time and effort.       |
+| **Automation** | Eliminate manual compilation.          |
 
 ---
 
 
 ## **9. Best Practices**
 
-* Always include `npm run build` in CI pipelines.
-* Use `--no-cache` to avoid stale build artifacts.
-* Ensure `package-lock.json` is committed.
-* Isolate `node_modules` and cache intelligently.
-* Break CI checks into stages (Lint → Test → Compile → Deploy).
-* Fail builds on compilation errors.
-* Use ESLint + Prettier before compilation for consistent code.
+| Best Practice      | Description                                                   |
+| ------------------ | ------------------------------------------------------------- |
+| **Include Build**      | Always include `npm run build` in CI pipelines.               |
+| **No Cache**           | Use `--no-cache` to avoid stale build artifacts.              |
+| **Commit Lockfile**    | Ensure `package-lock.json` is committed.                      |
+| **Cache Dependencies** | Isolate `node_modules` and cache intelligently.               |
+
 
 ---
 
