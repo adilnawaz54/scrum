@@ -1,21 +1,30 @@
 # Java CI Checks: Unit Testing
 
-| 📅 CREATED/UPDATED | 📌 VERSION | ✍️ AUTHOR    | 📝 COMMENT                     |
-|--------------------|------------|--------------|--------------------------------|
-| 26-09-2024         | 0.1       | Aayush Gaur  |      Unit Testing         |
+##  **Author Information**
+| Created     | Version | Author        | Last Updated       | Comment          | Reviewer         |
+|-------------|---------|---------------|--------------------|------------------|------------------|
+| 19-05-2025  | v1      | Adil Nawaz    |        | Internal Reviewer| Pritam        |
+|  | v2.1   | Adil Nawaz    |        | L0 Reviewer      | Shreya           |
+|  | v3    | Adil Nawaz    |          | L1 Reviewer      | Abhiskek V         |
+|  | v4    | Adil Nawaz    |         | L2 Reviewer      | Abhiskek D         |
+
+
 
 ## Table of Contents
-- [Introduction](#introduction)
-- [What is Unit Testing](#what-is-unit-testing)
-- [Why is Unit Testing Important](#why-is-unit-testing-important)
-- [Different Tools for Unit Testing in Java](#different-tools-for-unit-testing-in-java)
-- [Advantages of Unit Testing](#advantages-of-unit-testing)
-- [Proof of Concept (POC)](#proof-of-concept-poc)
-- [Best Practices](#best-practices)
-- [Recommendation](#recommendation)
-- [Conclusion](#conclusion)
-- [Contact Information](#contact-information)
-- [References](#references)
+
+1. [Introduction](#introduction)
+2. [What is Unit Testing](#what-is-unit-testing)
+3. [Why is Unit Testing Important](#why-is-unit-testing-important)
+4. [Workflow Diagram](#workflow-diagram)
+5. [Different Tools for Unit Testing in Java](#different-tools-for-unit-testing-in-java)
+6. [Tool Comparison](#tool-comparison)
+7. [Advantages of Unit Testing](#advantages-of-unit-testing)
+8. [Proof of Concept (POC)](#proof-of-concept-poc)
+9. [Best Practices](#best-practices)
+10. [Conclusion](#conclusion)
+11. [Contact Information](#contact-information)
+12. [References](#references)
+
 
 
 ## Introduction
@@ -34,24 +43,31 @@ In Java, common unit testing frameworks include JUnit and TestNG. These framewor
 | **Prevents Regressions**      | Running unit tests as part of a CI pipeline ensures that new changes don’t break existing code.   |
 | **Early Bug Detection**       | Bugs are detected early in the development process, reducing the cost of fixing them later.       |
 | **Code Quality**              | Unit tests enforce a structured and well-tested codebase.                                         |
-| **Confidence in Refactoring** | Developers can make changes with confidence, knowing that unit tests will catch any issues introduced during refactoring. |
-| **Automated Testing**         | CI pipelines automate the testing process, reducing manual effort and human error.                |
+## Workflow Diagram
+![image](https://github.com/user-attachments/assets/7485bb81-88f4-4828-9bce-643335771002)
+
 
 ## Different Tools for Unit Testing in Java
-| Tool    | Key Features                                  | Strengths                                             | Limitations                                        |
-|---------|-----------------------------------------------|------------------------------------------------------|---------------------------------------------------|
-| **JUnit**  | Standard, used in most Java projects           | - Wide support and integration                         | - Limited configuration options                    |
-|         | Annotation-based framework                    | - Easy to set up and use in CI/CD pipelines            | - Less advanced compared to TestNG for complex cases|
-|         | Supports parameterized tests                  | - Active community support and regular updates         | - Requires external libraries for mocking          |
-| **TestNG** | Flexible with advanced configuration          | - Parallel test execution, more options                | - Learning curve for beginners                     |
-|         | Supports data-driven testing                  | - Great for running large test suites                  | - Somewhat heavier than JUnit for simple tests      |
-|         | Dependency injection support                  | - Better handling of complex test configurations       | - Integration with some tools may need extra effort |
-| **Spock**  | Groovy-based, expressive syntax               | - Clear, readable tests                                | - Learning Groovy is required                      |
-|         | Powerful data-driven testing support           | - Combines JUnit, Mockito, and data-driven testing     | - Smaller community compared to JUnit/TestNG        |
-|         | Provides advanced mocking and stubbing         | - Highly readable and concise syntax                   | - May require JVM tuning for large test suites      |
-| **AssertJ** | Rich assertion library                        | - More readable assertions                             | - Used as an add-on to JUnit/TestNG                |
-|         | Fluent API for chaining assertions             | - Supports custom assertions                          | - Limited by JUnit/TestNG functionality             |
-|         | Strong IDE support and auto-completion         | - Simplifies writing complex assertions                | - Requires familiarity with functional-style programming |
+| Tool                      | Description                                       | Key Features                               |
+| ------------------------- | ------------------------------------------------- | ------------------------------------------ |
+| **JUnit**                 | Most widely used testing framework for Java       | Annotations, assertions, runners           |
+| **TestNG**                | Inspired by JUnit, supports more flexible tests   | Parallel testing, data-driven tests        |
+| **JaCoCo**                | Java Code Coverage Library                        | Measures test coverage, integrates with CI |
+| **Maven Surefire Plugin** | Runs unit tests in Maven build lifecycle          | Integration with Maven builds              |
+| **Gradle Test Task**      | Runs unit tests during Gradle builds              | Flexible test configuration                |
+| **SonarQube**             | Code quality and coverage analysis                | Integration with CI for reports            |
+
+## Tool Comparison
+| Feature / Tool         | JUnit                | TestNG                        | JaCoCo                  | Gradle Test Task          | SonarQube                         |
+| ---------------------- | -------------------- | ----------------------------- | ----------------------- | ------------------------- | --------------------------------- |
+| Category               | Testing Framework    | Testing Framework             | Code Coverage Tool      | Test Runner Task (Gradle) | Static Code Analysis Platform     |
+| Test Framework Support | JUnit                | TestNG                        | Any (depends on runner) | JUnit/TestNG              | JUnit/TestNG/others               |
+| Code Coverage          | No                   | No                            | Yes                     | No                        | Yes (pulls from JaCoCo)           |
+| Reporting              | Yes (with Gradle)    | Yes                           | Yes (HTML, XML)         | Yes (console + HTML/XML)  | Yes (Dashboard, detailed metrics) |
+| Custom Test Configs    | Limited              | Advanced (e.g., DataProvider) | Not applicable          | Yes (via `build.gradle`)  | Yes (custom rules and plugins)    |
+| Ease of Use            | Easy                 | Medium                        | Easy                    | Medium                    | Medium to Advanced                |
+| Best For               | General Unit Testing | Complex Test Flows            | Measuring Test Coverage | Orchestrating test runs   | Code Quality, Security, Coverage  |
+
 
 
 ## Advantages of Unit Testing
@@ -76,22 +92,16 @@ For performing unit testing in java you can refer this poc [Link](https://github
 | **Ensure Code Coverage**         | Strive for high code coverage without sacrificing test quality.                                                      |
 | **Automate Test Execution**      | Integrate unit testing into CI pipelines to catch issues early.                                                      |
 
-## Recommendation
- JUnit is the recommended choice for performing unit testing in Java due to its:
-- **Standardization**: Widely accepted in Java development.
-- **Integration**: Seamless integration with popular IDEs.
-- **Ease of Learning**: Simple syntax for quick adoption.
-- **Community Support**: Large and active community for ongoing assistance.
-- **Parallel Execution**: Improved support for optimizing test suite performance.
-- **Compatibility**: Works well with Maven and Gradle for versatile project setups.
 
 ## Conclusion
-Unit testing is a foundational practice in modern CI pipelines, helping to ensure the quality and reliability of software. Java developers have access to a variety of tools for writing and running unit tests, but JUnit stands out as a practical, effective solution for most projects.
+Unit testing is a foundational practice in modern CI pipelines, helping to ensure the quality and reliability of software. **JUnit** is the preferred tool for unit testing in Java because it is widely standardized, easy to learn, and supported by a large community. It integrates smoothly with build tools like Maven and Gradle, offers improved parallel test execution, and is compatible with most IDEs, making it a reliable and efficient choice for Java projects.
 
-### Contact Information 
-|Name|Email Address|
-|:---:|:---:|
-|Aayush|aayush.gaur.snaatak@mygurukulam.co|
+## Contact Information
+
+
+| Name         | Email Address                                 |
+|--------------|-----------------------------------------------|
+| Adil Nawaz | adil.nawaz.snaatak@mygurukulam.co           |
 
 ## References 
 |links | Description |
