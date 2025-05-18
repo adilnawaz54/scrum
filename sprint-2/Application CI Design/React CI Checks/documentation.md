@@ -1,9 +1,11 @@
 
-# **Document: Java Static Code Anaylysis**
+# **Document: React Code Compilation**
 
-<div align="center">
- ![Screenshot 2025-05-15 123137](https://github.com/user-attachments/assets/766fd9c7-1ae3-4e11-afe3-7f9c87f730a6)
-</div>
+<img src="https://github.com/user-attachments/assets/9a5428f8-0e07-4d3e-88df-bb43daf72016" width="300"/>
+
+
+
+
 
  ##  **Author Information**
 | Created     | Version | Author        | Last Updated       | Comment          | Reviewer         |
@@ -15,18 +17,22 @@
 
 
 
-# **Table of Contents**
-1. [Introduction](#introduction)
-2. [What is Static Code Analysis?](#what-is-static-code-analysis)
-3. [Why Use Static Code Analysis?](#why-use-static-code-analysis)
-4. [Different Tools for Static Code Analysis in Java](#different-tools-for-static-code-analysis-in-java)
-5. [Comparison of Static Code Analysis Tools](#comparison-of-static-code-analysis-tools)
-6. [Advantages of Static Code Analysis](#advantages-of-static-code-analysis)
-8. [Proof of Concept (POC)](#proof-of-concept-poc)
-9. [Best Practices](#best-practices)
-10. [Conclusion](#conclusion)
-11. [Contact Information](#contact-information)
-12. [References](#references)
+
+# Table of Contents
+
+1. [**Introduction**](#introduction)
+2. [**What is Code Compilation?**](#what-is-code-compilation)
+3. [**Why is Code Compilation Important?**](#why-is-code-compilation-important)
+4. [**Workflow Diagram**](#workflow-diagram)
+5. [**Different Tools for Compilation Checks**](#different-tools-for-compilation-checks)
+6. [**Tool Comparison Table**](#tool-comparison-table)
+7. [**Advantages of Compilation Checks**](#advantages-of-compilation-checks)
+8. [**Best Practices**](#best-practices)
+9. [**Conclusion**](#conclusion)
+10. [**Contact Information**](#contact-information)
+11. [**References**](#references)
+
+
 
 
 
@@ -34,7 +40,7 @@
 
 This documentation explains how to perform compile code analysis on a React project. It covers setup, execution, and how to review results to ensure code quality and maintainability.
 
-##  **What is Code Compilation?**
+## **What is Code Compilation?**
 Code compilation is the process of converting source code written in a programming language into executable machine code. In React, this process involves using tools like Babel and Webpack (or Vite) to transform modern JavaScript/JSX into browser-compatible JavaScript.
 
 
@@ -50,11 +56,11 @@ Code compilation is the process of converting source code written in a programmi
 
 ---
 
-## **4. Workflow Diagram**
+## **Workflow Diagram**
+![react](https://github.com/user-attachments/assets/d6d47556-fb74-4930-8cfb-565ff62d6c35)
 
 
-
-## **5. Different Tools for Compilation Checks**
+## **Different Tools for Compilation Checks**
 
 | Tool               | Description                                     |
 | ------------------ | ----------------------------------------------- |
@@ -62,25 +68,22 @@ Code compilation is the process of converting source code written in a programmi
 | **Webpack**        | Bundles JS modules and assets                   |
 | **Vite**           | Fast dev server and bundler for modern projects |
 | **ESBuild**        | Extremely fast bundler/transpiler               |
-| **Jenkins**        | Automates build & compilation checks            |
-| **GitHub Actions** | Workflow automation for code compilation        |
-| **CircleCI**       | CI platform with built-in JS project support    |
+| **CRA** | CRA uses Webpack and Babel under the hood. |
+---
+
+## **Tool Comparison Table**
+
+| **Tool**                               | **Used With**                    | **Setup**            | **Speed**   | **Customization** | **Production Ready** | **Use Case**                                         |
+| -------------------------------------- | -------------------------------- | -------------------- | ----------- | ----------------- | -------------------- | ---------------------------------------------------- |
+| **Create React App** (`react-scripts`) | Beginners, small–medium projects | Zero config          | Medium      | Limited           | Yes                  | Easiest way to start React projects with defaults    |
+| **Vite**                               | Modern React, Vue, etc.          | Minimal config       | Very Fast   | High              | Yes                  | Modern dev experience and lightning-fast HMR         |
+| **Webpack**                            | Advanced React apps              | Manual config        | Slower      | Very High         | Yes                  | Full control over bundling, used in large codebases  |
+| **Parcel**                             | Small to medium apps             | Zero config          | Fast        | Moderate          | Yes                  | Good balance between config-free and performance     |
+| **Next.js**                            | React + SSR/SPAs                 | Slightly opinionated | Medium      | High              | Yes                  | Ideal for SSR, hybrid static & dynamic React sites   |
 
 ---
 
-## **6. Tool Comparison Table**
-
-| Feature           | Babel + Webpack  | Vite      | ESBuild        |
-| ----------------- | ---------------- | --------- | -------------- |
-| Speed             | Moderate         | Very Fast | Extremely Fast |
-| Configuration     | Complex          | Simple    | Simple         |
-| Ecosystem Support | Mature           | Growing   | Growing        |
-| Tree Shaking      | Yes              | Yes       | Yes            |
-| Use in CI/CD      | Widely Supported | Supported | Supported      |
-
----
-
-## **7. Advantages of Compilation Checks**
+## **Advantages of Compilation Checks**
 
 | Benefit    | Description                            |
 | ---------- | -------------------------------------- |
@@ -91,7 +94,7 @@ Code compilation is the process of converting source code written in a programmi
 ---
 
 
-## **9. Best Practices**
+## **Best Practices**
 
 | Best Practice      | Description                                                   |
 | ------------------ | ------------------------------------------------------------- |
@@ -105,11 +108,8 @@ Code compilation is the process of converting source code written in a programmi
 
 ## **Conclusion**
 
-* Adopt **Vite** or **ESBuild** for faster compilation in CI.
-* Use **Jenkins** or **GitHub Actions** for automation.
-* Enforce code compilation checks in **pull request workflows**.
-* Integrate compilation logs with Slack/Email alerts.
-* Regularly update build tools (e.g., Babel, Webpack).
+Create React App (CRA) uses Webpack and Babel under the hood to handle code compilation. When you run the build process, the source files inside the `src/` directory are transpiled, bundled, and optimized. The final output is placed in the `build/` directory, which contains static assets ready to be deployed to any web server.
+
 
 ---
 ## Contact Information
@@ -120,90 +120,16 @@ Code compilation is the process of converting source code written in a programmi
 
 ---
 
-## **12. References**
+## **References**
 
 * [React Official Docs](https://reactjs.org/docs/getting-started.html)
 * [Babel Documentation](https://babeljs.io/docs/)
 * [Webpack Documentation](https://webpack.js.org/)
 * [Vite Documentation](https://vitejs.dev/)
 * [ESBuild Docs](https://esbuild.github.io/)
-* [Jenkins CI](https://www.jenkins.io/)
-* [GitHub Actions](https://docs.github.com/en/actions)
-
----
 
 
 
-# **Why Use Static Code Analysis?**
-| Feature                         | Description                                                                                  |
-|---------------------------------|----------------------------------------------------------------------------------------------|
-| **Early Detection of Issues**       | Identifies problems in code before it is executed, helping to address issues early.        |
-| **Improves Code Quality**           | Enforces coding standards and best practices, resulting in cleaner and more maintainable code. |
-| **Enhances Security**               | Detects security vulnerabilities and potential threats in the code.                         |
-| **Reduces Debugging Time**          | Minimizes the time required for debugging by catching errors early in the development process. |
-| **Automates Code Reviews**         | Provides a consistent and automated way to perform code reviews.                            |
-
-
-# **Different Tools for Static Code Analysis in Java**
-Several tools are available for static code analysis in Java, each with unique features and strengths. Some popular ones include:
-
-- **SonarQube**
-- **Checkstyle**
-- **PMD**
-- **FindBugs/SpotBugs**
 
 
 
-# **Comparison of Static Code Analysis Tools**
-| Feature                        | SonarQube                                    | PMD                                 | Checkstyle                          | FindBugs/SpotBugs                  |
-|--------------------------------|----------------------------------------------|-------------------------------------|-------------------------------------|-------------------------------------|
-| **Purpose**                    | Comprehensive code quality management tool   | Code smells for Java       | Static code analysis for Java        | Bug detection and static analysis    |
-| **Language Support**           | Multiple languages (Java, JavaScript, C#, etc.) | Primarily Java                      | Primarily Java                      | Primarily Java                      |
-| **Reporting**                  | Provides detailed dashboards and reports     | Generates reports on Code smells | Generates reports on code style issues | Generates reports on potential bugs  |
-| **Focus Areas**                | Code quality, security, maintainability      | Code complexity, best practices     | Code formatting and style guidelines | Bug patterns and potential issues   |
-
-
-# **Advantages of Static Code Analysis**
-| Benefit                        | Description                                                               |
-|-------------------------------|---------------------------------------------------------------------------|
-| **Cost-Effective**            | Reduces the cost associated with fixing error later in the development cycle. |
-| **Automated**                 | Can be integrated into build processes for continuous feedback.           |
-| **Consistent**                | Provides a uniform approach to code quality across teams.                 |
-| **Increased Maintainability**| Promotes cleaner code which is easier to maintain and extend.           |
-
-
-# **Proof of Concept (POC)**
-
-> **NOTE:**   
-> We are using **SalaryAPI** for Java static code analysis.  
-> Refer to the official POC documentation for complete steps: [Static code analysis POC](https://github.com/snaatak-Downtime-Crew/Documentation/tree/SCRUMS-157-Vardaan/application-ci/checks/java/static-code-analysis/poc) 
-
-
-# **Best Practices**
-| Best Practice                 | Description                                                               |
-|-------------------------------|---------------------------------------------------------------------------|
-| **Integrate Early**           | Start static analysis early in the development cycle to catch issues sooner. |
-| **Automate**                  | Incorporate static analysis into CI/CD pipelines for continuous feedback.  |
-| **Review Regularly**          | Regularly review from experienced developers        |
-|**Focus on Readability and Reusability**| Write code that is easy to read and understand for other developers.|
-
-
-
-# **Conclusion**
-In conclusion, static code analysis is a valuable tool in the software development process, offering benefits such as improved code quality and adherence to coding standards.  
-We are using **SonarQube** in our project because it effectively enhances code quality, improves maintainability, and fosters a consistent coding culture within the team.
-
-#  **Contact Information**
-
-| Name           | Email Address                                                                         |
-| -------------- | ------------------------------------------------------------------------------------- |
-| Vardaan Saxena | [vardaan.saxena.snaatak@mygurukulam.co](mailto:vardaan.saxena.snaatak@mygurukulam.co) |
-
-
-
-# **References**
-
-| **Description**                 | **Link**                                                              |
-|--------------------------------|------------------------------------------------------------------------|
-| **SonarQube**                    | https://www.sonarsource.com/products/sonarqube/ 
-| **Static Code Analysis Tools**     | https://www.bitshifted.co/blog/java-static-code-analysis-tools/        |
