@@ -1,4 +1,4 @@
-#  Proof of Concept (POC) for Code Compilation for Golang
+#  Proof of Concept (POC) for Code Compilation ReactJS
 <img width="469" alt="image" src="https://github.com/user-attachments/assets/dbf5f68b-df66-4122-8e6f-bd5f7099636a" />
 
 
