@@ -13,18 +13,28 @@
 
 
   
-## 📑 Table of Contents
-- [Introduction](#introduction)
-- [⚙️ Pre-Requisites](#-pre-requisites)
-- [🖥️ System Requirements](#-system-requirements)
-- [🛠️ Build-Time Dependency](#-build-time-dependency)
-- [🚀 Run-Time Dependency](#-run-time-dependency)
-- [🌐 Important Ports](#-important-ports)
-- [🏗️ Architecture](#-architecture)
-- [📥 Step-by-step Installation](#-step-by-step-installation)
-- [📝Conclusion](#conclusion)
-- [📧 Contact Information ](#-contact-information )
-- [📚 References](#-references )
+Here’s a **Table of Contents (ToC)** you can add at the top of your document:
+
+---
+
+##  Table of Contents
+
+1. [Introduction](#introduction)  
+2. [Pre-Requisites](#pre-requisites)  
+3. [System Requirements](#system-requirements)  
+4. [Build-Time Dependency](#build-time-dependency)  
+5. [Run-Time Dependency](#run-time-dependency)  
+6. [Important Ports](#important-ports)  
+7. [Step-by-step Installation](#step-by-step-installation)  
+   - [Step 1: Check the Go version](#step-1-check-the-go-version)  
+   - [Step 2: Install Go (if not installed)](#step-2-if-not-installed-install-go)  
+   - [Step 3: Clone the Git Repository](#step-3-clone-the-git-repository)  
+   - [Step 4: Change Directory](#step-4-change-directory)  
+   - [Step 5: Code Compilation](#step-5-code-compilation)  
+8. [Contact Information](#contact-information)  
+9. [References](#references)  
+
+---
 
 
 ## Introduction 
@@ -107,6 +117,6 @@ Running this command starts the employee API service, making it ready to handle 
 | Adil Nawaz | adil.nawaz.snaatak@mygurukulam.co           |
 
 ##  References
-| Links | Descriptions|
+| Description | Links|
 |------|---------------------|
-| Document|https://github.com/mygurukulam-p10/Documention/blob/main/Application%20CI%20Design/GoLang%20CI%20Checks/Code%20compilation%20Doc/readme.md|
+| Document|[Link](https://github.com/mygurukulam-p10/Documention/blob/main/Application%20CI%20Design/GoLang%20CI%20Checks/Code%20compilation%20Doc/readme.md)|
