@@ -1,6 +1,6 @@
 # Authentication and Authorization in Jenkins
 
-This document provides an overview of Jenkins' authentication and authorization mechanisms, focusing on securing access and managing user permissions.
+
 
 ## Table of Contents
 1. [Introduction](#what-is-jenkins)
@@ -19,9 +19,12 @@ This document provides an overview of Jenkins' authentication and authorization 
 8. [Contact Information](#contact-information)
 9. [References](#references)
 
+## Introduction
+This document provides an overview of Jenkins' authentication and authorization mechanisms, focusing on securing access and managing user permissions.
+
 ## What is Jenkins
 
-Jenkins is a crucial part of many CI/CD pipelines, often handling sensitive information such as source code, credentials, and deployment configurations. Securing Jenkins ensures that only authorized users can access these critical assets, protecting the integrity of the development and deployment processes.
+Jenkins is a crucial part of CI/CD pipelines, often handling sensitive information such as source code, credentials, and deployment configurations. Securing Jenkins ensures that only authorized users can access these critical assets, protecting the integrity of the development and deployment processes.
 
 
 ## Authentication in Jenkins
