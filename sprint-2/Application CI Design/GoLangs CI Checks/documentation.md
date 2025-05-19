@@ -7,7 +7,7 @@
 | 19-05-2025  | V1      | Adil Nawaz    |        | Internal Reviewer| Pritam        |
 |   | V2    | Adil Nawaz    |          | L0 Reviewer      | Shreya           |
 |   | V3    | Adil Nawaz    |          | L1 Reviewer      | Abhiskek V         |
-| 5  | V3    | Adil Nawaz    |          | L2 Reviewer      | Abhiskek D         |
+|   | V3    | Adil Nawaz    |          | L2 Reviewer      | Abhiskek D         |
 
 
 
@@ -94,7 +94,7 @@ Code compilation is the process of converting source code written in a programmi
 | **Cross-Compile as Needed** | Utilize cross-compilation to build binaries for different platforms (e.g., Linux, Windows).     |
 | **Automate Builds**      | Use CI/CD pipelines (like GitHub Actions) to automate the compilation process.     |
 
-## Conclusion**
+## Conclusion
 
 We chose the **Go Compiler** as our primary build tool because it is fast, reliable, and well-integrated into the Go ecosystem. It supports module-based dependency management, flexible build flags, and seamless CI/CD integration. By following best practices like using Go modules and automating builds, we ensure consistent, high-performance application delivery across environments.
 
