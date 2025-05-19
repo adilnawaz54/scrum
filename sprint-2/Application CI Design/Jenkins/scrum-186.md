@@ -1,6 +1,22 @@
-#  Jenkins Authentication & Authorization
+#  Documentation: Jenkins Authentication & Authorization
 
----
+
+##  Table of Contents
+
+1. [Introduction](#introduction)
+2. [What is Jenkins](#what-is-jenkins)
+3. [What is Authentication and Authorization?](#what-is-authentication-and-authorization)
+4. [Why Use Authentication and Authorization in Jenkins?](#why-use-authentication-and-authorization-in-jenkins)
+5. [Jenkins AuthN & AuthZ Workflow](#jenkins-authn--authz-workflow)
+6. [Authentication Strategies in Jenkins](#authentication-strategies-in-jenkins)
+7. [Authorization Strategies in Jenkins](#authorization-strategies-in-jenkins)
+8. [Authentication Method Comparison](#comparison-table)
+9. [Best Practices](#best-practices)
+10. [Conclusion](#conclusion)
+11. [Contact Information](#contact-information)
+12. [References](#references)
+
+
 
 ##  Introduction
 
@@ -75,11 +91,6 @@ Jenkins is a crucial part of CI/CD pipelines, often handling sensitive informati
 ---
 
 ##  Comparison Table
-Here’s your updated comparison table with **descriptive text** instead of tick (✅) and cross (❌) emojis:
-
----
-
-###  Jenkins Authentication Methods Comparison
 
 | Feature                        | Jenkins DB                  | LDAP                                | GitHub OAuth                         | SSO (SAML/OIDC)                      |
 |-------------------------------|-----------------------------|--------------------------------------|--------------------------------------|--------------------------------------|
