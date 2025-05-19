@@ -4,9 +4,12 @@
 
 ##  Introduction
 
-Security is a critical aspect of any CI/CD system. In Jenkins, **Authentication** (AuthN) verifies *who* you are, and **Authorization** (AuthZ) determines *what* you can do. This document provides a detailed overview of how Jenkins manages users and permissions to secure the automation pipeline.
+This document provides an overview of Jenkins' authentication and authorization mechanisms, focusing on securing access and managing user permissions.
 
----
+## What is Jenkins
+
+Jenkins is a crucial part of CI/CD pipelines, often handling sensitive information such as source code, credentials, and deployment configurations. Securing Jenkins ensures that only authorized users can access these critical assets, protecting the integrity of the development and deployment processes.
+
 
 ##  What is Authentication and Authorization?
 
@@ -21,10 +24,10 @@ Security is a critical aspect of any CI/CD system. In Jenkins, **Authentication*
 
 | Purpose                      | Reason                                                                 |
 |------------------------------|------------------------------------------------------------------------|
-| 🔐 Secure Access             | Prevent unauthorized access to Jenkins and its resources.              |
-| 🛂 Role Management           | Control user access based on roles and responsibilities.               |
-| 📈 Audit & Compliance        | Track who did what and ensure compliance with organizational policies. |
-| 🧪 Safe Environment           | Protect build/test pipelines from tampering.                           |
+|  **Secure Access**             | Prevent unauthorized access to Jenkins and its resources.              |
+|  **Role Management**           | Control user access based on roles and responsibilities.               |
+|  **Audit & Compliance**        | Track who did what and ensure compliance with organizational policies. |
+|  **Safe Environment**           | Protect build/test pipelines from tampering.                           |
 
 ---
 
@@ -72,16 +75,23 @@ Security is a critical aspect of any CI/CD system. In Jenkins, **Authentication*
 ---
 
 ##  Comparison Table
-
-| Feature                        | Jenkins DB | LDAP | GitHub OAuth | SSO (SAML/OIDC) |
-|-------------------------------|------------|------|--------------|-----------------|
-| Built-in                      | ✅         | ❌   | ❌           | ❌              |
-| External Identity Source      | ❌         | ✅   | ✅           | ✅              |
-| Requires Plugin               | ❌         | ✅   | ✅           | ✅              |
-| Fine-grained Access Control   | ✅         | ✅   | ✅           | ✅              |
-| Enterprise Ready              | ❌         | ✅   | ✅           | ✅              |
+Here’s your updated comparison table with **descriptive text** instead of tick (✅) and cross (❌) emojis:
 
 ---
+
+###  Jenkins Authentication Methods Comparison
+
+| Feature                        | Jenkins DB                  | LDAP                                | GitHub OAuth                         | SSO (SAML/OIDC)                      |
+|-------------------------------|-----------------------------|--------------------------------------|--------------------------------------|--------------------------------------|
+| **Built-in**                  | Yes, comes pre-installed    | No, requires configuration           | No, needs plugin and setup           | No, needs plugin and setup           |
+| **External Identity Source**  | No, uses internal database  | Yes, connects to directory services | Yes, authenticates via GitHub        | Yes, integrates with identity providers |
+| **Requires Plugin**           | No plugin needed            | Yes, LDAP plugin required            | Yes, GitHub OAuth plugin required    | Yes, SAML or OIDC plugin required    |
+| **Fine-grained Access Control** | Yes, supports roles/groups | Yes, supports group-based access     | Yes, can map teams to roles          | Yes, supports detailed role mapping  |
+| **Enterprise Ready**          | Basic only, limited scaling | Yes, widely used in enterprises      | Yes, scalable for GitHub users       | Yes, ideal for large organizations   |
+
+---
+
+
 
 ##  Best Practices
 
@@ -96,7 +106,7 @@ Security is a critical aspect of any CI/CD system. In Jenkins, **Authentication*
 
 ---
 
-##  Recommendations & Conclusion
+## Conclusion
 
 - For **small teams**, internal Jenkins DB with matrix strategy may be sufficient.
 - For **enterprise or production**, integrate Jenkins with **LDAP/SSO** and enable **role-based authorization**.
@@ -117,10 +127,10 @@ Security is a critical aspect of any CI/CD system. In Jenkins, **Authentication*
 
 | Title                              | Link                                                                 |
 |------------------------------------|----------------------------------------------------------------------|
-| Jenkins Security Documentation     | https://www.jenkins.io/doc/book/security/                            |
-| Role Strategy Plugin               | https://plugins.jenkins.io/role-strategy/                            |
-| GitHub OAuth Plugin for Jenkins    | https://plugins.jenkins.io/github-oauth/                             |
-| LDAP Plugin                        | https://plugins.jenkins.io/ldap/                                     |
+| Jenkins Security Documentation     | [Link](https://www.jenkins.io/doc/book/security/)                   |
+| Role Strategy Plugin               | [Link](https://plugins.jenkins.io/role-strategy/)                            |
+| GitHub OAuth Plugin for Jenkins    | [Link](https://plugins.jenkins.io/github-oauth/)                             |
+| LDAP Plugin                        | [Link](https://plugins.jenkins.io/ldap/)                                    |
 
 ---
 
