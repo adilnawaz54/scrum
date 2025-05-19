@@ -45,7 +45,12 @@ Code compilation is the process of converting source code written in a programmi
 | **Static Typing** | Helps catch errors at compile time, enhancing reliability. |
 
 ## Workflow Diagram
-
+![image](https://github.com/user-attachments/assets/cefdb377-0f61-4c43-afdc-596a4a9f1b55)
+- **Go Source:** This represents the source code written in the Go programming language. It’s the initial code that you write and save in .go files.
+  
+- **Compiler:** The compiler is a tool that translates the Go source code into machine code. Within the compiler, there’s a step labeled “asm” which stands for assembly. This step converts the high-level Go code into assembly language, a low-level representation of the code that is closer to machine language.
+  
+- **Executable Binary:** The final output of the compilation process is the executable binary. This is the machine code that the computer can directly execute. 
 
 ## Different Tools for Go Compilation
 
