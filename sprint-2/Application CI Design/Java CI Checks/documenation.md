@@ -30,10 +30,7 @@
 ## Introduction
 Unit testing is a critical practice in software development that involves testing individual units or components of an application in isolation. In Java, unit testing helps validate that each method or class performs as expected before the code is integrated into the larger system.
 
-Unit tests are automated and run regularly as part of Continuous Integration (CI) pipelines to ensure that changes in the codebase don’t introduce regressions or break existing functionality.
-
 ## What is Unit Testing
-Unit testing refers to testing individual components of the software (such as functions, classes, or methods) in isolation from other parts of the system. This is done to ensure that each unit behaves correctly according to its design and requirements.
 
 In Java, common unit testing frameworks include JUnit and TestNG. These frameworks allow you to create tests that are automatically executed as part of the CI pipeline, ensuring that any code changes still meet quality standards.
 
