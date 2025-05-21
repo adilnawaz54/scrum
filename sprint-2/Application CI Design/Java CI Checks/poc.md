@@ -1,13 +1,11 @@
 # Proof of Concept (POC) for Java Unit Testing
 
 ##  **Author Information**
-| Created     | Version | Author        | Last Updated       | Comment          | Reviewer         |
-|-------------|---------|---------------|--------------------|------------------|------------------|
-| 18-05-2025  | V1      | Adil Nawaz    |        | Internal Reviewer| Pritam        |
-| 18-05-2025  | V2    | Adil Nawaz    |          | L0 Reviewer      | Shreya           |
-| 18-05-2025  | V3    | Adil Nawaz    |          | L1 Reviewer      | Abhiskek V         |
-| 18-05-2025  | V3    | Adil Nawaz    |          | L2 Reviewer      | Abhiskek D         |
-
+| Last Updated | Version | Author          | Comment           | Reviewer |
+|--------------|---------|------------------|-------------------|----------|
+| 19-05-2025   | V1.0    | Adil Nawaz   | Internal Review   | Pritam   |
+| 00-05-2025   | V2.0    | Adil Nawaz   | L0                | Shreya   |
+| 00-05-2025   | V3.0    | Adil Nawaz   | L1               | Abhishek V   |
 
 ## Table of Contents
 
@@ -28,7 +26,45 @@
 7. [References](#references)
 
 ## Introduction
-Unit testing in Java is an essential practice for ensuring the correctness and functionality of individual code units. By isolating and testing these components, developers can improve code reliability and reduce the likelihood of errors. In this document, we will outline the steps for setting up and executing unit tests using the JUnit framework in a typical Java project.
+Unit testing in Java is an essential practice for ensuring the correctness and functionality of individual code units. In this document, we will outline the steps for setting up and executing unit tests using the JUnit framework in a typical Java project.
+
+# Pre-requisites 
+
+
+| **Specification**      | **Details**         |
+|-------------------------|---------------------|
+| **Operating System**    | Ubuntu 22.04      |
+| **CPU**                | 2 vCPU             |
+| **Hard Disk**             | 20 GB              |
+| **RAM**                | 4 GB               |
+
+
+# **Security Ports**
+
+| **Port** | **Use Case**                  |
+|----------|-------------------------------|
+| 22       | SSH access for remote login   |
+| 5432     | PostgreSQL database access    |
+| 9000     | SonarQube web interface       |
+
+
+
+
+# **Step-by-step Installation**
+
+> **NOTE:**   
+> We are using **SalaryAPI** for Java static code analysis.  
+> Refer to the official POC documentation for complete steps: [Salary API POC](https://github.com/snaatak-Downtime-Crew/Documentation/blob/main/ot-ms-understanding/applications/salary/poc/README.md)
+
+ ## **Step 1. Update System Packages**
+
+>
+>  **Update system**  
+> 👉 **Follow Step 3 here**: [System update Commands](https://github.com/snaatak-Downtime-Crew/Documentation/blob/main/common_stack/operating_system/ubuntu/sop/commoncommands/README.md#1-basic-system-commands)
+>
+> 
+
+
 
 ## Testing Framework
 Java unit testing is facilitated by various testing frameworks, with JUnit being one of the most widely adopted. JUnit provides a structured way to write, organize, and execute tests.
