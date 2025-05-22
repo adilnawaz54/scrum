@@ -9,27 +9,38 @@
 
 ## Table of Contents
 
+
 1. [Introduction](#introduction)
-2. [Testing Framework](#testing-framework)
-   - [Overview](#overview)
-3. [Prerequisites](#prerequisites)
-4. [Steps to Perform](#steps-to-perform)
-   - [Cloning the Java Application](#cloning-the-java-application)
-   - [Install Java 17 and Maven](#install-java-17-and-maven)
-   - [Add the JUnit Dependency to `pom.xml`](#add-the-junit-dependency-to-pomxml)
-   - [Add Maven Dependency in `pom.xml`](#add-maven-dependency-in-pomxml)
-   - [Update Surefire Plugin Configuration in `pom.xml`](#update-surefire-plugin-configuration-in-pomxml)
-   - [Execute Java Unit Tests](#execute-java-unit-tests)
-   - [Generate HTML Report with Surefire](#generate-html-report-with-surefire)
-5. [POC Conclusion](#poc-conclusion)
-6. [Contact Information](#contact-information)
-7. [References](#references)
+2. [Pre-requisites](#pre-requisites)
+3. [System Requirements](#system-requirements)
+4. [Security Ports](#security-ports)
+5. [Testing Framework](#testing-framework)
+6. [Step-by-step Installation](#step-by-step-installation)
+   * [Step 1: Update System Packages](#step-1-update-system-packages)
+   * [Step 2: Install Java 17 and Maven](#step-2-install-java-17-and-maven)
+   * [Step 3: Cloning the Java Application](#step-3-cloning-the-java-application)
+   * [Step 4: Configure pom.xml](#step-4)
+     * [Add JUnit Dependency](#add-the-junit-dependency-to-pomxml)
+     * [Add Maven Compiler Plugin](#add-maven-dependency-in-pomxml)
+     * [Update Surefire Plugin](#update-surefire-plugin-configuration-in-pomxml)
+   * [Step 5: Execute Java Unit Tests](#step-5-execute-java-unit-tests)
+7. [Generate HTML Report with Surefire](#generate-html-report-with-surefire)
+8. [POC Conclusion](#poc-conclusion)
+9. [Contact Information](#contact-information)
+10. [References](#references)
+
+---
 
 ## Introduction
 Unit testing in Java is an essential practice for ensuring the correctness and functionality of individual code units. In this document, we will outline the steps for setting up and executing unit tests using the JUnit framework in a typical Java project.
 
-# Pre-requisites 
+## Pre-requisites 
+- Java Version 17 (as specified in pom.xml)
+- Maven: Maven simplifies dependency management and project build processes, including testing.
+- JUnit: A necessary library for executing the unit tests.
 
+
+## System Requirements
 
 | **Specification**      | **Details**         |
 |-------------------------|---------------------|
@@ -39,32 +50,12 @@ Unit testing in Java is an essential practice for ensuring the correctness and f
 | **RAM**                | 4 GB               |
 
 
-# **Security Ports**
+## **Security Ports**
 
 | **Port** | **Use Case**                  |
 |----------|-------------------------------|
 | 22       | SSH access for remote login   |
 | 5432     | PostgreSQL database access    |
-| 9000     | SonarQube web interface       |
-
-
-
-
-# **Step-by-step Installation**
-
-> **NOTE:**   
-> We are using **SalaryAPI** for Java static code analysis.  
-> Refer to the official POC documentation for complete steps: [Salary API POC](https://github.com/snaatak-Downtime-Crew/Documentation/blob/main/ot-ms-understanding/applications/salary/poc/README.md)
-
- ## **Step 1. Update System Packages**
-
->
->  **Update system**  
-> 👉 **Follow Step 3 here**: [System update Commands](https://github.com/snaatak-Downtime-Crew/Documentation/blob/main/common_stack/operating_system/ubuntu/sop/commoncommands/README.md#1-basic-system-commands)
->
-> 
-
-
 
 ## Testing Framework
 Java unit testing is facilitated by various testing frameworks, with JUnit being one of the most widely adopted. JUnit provides a structured way to write, organize, and execute tests.
@@ -76,28 +67,37 @@ The salary microservice has pre-existing unit test cases authored by the develop
 src/test/java/com/opstree/microservice/salary
 ```
 
+## **Step-by-step Installation**
 
-## Prerequisites
-- Java Version 17 (as specified in pom.xml)
-- Maven: Maven simplifies dependency management and project build processes, including testing.
-- JUnit: A necessary library for executing the unit tests.
+> **NOTE:**   
+> We are using **SalaryAPI** for Java Unit testing.  
+> Refer to the official POC documentation for complete steps: [Salary API POC](https://github.com/snaatak-Downtime-Crew/Documentation/blob/main/ot-ms-understanding/applications/salary/poc/README.md)
 
-## Steps to perform
+ ### **Step 1. Update System Packages**
 
-### Cloning the Java Application
-To begin, clone the salary-api repository from GitHub into your local directory:
-```
-git clone https://github.com/OT-MICROSERVICES/salary-api.git
-```
-## Install Java 17 and Maven
+>
+>  **Update system**  
+> 👉 **Follow Step 3 here**: [System update Commands](https://github.com/snaatak-Downtime-Crew/Documentation/blob/main/common_stack/operating_system/ubuntu/sop/commoncommands/README.md#1-basic-system-commands)
+>
+> 
+
+### Step 2. Install Java 17 and Maven
 Since the salary codebase relies on Java 17, it is essential to install the correct version of Java and Maven for managing project dependencies.
-```
-sudo apt update
-sudo apt install openjdk-17-jdk
-sudo apt install maven
-```
+- ![image](https://github.com/user-attachments/assets/b98f2a5f-7631-4783-b560-30bc0af5eb82)
+- ![image](https://github.com/user-attachments/assets/487be602-13cd-451a-98dc-57e2201bfb0e)
 
-## Add the JUnit Dependency to ```pom.xml```
+
+### Step 2. Cloning the Java Application
+![image](https://github.com/user-attachments/assets/e1ccbba5-2cb1-4b21-ba6d-8cc1c0894570)
+
+### Step 3. Clean the project
+- This removes any previously compiled files or cached test results.
+
+![Screenshot 2025-05-21 194207](https://github.com/user-attachments/assets/fa5abc47-b0f2-4ba7-8616-ef9e12e7bdd5)
+
+### Step 4. 
+
+#### Add the JUnit Dependency to ```pom.xml```
 Ensure that the JUnit dependency is added to your ```pom.xml``` file:
 ```
 <dependency>
@@ -110,7 +110,7 @@ Ensure that the JUnit dependency is added to your ```pom.xml``` file:
 ![Screenshot from 2024-09-30 11-26-29](https://github.com/user-attachments/assets/9440f179-d1f9-49db-ad64-3bd18cddd81a)
 
 
-## Add Maven Dependency in ```pom.xml```
+#### Add Maven Dependency in ```pom.xml```
 Add the Maven compiler plugin to your ```pom.xml``` file for compiling your Java project:
 ```
 <dependency>
@@ -122,17 +122,16 @@ Add the Maven compiler plugin to your ```pom.xml``` file for compiling your Java
 ```
 ![Screenshot from 2024-09-30 11-25-10](https://github.com/user-attachments/assets/c5eeed17-8b8e-4d73-9e1c-a2b29954e880)
 
-### Update Surefire Plugin Configuration in pom.xml
+#### Update Surefire Plugin Configuration in pom.xml
 To resolve compatibility issues with JUnit, you may need to uncomment and adjust the Surefire plugin configuration in the pom.xml file.
 Make sure to update the Surefire plugin 3.0.0:
 ![Screenshot from 2024-09-30 11-23-38](https://github.com/user-attachments/assets/51c12b2b-7107-4443-8c56-0b5f77bdb976)
 
-## Execute Java Unit Tests
-Run the following Maven command to execute the unit tests:
-```
-mvn test
-```
-![Screenshot from 2024-09-30 12-25-03](https://github.com/user-attachments/assets/140aafdd-6e1e-4053-9ff7-86c6e7b1a81f)
+### Step 5. Execute Java Unit Tests
+- ![Screenshot 2025-05-21 233155](https://github.com/user-attachments/assets/b8598620-795f-402d-8596-0b7cf997dcce)
+
+- ![image](https://github.com/user-attachments/assets/fd6c8208-3f37-4b27-b8fc-f68a9f00bede)
+
 
 ## Generate HTML Report with Surefire
 To generate an HTML report from the test execution, run the following command:
