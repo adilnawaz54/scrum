@@ -1,0 +1,8 @@
+@Library('shared-library@main') _
+
+golangcodecompilation(
+    GO_VERSION: 'go1.20.12',
+    RECIPIENT: 'adilnawaz54@gmail.com',
+    repoUrl: 'https://github.com/OT-MyGurukulam/employee-api.git',
+    repoBranch: 'main'
+)
