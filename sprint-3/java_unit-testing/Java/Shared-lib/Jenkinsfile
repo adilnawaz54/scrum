@@ -1,0 +1,8 @@
+@Library('shared-library@main') _
+
+javaunittesting(
+    repoUrl: 'https://github.com/snaatak-Downtime-Crew/salary-api.git',
+    branch: 'main',
+    credentialsId: 'downtime_github',
+    emailRecipient: 'adilnawaz54@gmail.com'
+)
