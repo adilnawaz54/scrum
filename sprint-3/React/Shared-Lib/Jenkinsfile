@@ -1,0 +1,8 @@
+@Library('shared-library@main') _
+
+reactcodecompilation(
+    repoUrl: 'https://github.com/OT-MyGurukulam/frontend.git',
+    branch: 'main',
+    buildDir: 'frontend',
+    email: 'adilnawaz54@gmail.com'
+)
