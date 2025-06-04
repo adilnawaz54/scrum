@@ -1,0 +1,94 @@
+pipeline {
+    agent any
+
+    environment {
+        REPO_URL = 'https://github.com/OT-MyGurukulam/frontend.git'
+        BRANCH = 'main'
+        BUILD_DIR = 'frontend'
+    }
+
+    stages {
+        stage('Clean Workspace') {
+            steps {
+                cleanWs()
+            }
+        }
+
+        stage('Checkout Code') {
+            steps {
+                git branch: "${BRANCH}", url: "${REPO_URL}"
+            }
+        }
+
+        stage('Install Node.js') {
+            steps {
+                sh '''
+                if command -v node > /dev/null 2>&1; then
+                    echo "Node.js is already installed, skipping installation."
+                else
+                    echo "Node.js not found, installing..."
+                    curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+                    sudo apt-get install -y nodejs
+                fi
+                '''
+            }
+        }
+
+        stage('Install Dependencies') {
+            steps {
+                dir("${BBUILD_DIR}") {
+                    sh 'npm install'
+                }
+            }
+        }
+
+        stage('Create public/index.html') {
+            steps {
+                sh '''
+                mkdir -p public
+                cat > public/index.html <<EOF
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React App</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
+</html>
+EOF
+                '''
+            }
+        }
+
+        stage('Run Code Compilation') {
+            steps {
+                dir("${BUILD_DIR}") {
+                    sh 'CI=false npm run build'
+                }
+            }
+        }
+
+        stage('Archive Build Artifacts') {
+            steps {
+                archiveArtifacts artifacts: "build/**"
+            }
+        }
+    }
+
+    post {
+        success {
+            mail to: 'adilnawaz54@gmail.com',
+                 subject: "Build Successful: ${env.JOB_NAME} [${env.BUILD_NUMBER}]",
+                 body: "The Jenkins job completed successfully.\nCheck details: ${env.BUILD_URL}"
+        }
+        failure {
+            mail to: 'adilnawaz54@gmail.com',
+                 subject: " Build Failed: ${env.JOB_NAME} [${env.BUILD_NUMBER}]",
+                 body: "Please check the Jenkins job for failure details:\n${env.BUILD_URL}"
+        }
+    }
+}
