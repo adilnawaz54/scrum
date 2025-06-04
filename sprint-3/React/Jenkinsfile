@@ -36,7 +36,7 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
-                dir("${BBUILD_DIR}") {
+                dir("${BUILD_DIR}") {
                     sh 'npm install'
                 }
             }
