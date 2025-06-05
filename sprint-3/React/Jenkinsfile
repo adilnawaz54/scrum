@@ -5,48 +5,116 @@ pipeline {
         REPO_URL = 'https://github.com/OT-MyGurukulam/frontend.git'
         BRANCH = 'main'
         BUILD_DIR = 'frontend'
+        SLACK_CHANNEL = 'notificationn-channel'
+        SLACK_CREDENTIAL_ID = 'downtime-crew'
+        PRIORITY = 'P1'
+        def FAILED_STAGE = ''
+        def FAILURE_REASON = ''
+        def PASSED_STAGES = 0
+        TOTAL_STAGES = 6
+        BUILD_TRIGGER = "${currentBuild.getBuildCauses()[0]?.userName ?: 'Timer/SCM/Event'}"
     }
 
     stages {
         stage('Clean Workspace') {
             steps {
-                cleanWs()
+                script {
+                    FAILED_STAGE = 'Clean Workspace'
+                    try {
+                        cleanWs()
+                        PASSED_STAGES++
+                    } catch (e) {
+                        FAILURE_REASON = e.getMessage()
+                        error("Stage failed: ${FAILURE_REASON}")
+                    }
+                }
             }
         }
 
         stage('Checkout Code') {
             steps {
-                git branch: "${BRANCH}", url: "${REPO_URL}"
+                script {
+                    FAILED_STAGE = 'Checkout Code'
+                    try {
+                        git branch: "${BRANCH}", url: "${REPO_URL}"
+                        PASSED_STAGES++
+                    } catch (e) {
+                        FAILURE_REASON = e.getMessage()
+                        error("Stage failed: ${FAILURE_REASON}")
+                    }
+                }
+            }
+        }
+
+        stage('Approval to Proceed') {
+            steps {
+                script {
+                    try {
+                        input message: "Do you want to proceed with the build?", ok: 'Yes, proceed'
+                    } catch (err) {
+                        currentBuild.result = 'ABORTED'
+                        error("Build aborted by user.")
+                    }
+                }
             }
         }
 
         stage('Install Node.js') {
             steps {
-                sh '''
-                if command -v node > /dev/null 2>&1; then
-                    echo "Node.js is already installed, skipping installation."
-                else
-                    echo "Node.js not found, installing..."
-                    curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
-                    sudo apt-get install -y nodejs
-                fi
-                '''
+                script {
+                    FAILED_STAGE = 'Install Node.js'
+                    try {
+                        sh '''
+                        export NVM_DIR="$HOME/.nvm"
+                        if [ ! -s "$NVM_DIR/nvm.sh" ]; then
+                            echo "Installing NVM..."
+                            curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+                        fi
+                        [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+                        nvm install 16
+                        nvm use 16
+                        echo "Node version: $(node -v)"
+                        echo "NPM version: $(npm -v)"
+                        '''
+                        PASSED_STAGES++
+                    } catch (e) {
+                        FAILURE_REASON = e.getMessage()
+                        error("Stage failed: ${FAILURE_REASON}")
+                    }
+                }
             }
         }
 
         stage('Install Dependencies') {
             steps {
-                dir("${BUILD_DIR}") {
-                    sh 'npm install'
+                script {
+                    FAILED_STAGE = 'Install Dependencies'
+                    try {
+                        dir("${BUILD_DIR}") {
+                            sh '''
+                            export NVM_DIR="$HOME/.nvm"
+                            [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+                            nvm use 16
+                            npm install
+                            '''
+                        }
+                        PASSED_STAGES++
+                    } catch (e) {
+                        FAILURE_REASON = e.getMessage()
+                        error("Stage failed: ${FAILURE_REASON}")
+                    }
                 }
             }
         }
 
-        stage('Create public/index.html') {
+        stage('Create and Copy index.html') {
             steps {
-                sh '''
-                mkdir -p public
-                cat > public/index.html <<EOF
+                script {
+                    FAILED_STAGE = 'Create and Copy index.html'
+                    try {
+                        sh '''
+                        mkdir -p public
+                        cat <<EOF > public/index.html
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -60,35 +128,123 @@ pipeline {
   </body>
 </html>
 EOF
-                '''
+
+                        mkdir -p ${BUILD_DIR}/public
+                        cp public/index.html ${BUILD_DIR}/public/index.html
+                        '''
+                        PASSED_STAGES++
+                    } catch (e) {
+                        FAILURE_REASON = e.getMessage()
+                        error("Stage failed: ${FAILURE_REASON}")
+                    }
+                }
             }
         }
 
         stage('Run Code Compilation') {
             steps {
-                dir("${BUILD_DIR}") {
-                    sh 'CI=false npm run build'
+                script {
+                    FAILED_STAGE = 'Run Code Compilation'
+                    try {
+                        dir("${BUILD_DIR}") {
+                            sh '''
+                            export NVM_DIR="$HOME/.nvm"
+                            [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+                            nvm use 16
+                            CI=false npm run build
+                            '''
+                        }
+                        PASSED_STAGES++
+                    } catch (e) {
+                        FAILURE_REASON = e.getMessage()
+                        error("Stage failed: ${FAILURE_REASON}")
+                    }
                 }
             }
         }
 
         stage('Archive Build Artifacts') {
             steps {
-                archiveArtifacts artifacts: "build/**"
+                script {
+                    FAILED_STAGE = 'Archive Build Artifacts'
+                    try {
+                        archiveArtifacts artifacts: 'build/**'
+                    } catch (e) {
+                        FAILURE_REASON = e.getMessage()
+                        error("Stage failed: ${FAILURE_REASON}")
+                    }
+                }
             }
         }
     }
 
     post {
         success {
-            mail to: 'adilnawaz54@gmail.com',
-                 subject: "Build Successful: ${env.JOB_NAME} [${env.BUILD_NUMBER}]",
-                 body: "The Jenkins job completed successfully.\nCheck details: ${env.BUILD_URL}"
+            script {
+                def message = """\
+Build #${env.BUILD_NUMBER} - SUCCESS
+
+Job: ${env.JOB_NAME}
+Triggered by: ${BUILD_TRIGGER}
+Stages Passed: ${PASSED_STAGES}/${TOTAL_STAGES}
+Job URL: ${env.BUILD_URL}
+"""
+                echo message
+
+                mail to: 'adilnawaz54@gmail.com',
+                     subject: "SUCCESS: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
+                     body: message
+
+                slackSend(
+                    channel: env.SLACK_CHANNEL,
+                    color: 'good',
+                    message: message,
+                    tokenCredentialId: env.SLACK_CREDENTIAL_ID
+                )
+            }
         }
+
         failure {
-            mail to: 'adilnawaz54@gmail.com',
-                 subject: " Build Failed: ${env.JOB_NAME} [${env.BUILD_NUMBER}]",
-                 body: "Please check the Jenkins job for failure details:\n${env.BUILD_URL}"
+            script {
+                def report = """
+Jenkins Build Failure Report
+=============================
+Job Name   : ${env.JOB_NAME}
+Build No.  : ${env.BUILD_NUMBER}
+Failed At  : ${FAILED_STAGE}
+Tools Used :
+  - Git (for code checkout)
+  - Node.js (for runtime)
+  - NPM (for dependency installation and build)
+  - Jenkins Archive (for build artifacts)
+
+Build URL  : ${env.BUILD_URL}
+Timestamp  : ${new Date().format("yyyy-MM-dd HH:mm:ss")}
+"""
+                writeFile file: 'failure_report.txt', text: report
+                archiveArtifacts artifacts: 'failure_report.txt'
+
+                def message = """\
+Build #${env.BUILD_NUMBER} - FAILED
+
+Job: ${env.JOB_NAME}
+Stage Failed: ${FAILED_STAGE}
+Reason: ${FAILURE_REASON}
+Job URL: ${env.BUILD_URL}
+"""
+                echo message
+
+                mail to: 'adilnawaz54@gmail.com',
+                     subject: "FAILURE: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
+                     body: message
+
+                slackSend(
+                    channel: env.SLACK_CHANNEL,
+                    color: 'danger',
+                    message: message,
+                    tokenCredentialId: env.SLACK_CREDENTIAL_ID
+                )
+            }
         }
     }
 }
