@@ -4,17 +4,21 @@ pipeline {
     agent any
 
     environment {
-        EMAIL = 'adilnawaz54@gmail.com'
+        SLACK_CHANNEL = 'notificationn-channel'
+        SLACK_CREDENTIAL_ID = 'downtime-crew'
     }
 
     stages {
-        stage('Run React Build Pipeline') {
+        stage('React Code Compilation') {
             steps {
                 script {
                     reactcodecompilation(
                         repoUrl: 'https://github.com/OT-MyGurukulam/frontend.git',
                         branch: 'main',
-                        buildDir: 'frontend'
+                        buildDir: 'frontend',
+                        slackChannel: "${SLACK_CHANNEL}",
+                        slackCredentialId: "${SLACK_CREDENTIAL_ID}",
+                        priority: 'P1'
                     )
                 }
             }
@@ -23,14 +27,62 @@ pipeline {
 
     post {
         success {
-            mail to: "${env.EMAIL}",
-                 subject: " Build Successful: ${env.JOB_NAME} [${env.BUILD_NUMBER}]",
-                 body: "The Jenkins job completed successfully.\nCheck details: ${env.BUILD_URL}"
+            script {
+                def message = """\
+Build #${env.BUILD_NUMBER} - SUCCESS
+Job: ${env.JOB_NAME}
+Triggered by: ${currentBuild.getBuildCauses()[0]?.userName ?: 'Timer/SCM/Event'}
+Stages Passed: ${env.PASSED_STAGES}/8
+Job URL: ${env.BUILD_URL}
+"""
+                echo message
+                mail to: 'adilnawaz54@gmail.com',
+                    subject: "SUCCESS: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
+                    body: message
+                slackSend(
+                    channel: SLACK_CHANNEL,
+                    color: 'good',
+                    message: message,
+                    tokenCredentialId: SLACK_CREDENTIAL_ID
+                )
+            }
         }
+
         failure {
-            mail to: "${env.EMAIL}",
-                 subject: " Build Failed: ${env.JOB_NAME} [${env.BUILD_NUMBER}]",
-                 body: "Please check the Jenkins job for failure details:\n${env.BUILD_URL}"
+            script {
+                def failedStage = env.FAILED_STAGE ?: 'Unknown'
+                def failureReason = env.FAILURE_REASON ?: 'No error message captured'
+
+                def report = """\
+Jenkins Build Failure Report
+=============================
+Job Name   : ${env.JOB_NAME}
+Build No.  : ${env.BUILD_NUMBER}
+Failed At  : ${failedStage}
+Build URL  : ${env.BUILD_URL}
+Timestamp  : ${new Date().format("yyyy-MM-dd HH:mm:ss")}
+"""
+                writeFile file: 'failure_report.txt', text: report
+                archiveArtifacts artifacts: 'failure_report.txt'
+
+                def message = """\
+Build #${env.BUILD_NUMBER} - FAILED
+Job: ${env.JOB_NAME}
+Stage Failed: ${failedStage}
+Reason: ${failureReason}
+Job URL: ${env.BUILD_URL}
+"""
+                echo message
+                mail to: 'adilnawaz54@gmail.com',
+                    subject: "FAILURE: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
+                    body: message
+                slackSend(
+                    channel: SLACK_CHANNEL,
+                    color: 'danger',
+                    message: message,
+                    tokenCredentialId: SLACK_CREDENTIAL_ID
+                )
+            }
         }
     }
 }
