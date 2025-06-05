@@ -1,8 +1,36 @@
 @Library('shared-library@main') _
 
-reactcodecompilation(
-    repoUrl: 'https://github.com/OT-MyGurukulam/frontend.git',
-    branch: 'main',
-    buildDir: 'frontend',
-    email: 'adilnawaz54@gmail.com'
-)
+pipeline {
+    agent any
+
+    environment {
+        EMAIL = 'adilnawaz54@gmail.com'
+    }
+
+    stages {
+        stage('Run React Build Pipeline') {
+            steps {
+                script {
+                    reactcodecompilation(
+                        repoUrl: 'https://github.com/OT-MyGurukulam/frontend.git',
+                        branch: 'main',
+                        buildDir: 'frontend'
+                    )
+                }
+            }
+        }
+    }
+
+    post {
+        success {
+            mail to: "${env.EMAIL}",
+                 subject: " Build Successful: ${env.JOB_NAME} [${env.BUILD_NUMBER}]",
+                 body: "The Jenkins job completed successfully.\nCheck details: ${env.BUILD_URL}"
+        }
+        failure {
+            mail to: "${env.EMAIL}",
+                 subject: " Build Failed: ${env.JOB_NAME} [${env.BUILD_NUMBER}]",
+                 body: "Please check the Jenkins job for failure details:\n${env.BUILD_URL}"
+        }
+    }
+}
