@@ -18,11 +18,11 @@ External systems alter resource properties (e.g., auto-scaling).
 Infrastructure states become inconsistent with the .tfstate file.
 
 ## Why Detect Terraform Drift?
- Maintain Infrastructure Consistency
- Avoid Unexpected Failures
- Enhance Security & Compliance
- Support Audits
- Prevent Environment Deviation
+ - Maintain Infrastructure Consistency
+ - Avoid Unexpected Failures
+ - Enhance Security & Compliance
+ - Support Audits
+ - Prevent Environment Deviation
 
 
 ## Advantages
@@ -33,5 +33,18 @@ Infrastructure states become inconsistent with the .tfstate file.
 |  **Audit & Compliance**      | Verifies environment adheres to defined configurations.       |
 |  **Faster Troubleshooting** | Highlights unexpected infrastructure behavior.                |
 |  **Automation Ready**        | Can be integrated into CI/CD for continuous monitoring.       |
+
+
+## Workflow
+
+## Tools for Drift detection
+
+| Tool                               | Description                                                       |
+| ---------------------------------- | ----------------------------------------------------------------- |
+| `terraform plan`                   | Detects differences between actual infrastructure and `.tfstate`. |
+| `terraform apply -refresh-only`    | Updates state file without changing infra.                        |
+| `Terratag` + `Terrascan`           | For tagging and scanning policies.                                |
+| Custom Scripts + AWS CLI           | For auditing and comparison.                                      |
+| CI tools (GitHub Actions, Jenkins) | Automate and report drifts on schedule.                           |
 
 
