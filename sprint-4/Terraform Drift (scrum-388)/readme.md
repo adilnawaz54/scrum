@@ -41,10 +41,21 @@ Infrastructure states become inconsistent with the .tfstate file.
 
 | Tool                               | Description                                                       |
 | ---------------------------------- | ----------------------------------------------------------------- |
-| `terraform plan`                   | Detects differences between actual infrastructure and `.tfstate`. |
-| `terraform apply -refresh-only`    | Updates state file without changing infra.                        |
-| `Terratag` + `Terrascan`           | For tagging and scanning policies.                                |
-| Custom Scripts + AWS CLI           | For auditing and comparison.                                      |
-| CI tools (GitHub Actions, Jenkins) | Automate and report drifts on schedule.                           |
+| **terraform plan**                   | Detects differences between actual infrastructure and `.tfstate`. |
+| **terraform apply -refresh-only**    | Updates state file without changing infra.                        |
+| **Custom Scripts + AWS CLI**           | For auditing and comparison.                                      |
+| **CI tools (GitHub Actions, Jenkins)** | Automate and report drifts on schedule.                           |
+
+## Best Practices
+
+| **Best Practice**                                                              | **Description**                                                                         |
+| ------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------- |
+| **Use remote backends (S3 + DynamoDB lock) for consistent state**                  | Ensures shared, centralized, and locked state management across teams.                  |
+| **Lock state during drift detection to avoid race conditions**                     | Prevents multiple operations from accessing/modifying state simultaneously.             |
+| **Treat all infrastructure as immutable via Terraform**                            | Avoid manual changes; all infra should be version-controlled and reproducible via code. |
+| **Alert only on real drift**          | Avoid false positives; notify only for meaningful changes.                              |
+
+
+
 
 
