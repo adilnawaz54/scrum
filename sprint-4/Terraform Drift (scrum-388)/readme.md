@@ -12,6 +12,24 @@
 | 00-06-2025   | V3.0    | Adil Nawaz   | L1               | Abhishek V   |
 
 
+
+##  Table of Contents
+
+1. [Introduction](#introduction)
+2. [What is Terraform Drift?](#what-is-terraform-drift)
+3. [Why Detect Drift?](#why-detect--drift)
+4. [Advantages](#advantages)
+5. [Workflow](#workflow)
+6. [Tools for Drift Detection](#tools-for-drift-detection)
+7. [Best Practices](#best-practices)
+8. [Conclusion](#conclusion)
+9. [Contact Information](#contact-information)
+10. [References](#references)
+
+
+
+
+
 ## Introduction
 This document provides detailed information about the Terraform Drift, why we use it workflow and advantages.
 Drift detection is crucial in maintaining infrastructure consistency, compliance, and predictability in IaC (Infrastructure as Code) environments.
