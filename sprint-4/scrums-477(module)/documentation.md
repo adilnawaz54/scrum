@@ -1,8 +1,6 @@
-Here's a detailed outline and content draft for your **Terraform Modules CI/CD Documentation** with the specified **Acceptance Criteria**:
-
----
-
 # **Terraform Modules CI/CD Documentation**
+<img src="https://github.com/user-attachments/assets/675eadc9-2984-4a34-9487-15e35d608679" alt="image" width="600"/>
+
 
 ## **Table of Contents**
 
@@ -14,7 +12,7 @@ Here's a detailed outline and content draft for your **Terraform Modules CI/CD D
 6. [Validation Steps](#validation-steps)
 7. [Deployment Lifecycle](#deployment-lifecycle)
 8. [Best Practices](#best-practices)
-9. [Conclusion and Recommendation](#conclusion-and-recommendation)
+9. [Conclusion](#conclusion)
 
 ---
 
@@ -37,18 +35,17 @@ CI/CD for Terraform modules is the automated pipeline setup that includes:
 
 | **Reason**           | **Benefit**                                          |
 | -------------------- | ---------------------------------------------------- |
-| Prevent Drift        | Ensures actual infra matches codebase                |
-| Automated Validation | Catch issues early (format, syntax, plan diffs)      |
-| Secure Workflow      | Role-based access, version-controlled, and auditable |
-| Reusability          | Promotes DRY code with modular pipelines             |
-| Fast Feedback        | Speeds up development and review process             |
-| Safe Deployment      | Uses plan and approval stages before apply           |
+| **Prevent Drift**        | Ensures actual infra matches codebase                |
+| **Automated Validation** | Catch issues early (format, syntax, plan diffs)      |
+| **Secure Workflow**      | Role-based access, version-controlled, and auditable |
+| **Reusability**          | Promotes DRY code with modular pipelines             |
+| **Safe Deployment**      | Uses plan and approval stages before apply           |
 
 ---
 
 ## **CI/CD Workflow Diagram**
 
-```mermaid
+```
 flowchart TD
     A[Git Push - PR Created] --> B[CI Triggered]
     B --> C[Terraform Format & Validate]
@@ -66,13 +63,13 @@ flowchart TD
 
 | **Category**      | **Tool**                         | **Purpose**                                   |
 | ----------------- | -------------------------------- | --------------------------------------------- |
-| SCM               | GitHub/GitLab/Bitbucket          | Version control and pull requests             |
-| CI/CD             | Jenkins / GitHub Actions         | Automate test, plan, deploy                   |
+| SCM               | GitHub                           | Version control and pull requests             |
+| CI/CD             | Jenkins                          | Automate test, plan, deploy                   |
 | IaC Engine        | Terraform                        | Infrastructure as Code engine                 |
 | Linting           | `tflint`, `checkov`              | Syntax check and security scanning            |
 | Formatting        | `terraform fmt`                  | Consistent code formatting                    |
 | Secret Scanning   | `gitleaks`, `truffleHog`         | Prevent secrets in code                       |
-| Approval Workflow | GitHub/GitLab Protected Branches | Manual or automated change control            |
+| Approval Workflow | GitHub Protected Branches        | Manual or automated change control            |
 | Notification      | Slack, Email                     | Post-build status alerts                      |
 | State Management  | S3 + DynamoDB (AWS)              | Remote backend for locking and state tracking |
 
@@ -104,8 +101,7 @@ Each pipeline should validate:
 4. **Terraform Plan**
 
    ```bash
-   terraform plan -out=tfplan.binary
-   terraform show -json tfplan.binary > tfplan.json
+   terraform plan -out=tfplan.binar
    ```
 
 5. **Secret Scanning**
@@ -136,27 +132,18 @@ Each pipeline should validate:
 | Version Control       | Pin Terraform and provider versions (`required_version`)                      |
 | Modular Design        | Write small reusable modules with proper input/output                         |
 | Backend Configuration | Use remote state (S3/DynamoDB) for collaboration and locking                  |
-| Secrets Handling      | Never hardcode secrets; use Vault, SSM, or encrypted vars                     |
-| Branch Protection     | Require PR review and CI pass before merge                                    |
 | Plan Review           | Always review Terraform Plan before `apply`                                   |
-| DRY Principle         | Use reusable workflows and pipeline templates for common actions              |
-| State Management      | Don’t share backends between environments (use workspaces or separate states) |
-| Notifications         | Integrate alerts for failed builds, drift, or approval requirements           |
+
 
 ---
 
-## **Conclusion and Recommendation**
+## **Conclusion**
 
 CI/CD automation for Terraform modules significantly enhances infrastructure reliability, maintainability, and security.
 Organizations should:
 
 * **Automate CI** for format, validate, lint, and plan
 * **Enforce CD approval** for production deployments
-* **Adopt static analysis and secret scanning**
 * **Use consistent remote state management**
 
-> **Recommendation**: Use GitHub Actions or Jenkins Shared Libraries with reusable Terraform workflows for scalable and secure infrastructure delivery.
 
----
-
-Let me know if you want this exported as PDF/Markdown or turned into a visual presentation.
