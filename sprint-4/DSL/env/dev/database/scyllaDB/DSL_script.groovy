@@ -13,12 +13,12 @@ folder('terraform/env/dev') {
     description('Development environment deployments')
 }
 
-folder('terraform/env/dev/database') { 
+folder('terraform/env/dev/databases') { 
     displayName('database') 
     description('Database specific deployments')
 }
 
-folder('terraform/env/dev/applications/scylladb') { 
+folder('terraform/env/dev/databases/scylladb') { 
     displayName('scylladb')
     description('Scylladb database deployments')
 }
@@ -47,7 +47,7 @@ pipelineJob("terraform/env/dev/applications/scylladb/Deploy-instance") {
         }
     }
 }
-println "✔︎ Pipeline job created → terraform/env/dev/applications/frontend/Deploy-instance"
+println "✔︎ Pipeline job created → terraform/env/dev/databases/scylladb/Deploy-instance"
 
 // Pipeline job for Deploy-security-group
 pipelineJob("terraform/env/dev/databases/scylladb/Deploy-security-group") {
