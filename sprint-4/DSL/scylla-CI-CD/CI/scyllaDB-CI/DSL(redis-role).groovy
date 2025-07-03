@@ -1,9 +1,9 @@
-folder('redis-CI-CD') { 
-    displayName('redis-CI-CD') 
+folder('Redis-CI-CD') { 
+    displayName('Redis-CI-CD') 
     description('Contains redisDB CI-CD')
 }
 
-folder('redis-CI-CD/CI') { 
+folder('Redis-CI-CD/CI') { 
     displayName('CI') 
     description('CI deployments')
 }
@@ -11,8 +11,8 @@ folder('redis-CI-CD/CI') {
 
 
 // Pipeline job for CI-redis
-pipelineJob("redis-CI-CD/CI/redis-role") {
-    description("Deploys/Destroys Deploy-instance using redis-CI-CD.")
+pipelineJob("Redis-CI-CD/CI/redis-role") {
+    description("Creating job for Redis CI.")
     
     parameters {
         stringParam('BRANCH_NAME', 'SCRUMS-462-Adil', 'Git branch to use')
@@ -34,5 +34,4 @@ pipelineJob("redis-CI-CD/CI/redis-role") {
         }
     }
 }
-println "✔︎ Pipeline job created → redis-CI-CD/CI/redis-role"
-
+println "✔︎ Pipeline job created → Redis-CI-CD/CI/redis-role"
